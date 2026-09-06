@@ -1,0 +1,82 @@
+---
+import Base from '../layouts/Base.astro';
+import Slideshow from '../components/Slideshow.astro';
+import EnquiryForm from '../components/EnquiryForm.astro';
+import Icon from '../components/Icon.astro';
+import { t, type Locale } from '../lib/i18n';
+import { localePath } from '../lib/paths';
+import { qualityNote } from '../lib/site';
+
+interface Props {
+  lang: Locale;
+}
+const { lang } = Astro.props;
+const c = t(lang);
+const links = [
+  { href: localePath(lang, '/about'), label: c.nav.about },
+  { href: localePath(lang, '/manufacturing'), label: c.nav.manufacturing },
+  { href: localePath(lang, '/contact'), label: c.nav.contact },
+];
+---
+
+<Base lang={lang} title={c.home.title} description={c.home.description} current="home">
+  <Slideshow lang={lang} />
+
+  <section>
+    <div class="wrap">
+      <p class="kicker">Dinymeo</p>
+      <h2>{c.home.welcome}</h2>
+      <p class="lede">{c.home.intro}</p>
+      <p>{c.home.body}</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>{c.home.linksTitle}</h2>
+      <div class="intro-links">
+        {links.map((link) => (
+          <a href={link.href}>
+            {link.label}
+            <span aria-hidden="true">→</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="band-navy">
+    <div class="wrap">
+      <h2>{c.home.promisesTitle}</h2>
+      <div class="grid-4">
+        {
+          c.promises.map((p) => (
+            <article class="card">
+              <Icon name={p.icon} />
+              <h3>{p.title}</h3>
+              <p>{p.text}</p>
+            </article>
+          ))
+        }
+      </div>
+      <p class="claim" style="margin-top:1.5rem;color:#cfefff">{qualityNote(lang)}</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap grid-2">
+      <div>
+        <h2>{c.home.aboutTitle}</h2>
+        <p class="lede">{c.home.aboutTeaser}</p>
+        <p>
+          <a class="btn navy" href={localePath(lang, '/about')}>{c.nav.about}</a>
+        </p>
+      </div>
+      <div>
+        <h2>{c.home.contactTitle}</h2>
+        <p>{c.home.formLead}</p>
+        <EnquiryForm lang={lang} compact />
+      </div>
+    </div>
+  </section>
+</Base>

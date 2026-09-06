@@ -1,0 +1,38 @@
+---
+import Base from '../layouts/Base.astro';
+import { t, type Locale } from '../lib/i18n';
+import { legalDoc } from '../lib/legal';
+
+interface Props {
+  lang: Locale;
+  kind: 'disclaimer' | 'privacy' | 'terms';
+}
+const { lang, kind } = Astro.props;
+const c = t(lang);
+const doc = legalDoc(lang, kind);
+const titles = {
+  disclaimer: c.legal.disclaimerTitle,
+  privacy: c.legal.privacyTitle,
+  terms: c.legal.termsTitle,
+};
+---
+
+<Base lang={lang} title={`${titles[kind]} | Dinymeo`} description={doc.sections[0].body[0]} current="legal">
+  <section>
+    <article class="wrap legal-article">
+      <p class="kicker">{c.footer.legal}</p>
+      <h1>{doc.title}</h1>
+      <p>{c.legal.lastUpdated}</p>
+      {
+        doc.sections.map((section) => (
+          <>
+            <h2>{section.heading}</h2>
+            {section.body.map((p) => (
+              <p>{p}</p>
+            ))}
+          </>
+        ))
+      }
+    </article>
+  </section>
+</Base>

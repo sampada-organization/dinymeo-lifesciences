@@ -1,0 +1,36 @@
+{
+  "legalName": "Dinymeo Lifesciences Pvt. Ltd.",
+  "shortName": "Dinymeo",
+  "phone": "+91 7775000425",
+  "phoneTel": "+917775000425",
+  "whatsapp": "917775000425",
+  "email": "Dinymeo@gmail.com",
+  "hours": {
+    "en": "Monday to Saturday, 9:30 AM – 5:00 PM IST",
+    "hi": "सोमवार से शनिवार, सुबह 9:30 – शाम 5:00 (भारतीय समय)",
+    "mr": "सोमवार ते शनिवार, सकाळी 9:30 – संध्याकाळी 5:00 (भारतीय वेळ)"
+  },
+  "address": {
+    "lines": [
+      "Flat no 1004, Smruti Garden",
+      "Pandhare Wasti, Punawale, PCMC",
+      "Pune 411033, Maharashtra, India"
+    ]
+  },
+  "geo": {
+    "lat": 18.6278,
+    "lng": 73.746
+  },
+  "cin": "",
+  "gstin": "",
+  "drugLicense": "",
+  "social": {
+    "linkedin": "",
+    "instagram": ""
+  },
+  "qualityNote": {
+    "en": "WHO-GMP, GLP and ISO refer to the manufacturing sites we work with. Certificates belong to those sites and can be shared with qualified partners on request. This website does not sell medicines to the public.",
+    "hi": "WHO-GMP, GLP और ISO उन निर्माण इकाइयों के प्रमाण हैं जिनके साथ हम काम करते हैं। प्रमाणपत्र उन्हीं इकाइयों के हैं। योग्य साझेदार माँग पर देख सकते हैं। यह वेबसाइट आम जनता को दवा नहीं बेचती।",
+    "mr": "WHO-GMP, GLP आणि ISO हे त्या उत्पादन केंद्रांचे प्रमाण आहेत ज्यांच्यासोबत आम्ही काम करतो. प्रमाणपत्रे त्या केंद्रांकडे आहेत. पात्र भागीदार विनंतीवर पाहू शकतात. ही वेबसाइट सामान्य लोकांना औषधे विकत नाही."
+  }
+}

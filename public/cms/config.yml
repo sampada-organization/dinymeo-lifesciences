@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: sampada-organization/dinymeo-lifesciences
+  branch: main
+local_backend: true
+media_folder: public/uploads
+public_folder: /uploads
+collections:
+  - name: site
+    label: Site
+    files:
+      - name: site
+        label: Contact & legal notes
+        file: src/content/site.json
+        fields:
+          - { label: Legal name, name: legalName, widget: string }
+          - { label: Phone, name: phone, widget: string }
+          - { label: Email, name: email, widget: string }
+          - { label: WhatsApp, name: whatsapp, widget: string }

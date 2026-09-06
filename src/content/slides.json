@@ -1,0 +1,61 @@
+{
+  "items": [
+    {
+      "id": "precision",
+      "image": "/media/hero-manufacturing.jpg",
+      "en": {
+        "kicker": "Manufacturing",
+        "title": "The science of healing.",
+        "text": "Allopathic medicines made in WHO-GMP, GLP and ISO certified facilities, with documented quality at every step."
+      },
+      "hi": {
+        "kicker": "निर्माण",
+        "title": "उपचार का विज्ञान।",
+        "text": "WHO-GMP, GLP और ISO प्रमाणित प्लांट में बनी एलोपैथिक दवाइयाँ। हर कदम पर दर्ज गुणवत्ता।"
+      },
+      "mr": {
+        "kicker": "उत्पादन",
+        "title": "उपचाराचे शास्त्र.",
+        "text": "WHO-GMP, GLP आणि ISO प्रमाणित प्लांटमध्ये बनलेली अॅलोपॅथिक औषधे. प्रत्येक टप्प्यावर नोंदवलेली गुणवत्ता."
+      }
+    },
+    {
+      "id": "packaging",
+      "image": "/media/hero-packaging.jpg",
+      "en": {
+        "kicker": "Packaging",
+        "title": "Packs that protect the dose.",
+        "text": "Alu-Alu, blister, strip and custom bottles — chosen to keep shelf life and look clean on a pharmacy shelf."
+      },
+      "hi": {
+        "kicker": "पैकेजिंग",
+        "title": "पैक जो दवा की रक्षा करें।",
+        "text": "अलु-अलु, ब्लिस्टर, स्ट्रिप और कस्टम बोतल — शेल्फ लाइफ और साफ दिखने के लिए।"
+      },
+      "mr": {
+        "kicker": "पॅकेजिंग",
+        "title": "डोस सुरक्षित ठेवणारे पॅक.",
+        "text": "अलु-अलु, ब्लिस्टर, स्ट्रिप आणि कस्टम बाटल्या — शेल्फ लाइफ आणि स्वच्छ दिसण्यासाठी."
+      }
+    },
+    {
+      "id": "india",
+      "image": "/media/hero-network.jpg",
+      "en": {
+        "kicker": "Supply",
+        "title": "From Pune to every corner of India.",
+        "text": "A practical supply chain so your consignment leaves on time and arrives where your market is."
+      },
+      "hi": {
+        "kicker": "आपूर्ति",
+        "title": "पुणे से भारत के हर कोने तक।",
+        "text": "सीधी सप्लाई चेन, ताकि आपका माल समय पर निकले और आपके बाजार तक पहुँचे।"
+      },
+      "mr": {
+        "kicker": "पुरवठा",
+        "title": "पुण्याहून भारताच्या प्रत्येक कोपऱ्यापर्यंत.",
+        "text": "व्यवहार्य पुरवठा साखळी, जेणेकरून तुमचा माल वेळेत निघेल आणि बाजारात पोहोचेल."
+      }
+    }
+  ]
+}

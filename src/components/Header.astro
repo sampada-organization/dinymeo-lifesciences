@@ -1,0 +1,89 @@
+---
+import { t, localeMeta, type Locale, locales } from '../lib/i18n';
+import { localePath, switchLocale } from '../lib/paths';
+import Logo from './Logo.astro';
+
+interface Props {
+  lang: Locale;
+  current: 'home' | 'about' | 'manufacturing' | 'contact' | 'legal' | 'admin';
+}
+const { lang, current } = Astro.props;
+const c = t(lang);
+const pathname = Astro.url.pathname;
+const base = import.meta.env.BASE_URL || '/';
+const links = [
+  { id: 'home' as const, href: localePath(lang, '/'), label: c.nav.home },
+  { id: 'about' as const, href: localePath(lang, '/about'), label: c.nav.about },
+  {
+    id: 'manufacturing' as const,
+    href: localePath(lang, '/manufacturing'),
+    label: c.nav.manufacturing,
+  },
+  { id: 'contact' as const, href: localePath(lang, '/contact'), label: c.nav.contact },
+];
+---
+
+<a class="skip" href="#main">{c.skip}</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href={localePath(lang, '/')}>
+      <Logo variant="mark" animated={current === 'home'} title={c.brand} />
+      <span>{c.brand}</span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Primary">
+      {
+        links.map((link) => (
+          <a href={link.href} aria-current={current === link.id ? 'page' : undefined}>
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+    <div class="header-tools">
+      <div class="lang" role="navigation" aria-label="Language">
+        {
+          locales.map((loc) => (
+            <a
+              href={switchLocale(lang, loc, pathname, base)}
+              lang={localeMeta[loc].html}
+              hreflang={localeMeta[loc].html}
+              aria-current={loc === lang ? 'true' : undefined}
+            >
+              {loc.toUpperCase()}
+            </a>
+          ))
+        }
+      </div>
+      <a class="btn quote" href={localePath(lang, '/contact')}>{c.cta.quote}</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" data-menu>
+        <span class="sr-only">Menu</span>
+        <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
+          <path
+            d="M5 8h18M5 14h18M5 20h18"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+</style>
+
+<script>
+  const btn = document.querySelector('[data-menu]');
+  const nav = document.getElementById('site-nav');
+  btn?.addEventListener('click', () => {
+    const open = nav?.classList.toggle('is-open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+</script>

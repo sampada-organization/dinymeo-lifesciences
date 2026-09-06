@@ -1,0 +1,115 @@
+---
+import { t, type Locale } from '../lib/i18n';
+import { whatsappUrl, mailUrl, siteData } from '../lib/site';
+
+interface Props {
+  lang: Locale;
+  compact?: boolean;
+}
+const { lang, compact = false } = Astro.props;
+const c = t(lang);
+---
+
+<form class="enquiry" data-enquiry method="post" action="/api/enquiry" novalidate>
+  <input type="hidden" name="lang" value={lang} />
+  <input type="text" name="company_website" class="hp" tabindex="-1" autocomplete="off" />
+  <label>
+    {c.form.name}
+    <input name="name" required maxlength="80" autocomplete="name" />
+  </label>
+  {
+    !compact && (
+      <label>
+        {c.form.email}
+        <input name="email" type="email" required maxlength="120" autocomplete="email" />
+      </label>
+    )
+  }
+  {
+    compact && (
+      <label>
+        {c.form.email}
+        <input name="email" type="email" required maxlength="120" autocomplete="email" />
+      </label>
+    )
+  }
+  <label>
+    {c.form.phone}
+    <input name="phone" required maxlength="20" autocomplete="tel" inputmode="tel" />
+  </label>
+  <label>
+    {c.form.company}
+    <input name="company" required maxlength="120" autocomplete="organization" />
+  </label>
+  <label>
+    {c.form.message}
+    <textarea name="message" required maxlength="2000"></textarea>
+  </label>
+  <label class="consent">
+    <input type="checkbox" name="consent" value="yes" required />
+    <span>{c.form.consent}</span>
+  </label>
+  <button class="btn navy" type="submit">{c.cta.send}</button>
+  <p class="form-status" data-status role="status"></p>
+  <p class="alt">
+    {c.cta.call}: <a href={`tel:${siteData.phoneTel}`}>{siteData.phone}</a>
+    ·
+    <a href={whatsappUrl()}>{c.cta.whatsapp}</a>
+    ·
+    <a href={mailUrl()}>{c.cta.email}</a>
+  </p>
+</form>
+
+<style>
+  .hp {
+    position: absolute;
+    left: -9999px;
+    height: 0;
+    width: 0;
+    opacity: 0;
+  }
+  .alt {
+    font-size: 0.92rem;
+    color: var(--muted);
+  }
+</style>
+
+<script define:vars={{ strings: c.cta, formCopy: c.form }}>
+  const form = document.querySelector('[data-enquiry]');
+  const status = form?.querySelector('[data-status]');
+
+  function setStatus(state, msg) {
+    if (!status) return;
+    status.dataset.state = state;
+    status.textContent = msg;
+  }
+
+  function waFallback(data) {
+    const text = `${data.name} / ${data.company}\n${data.phone}\n${data.email}\n\n${data.message}`;
+    window.location.href = `https://wa.me/917775000425?text=${encodeURIComponent(text)}`;
+  }
+
+  form?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const fd = new FormData(form);
+    const data = Object.fromEntries(fd.entries());
+    if (!data.consent) {
+      setStatus('err', formCopy.consent);
+      return;
+    }
+    setStatus('', strings.sending);
+    try {
+      const res = await fetch(form.getAttribute('action'), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error('fail');
+      setStatus('ok', strings.sent);
+      form.reset();
+    } catch {
+      setStatus('err', strings.fail);
+      waFallback(data);
+    }
+  });
+</script>

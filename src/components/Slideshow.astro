@@ -1,0 +1,95 @@
+---
+import { t, type Locale } from '../lib/i18n';
+import { localePath, asset } from '../lib/paths';
+import { slideData } from '../lib/site';
+import GoldenRatio from './GoldenRatio.astro';
+
+interface Props {
+  lang: Locale;
+}
+const { lang } = Astro.props;
+const c = t(lang);
+const slides = slideData.items;
+---
+
+<section class="hero" aria-roledescription="carousel" aria-label="Highlights">
+  {
+    slides.map((slide, i) => {
+      const copy = slide[lang];
+      return (
+        <div class:list={['hero-slide', { 'is-active': i === 0 }]} data-slide={i}>
+          <img
+            src={asset(slide.image)}
+            alt=""
+            width="1280"
+            height="720"
+            loading={i === 0 ? 'eager' : 'lazy'}
+            decoding={i === 0 ? 'sync' : 'async'}
+            fetchpriority={i === 0 ? 'high' : 'low'}
+          />
+        </div>
+      );
+    })
+  }
+  <GoldenRatio />
+  <div class="hero-copy">
+    <p class="kicker" data-kicker>{slides[0][lang].kicker}</p>
+    <h1 data-title>{slides[0][lang].title}</h1>
+    <p data-text>{slides[0][lang].text}</p>
+    <div class="hero-actions">
+      <a class="btn" href={localePath(lang, '/contact')}>{c.cta.quote}</a>
+      <a class="btn ghost" href={localePath(lang, '/manufacturing')}>{c.cta.range}</a>
+    </div>
+  </div>
+  <div class="hero-dots" role="tablist">
+    {
+      slides.map((slide, i) => (
+        <button
+          type="button"
+          role="tab"
+          aria-selected={i === 0 ? 'true' : 'false'}
+          aria-label={slide[lang].title}
+          data-go={i}
+        />
+      ))
+    }
+  </div>
+</section>
+
+<script define:vars={{ slides: slides.map((s) => s[lang]) }}>
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const nodes = [...document.querySelectorAll('[data-slide]')];
+  const dots = [...document.querySelectorAll('[data-go]')];
+  const kicker = document.querySelector('[data-kicker]');
+  const title = document.querySelector('[data-title]');
+  const text = document.querySelector('[data-text]');
+  let i = 0;
+  let timer;
+
+  function show(next) {
+    i = (next + nodes.length) % nodes.length;
+    nodes.forEach((n, idx) => n.classList.toggle('is-active', idx === i));
+    dots.forEach((d, idx) => d.setAttribute('aria-selected', idx === i ? 'true' : 'false'));
+    const s = slides[i];
+    if (kicker) kicker.textContent = s.kicker;
+    if (title) title.textContent = s.title;
+    if (text) text.textContent = s.text;
+  }
+
+  function start() {
+    if (reduced || nodes.length < 2) return;
+    timer = setInterval(() => show(i + 1), 6500);
+  }
+
+  dots.forEach((d) =>
+    d.addEventListener('click', () => {
+      clearInterval(timer);
+      show(Number(d.getAttribute('data-go')));
+      start();
+    }),
+  );
+
+  document.querySelector('.hero')?.addEventListener('mouseenter', () => clearInterval(timer));
+  document.querySelector('.hero')?.addEventListener('mouseleave', start);
+  start();
+</script>

@@ -1,0 +1,23 @@
+---
+import { t, type Locale } from '../lib/i18n';
+import { telUrl, whatsappUrl, mailUrl } from '../lib/site';
+import Icon from './Icon.astro';
+
+interface Props {
+  lang: Locale;
+}
+const { lang } = Astro.props;
+const c = t(lang);
+---
+
+<nav class="dock" aria-label="Quick contact">
+  <a href={telUrl()} aria-label={c.dock.call} title={c.dock.call}>
+    <Icon name="phone" size={22} />
+  </a>
+  <a class="wa" href={whatsappUrl(c.home.welcome)} aria-label={c.dock.wa} title={c.dock.wa}>
+    <Icon name="wa" size={22} />
+  </a>
+  <a class="mail" href={mailUrl(c.cta.quote)} aria-label={c.dock.mail} title={c.dock.mail}>
+    <Icon name="mail" size={22} />
+  </a>
+</nav>

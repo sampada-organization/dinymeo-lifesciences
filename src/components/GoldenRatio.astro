@@ -1,0 +1,67 @@
+---
+/**
+ * Decorative golden-ratio construction — the same geometry as the brand mark.
+ * First-class SVG animation: circles draw, then a slow drift.
+ */
+---
+
+<svg class="ratio" viewBox="0 0 400 400" aria-hidden="true">
+  <g fill="none" stroke="#4FD8FE" stroke-width="1.4">
+    <circle class="c c1" cx="200" cy="148" r="118"></circle>
+    <circle class="c c2" cx="128" cy="248" r="118"></circle>
+    <circle class="c c3" cx="272" cy="248" r="118"></circle>
+    <path class="spiral" d="M200 148 C200 80 272 80 272 148 C272 216 200 216 200 148 C200 200 148 230 128 248"></path>
+  </g>
+  <g stroke="#FF7F00" stroke-width="1" fill="none" opacity="0.7">
+    <rect class="phi" x="148" y="96" width="104" height="168"></rect>
+    <line x1="200" y1="40" x2="200" y2="360"></line>
+  </g>
+</svg>
+
+<style>
+  .c,
+  .spiral,
+  .phi {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 760;
+    animation: draw 3.2s ease forwards;
+  }
+  .c2 {
+    animation-delay: 0.25s;
+  }
+  .c3 {
+    animation-delay: 0.45s;
+  }
+  .spiral {
+    animation-delay: 0.7s;
+  }
+  .phi {
+    stroke-dasharray: 550;
+    animation-delay: 1s;
+  }
+  svg {
+    animation: drift 18s ease-in-out infinite alternate;
+  }
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes drift {
+    from {
+      transform: rotate(-4deg) translate3d(0, 0, 0);
+    }
+    to {
+      transform: rotate(6deg) translate3d(-2%, 3%, 0);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .c,
+    .spiral,
+    .phi,
+    svg {
+      animation: none;
+      stroke-dashoffset: 0;
+    }
+  }
+</style>

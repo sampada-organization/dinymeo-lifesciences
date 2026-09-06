@@ -1,0 +1,107 @@
+---
+import Base from '../layouts/Base.astro';
+import site from '../content/site.json';
+import products from '../content/products.json';
+import slides from '../content/slides.json';
+import { type Locale } from '../lib/i18n';
+
+interface Props {
+  lang: Locale;
+}
+const { lang } = Astro.props;
+const payload = { site, products, slides };
+---
+
+<Base
+  lang={lang}
+  title="Dinymeo CMS"
+  description="Edit contact details, products and slides. Changes go through git and CI."
+  current="admin"
+>
+  <section>
+    <div class="wrap">
+      <p class="kicker">CMS</p>
+      <h1>Edit the live copy</h1>
+      <p class="lede">
+        Local: password <code>dinymeo-dev</code>. Production: set <code>CMS_PASSWORD</code> in Azure
+        and a GitHub token so saves become commits. The public site rebuilds from git.
+      </p>
+      <form id="cms-login" class="enquiry">
+        <label>
+          Password
+          <input type="password" name="password" required />
+        </label>
+        <button class="btn navy" type="submit">Unlock</button>
+        <p data-login-status class="form-status"></p>
+      </form>
+      <form id="cms-editor" class="enquiry" hidden>
+        <label>
+          Site JSON
+          <textarea id="cms-json" rows="28"></textarea>
+        </label>
+        <button class="btn navy" type="submit">Save</button>
+        <p data-save-status class="form-status"></p>
+      </form>
+    </div>
+  </section>
+</Base>
+
+<script define:vars={{ payload }}>
+  const login = document.getElementById('cms-login');
+  const editor = document.getElementById('cms-editor');
+  const jsonBox = document.getElementById('cms-json');
+  let password = '';
+
+  login?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    password = new FormData(login).get('password');
+    const res = await fetch('/api/cms', {
+      headers: { 'X-CMS-Password': password, Accept: 'application/json' },
+    });
+    const status = login.querySelector('[data-login-status]');
+    if (!res.ok) {
+      status.textContent = 'Wrong password or API not running.';
+      status.dataset.state = 'err';
+      return;
+    }
+    const data = await res.json();
+    jsonBox.value = JSON.stringify(data, null, 2);
+    login.hidden = true;
+    editor.hidden = false;
+  });
+
+  editor?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const status = editor.querySelector('[data-save-status]');
+    let body;
+    try {
+      body = JSON.parse(jsonBox.value);
+    } catch {
+      status.textContent = 'JSON is not valid.';
+      status.dataset.state = 'err';
+      return;
+    }
+    const res = await fetch('/api/cms', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CMS-Password': password,
+      },
+      body: JSON.stringify(body),
+    });
+    if (!res.ok) {
+      status.textContent = 'Save failed. Download the JSON and commit it in git.';
+      status.dataset.state = 'err';
+      const blob = new Blob([jsonBox.value], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'dinymeo-content.json';
+      a.click();
+      return;
+    }
+    status.textContent = 'Saved. Local dev reloads; production waits for CI.';
+    status.dataset.state = 'ok';
+  });
+
+  jsonBox.value = JSON.stringify(payload, null, 2);
+</script>

@@ -1,0 +1,86 @@
+{
+  "packaging": [
+    {
+      "id": "alu-alu",
+      "en": "Alu-Alu",
+      "hi": "अलु-अलु",
+      "mr": "अलु-अलु"
+    },
+    {
+      "id": "blister",
+      "en": "Blister",
+      "hi": "ब्लिस्टर",
+      "mr": "ब्लिस्टर"
+    },
+    {
+      "id": "strip",
+      "en": "Strip",
+      "hi": "स्ट्रिप",
+      "mr": "स्ट्रिप"
+    },
+    {
+      "id": "bottle",
+      "en": "Custom bottles",
+      "hi": "कस्टम बोतल",
+      "mr": "कस्टम बाटल्या"
+    }
+  ],
+  "items": [
+    {
+      "id": "cardiology",
+      "icon": "heart",
+      "en": { "name": "Cardiology", "blurb": "Heart and blood-pressure formulations for licensed marketing partners." },
+      "hi": { "name": "हृदय रोग", "blurb": "हृदय और ब्लड प्रेशर की दवाइयाँ, लाइसेंसधारी मार्केटिंग पार्टनर के लिए।" },
+      "mr": { "name": "हृदयरोग", "blurb": "हृदय व रक्तदाबांच्या औषधांची निर्मिती, परवानाधारक भागीदारांसाठी." }
+    },
+    {
+      "id": "antibiotics",
+      "icon": "shield",
+      "en": { "name": "Antibiotics", "blurb": "Anti-infective range made in controlled, documented batches." },
+      "hi": { "name": "एंटीबायोटिक", "blurb": "संक्रमण रोधी दवाइयाँ, नियंत्रित और दर्ज बैच में।" },
+      "mr": { "name": "अँटीबायोटिक्स", "blurb": "संसर्गविरोधी औषधे, नियंत्रित व नोंदवलेल्या बॅचमध्ये." }
+    },
+    {
+      "id": "gynaecology",
+      "icon": "care",
+      "en": { "name": "Gynaecology", "blurb": "Women’s health formulations for partner brands." },
+      "hi": { "name": "स्त्री रोग", "blurb": "महिला स्वास्थ्य की दवाइयाँ, पार्टनर ब्रांड के लिए।" },
+      "mr": { "name": "स्त्रीरोग", "blurb": "महिला आरोग्याच्या औषधी, भागीदार ब्रँडसाठी." }
+    },
+    {
+      "id": "dermatology",
+      "icon": "leaf",
+      "en": { "name": "Dermatology", "blurb": "Skin-care allopathic products with stable, tested recipes." },
+      "hi": { "name": "त्वचा रोग", "blurb": "त्वचा की एलोपैथिक दवाइयाँ, स्थिर और जाँची हुई रेसिपी के साथ।" },
+      "mr": { "name": "त्वचारोग", "blurb": "त्वचेच्या अॅलोपॅथिक औषधी, स्थिर व तपासलेल्या रेसिपीसह." }
+    },
+    {
+      "id": "paediatrics",
+      "icon": "drop",
+      "en": { "name": "Paediatrics", "blurb": "Child-appropriate strengths and packs, made to spec." },
+      "hi": { "name": "बाल रोग", "blurb": "बच्चों के अनुकूल ताकत और पैक, आपकी जरूरत के अनुसार।" },
+      "mr": { "name": "बालरोग", "blurb": "मुलांसाठी योग्य क्षमता व पॅक, तुमच्या गरजेनुसार." }
+    },
+    {
+      "id": "gastro",
+      "icon": "hex",
+      "en": { "name": "Gastroenterology", "blurb": "Stomach and digestive-care range for everyday and surgical use." },
+      "hi": { "name": "पेट और पाचन", "blurb": "पेट और पाचन की दवाइयाँ, रोजमर्रा और सर्जरी दोनों के लिए।" },
+      "mr": { "name": "पचनसंस्था", "blurb": "पोट व पचनाच्या औषधी, रोजच्या व शस्त्रक्रियेच्या वापरासाठी." }
+    },
+    {
+      "id": "critical",
+      "icon": "pulse",
+      "en": { "name": "Critical care & surgery", "blurb": "Formulations used around procedures and hospital care." },
+      "hi": { "name": "गंभीर देखभाल और सर्जरी", "blurb": "अस्पताल और प्रक्रिया के आसपास इस्तेमाल होने वाली दवाइयाँ।" },
+      "mr": { "name": "गंभीर देखभाल व शस्त्रक्रिया", "blurb": "रुग्णालयीन व प्रक्रियांशी संबंधित औषधनिर्मिती." }
+    },
+    {
+      "id": "general",
+      "icon": "plus",
+      "en": { "name": "General medicine", "blurb": "Everyday allopathic medicines for a wide partner catalogue." },
+      "hi": { "name": "सामान्य दवाइयाँ", "blurb": "रोजमर्रा की एलोपैथिक दवाइयाँ, बड़े कैटलॉग के लिए।" },
+      "mr": { "name": "सामान्य औषधे", "blurb": "रोजच्या वापराच्या अॅलोपॅथिक औषधे, मोठ्या कॅटलॉगसाठी." }
+    }
+  ]
+}

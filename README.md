@@ -1,0 +1,44 @@
+# Dinymeo Lifesciences
+
+First-version JAMstack website for **Dinymeo Lifesciences Pvt. Ltd.** (Pune) — English, हिन्दी, मराठी.
+
+Live shape: static Astro site + Azure Static Web Apps (free) + GitHub Actions. Forms and a small CMS sit on `/api`. Click-to-call, WhatsApp, and email are first-class.
+
+## Quick start
+
+```bash
+npm install
+npm run dev:full
+```
+
+http://127.0.0.1:4321
+
+| Script | What it does |
+|---|---|
+| `npm run dev` | Site only |
+| `npm run dev:full` | Site + local `/api` (enquiries, CMS) |
+| `npm test` | Unit tests |
+| `npm run test:e2e` | Playwright against a production build |
+| `npm run build` | `dist/` for Azure / Pages |
+
+## Pages
+
+Home (slideshow, intro, promises, short about, enquiry) · About · Manufacturing & products · Contact · Disclaimer · Privacy · Terms · Admin.
+
+## Brand
+
+Navy `#01008E`, blue `#1E78FE`, cyan `#4FD8FE`, orange `#FF7F00`. Animated SVG mark (golden-ratio leaves + D), decorative construction, and icon set. Raster heroes are decorative only — no product claims in the pictures.
+
+## Legal (v1)
+
+WHO-GMP / GLP / ISO wording is a **site footnote**: certificates belong to manufacturing partners and can be shown to qualified partners on request. No consumer drug sale, no doctor quotes, no invented stats. Details: [docs/legal-claims.md](docs/legal-claims.md).
+
+## Azure / GitHub / domain
+
+GitHub account `sampada-organization` is ready. **Log in to Azure** (`az login`) then run `bash scripts/azure-bootstrap.sh`. Domain notes: [docs/domain.md](docs/domain.md). Pipelines: [docs/azure.md](docs/azure.md).
+
+Suggested domains (unchecked-out on 7 Sep 2026): `dinymeo.com`, `dinymeo.in`.
+
+## Client brief
+
+[docs/brief.md](docs/brief.md)

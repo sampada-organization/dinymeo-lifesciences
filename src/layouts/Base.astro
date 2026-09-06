@@ -1,0 +1,83 @@
+---
+import '@fontsource-variable/montserrat/wght.css';
+import '@fontsource-variable/source-sans-3/wght.css';
+import '@fontsource/noto-sans-devanagari/400.css';
+import '@fontsource/noto-sans-devanagari/700.css';
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ContactDock from '../components/ContactDock.astro';
+import { localeMeta, type Locale, t } from '../lib/i18n';
+import { localePath, withBase } from '../lib/paths';
+import { siteData } from '../lib/site';
+
+interface Props {
+  lang: Locale;
+  title: string;
+  description: string;
+  current: 'home' | 'about' | 'manufacturing' | 'contact' | 'legal' | 'admin';
+}
+const { lang, title, description, current } = Astro.props;
+const meta = localeMeta[lang];
+const canonical = new URL(Astro.url.pathname, Astro.site ?? 'https://dinymeo.com').href;
+const ogImage = new URL(withBase('/brand/og.jpg'), Astro.site ?? 'https://dinymeo.com').href;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: siteData.legalName,
+  url: Astro.site?.href ?? 'https://dinymeo.com/',
+  email: siteData.email,
+  telephone: siteData.phoneTel,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: siteData.address.lines[0],
+    addressLocality: 'Pune',
+    postalCode: '411033',
+    addressCountry: 'IN',
+  },
+  areaServed: 'IN',
+  knowsLanguage: ['en', 'hi', 'mr'],
+};
+---
+
+<!doctype html>
+<html lang={meta.html} dir={meta.dir}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta
+      name="keywords"
+      content="pharma third party manufacturing in India, allopathic medicine contract manufacturing, Dinymeo Lifesciences Pvt Ltd, Pune pharmaceutical company"
+    />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en-IN" href={new URL(localePath('en', Astro.url.pathname.replace(/^\/(hi|mr)/, '') || '/'), Astro.site ?? 'https://dinymeo.com').href} />
+    <link rel="alternate" hreflang="hi-IN" href={new URL(localePath('hi', Astro.url.pathname.replace(/^\/(hi|mr)/, '') || '/'), Astro.site ?? 'https://dinymeo.com').href} />
+    <link rel="alternate" hreflang="mr-IN" href={new URL(localePath('mr', Astro.url.pathname.replace(/^\/(hi|mr)/, '') || '/'), Astro.site ?? 'https://dinymeo.com').href} />
+    <link rel="alternate" hreflang="x-default" href={new URL(localePath('en', '/'), Astro.site ?? 'https://dinymeo.com').href} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={meta.og} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#01008E" />
+    <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
+    <link rel="apple-touch-icon" href={withBase('/favicon.svg')} />
+    <meta name="generator" content={Astro.generator} />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body data-lang={lang}>
+    <Header lang={lang} current={current} />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer lang={lang} />
+    <ContactDock lang={lang} />
+    <noscript>
+      <p class="wrap">{t(lang).footer.b2b}</p>
+    </noscript>
+  </body>
+</html>

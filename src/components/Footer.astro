@@ -1,0 +1,49 @@
+---
+import { t, type Locale } from '../lib/i18n';
+import { localePath } from '../lib/paths';
+import { siteData, hours, qualityNote } from '../lib/site';
+import Logo from './Logo.astro';
+
+interface Props {
+  lang: Locale;
+}
+const { lang } = Astro.props;
+const c = t(lang);
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="wrap foot-grid">
+    <div>
+      <Logo variant="lockup" invert title={c.brand} />
+      <p>{c.footer.blurb}</p>
+      <p class="claim">{qualityNote(lang)}</p>
+    </div>
+    <div>
+      <h3>{c.nav.about}</h3>
+      <p>
+        <a href={localePath(lang, '/about')}>{c.nav.about}</a><br />
+        <a href={localePath(lang, '/manufacturing')}>{c.nav.manufacturing}</a><br />
+        <a href={localePath(lang, '/contact')}>{c.nav.contact}</a>
+      </p>
+    </div>
+    <div>
+      <h3>{c.nav.contact}</h3>
+      <p>
+        {siteData.address.lines.map((line) => <span>{line}<br /></span>)}
+        <a href={`tel:${siteData.phoneTel}`}>{siteData.phone}</a><br />
+        <a href={`mailto:${siteData.email}`}>{siteData.email}</a><br />
+        {hours(lang)}
+      </p>
+      <p>
+        <strong>{c.footer.legal}</strong><br />
+        <a href={localePath(lang, '/legal/disclaimer')}>{c.footer.disclaimer}</a> ·
+        <a href={localePath(lang, '/legal/privacy')}>{c.footer.privacy}</a> ·
+        <a href={localePath(lang, '/legal/terms')}>{c.footer.terms}</a>
+      </p>
+    </div>
+  </div>
+  <div class="wrap tiny">
+    © {year} {siteData.legalName}. {c.footer.rights} {c.footer.b2b}
+  </div>
+</footer>
