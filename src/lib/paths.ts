@@ -29,3 +29,15 @@ export function switchLocale(current: Locale, next: Locale, pathname: string, ba
 export function asset(path: string): string {
   return withBase(path);
 }
+
+/** Path without the configured base and without a locale prefix. */
+export function unprefixedPath(pathname: string, base = import.meta.env.BASE_URL || '/'): string {
+  let rest = pathname;
+  const trimmed = base === '/' ? '' : base.replace(/\/$/, '');
+  if (trimmed && rest.startsWith(trimmed)) {
+    rest = rest.slice(trimmed.length) || '/';
+  }
+  rest = rest.replace(/^\/(hi|mr)(?=\/|$)/, '') || '/';
+  if (!rest.startsWith('/')) rest = `/${rest}`;
+  return rest;
+}

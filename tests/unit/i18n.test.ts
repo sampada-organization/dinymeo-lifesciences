@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { copy, locales, type Locale } from '../../src/lib/i18n';
-import { localePath, switchLocale, withBase } from '../../src/lib/paths';
+import { localePath, switchLocale, withBase, unprefixedPath } from '../../src/lib/paths';
 
 function keysOf(value: unknown, prefix = ''): string[] {
   if (value === null || typeof value !== 'object') return [prefix];
@@ -37,5 +37,11 @@ describe('paths', () => {
   });
   it('withBase joins a non-root base', () => {
     expect(withBase('/media/x.jpg')).toMatch(/media\/x\.jpg$/);
+  });
+  it('unprefixedPath strips base and locale', () => {
+    expect(unprefixedPath('/dinymeo-lifesciences/hi/about', '/dinymeo-lifesciences/')).toBe(
+      '/about',
+    );
+    expect(unprefixedPath('/about', '/')).toBe('/about');
   });
 });

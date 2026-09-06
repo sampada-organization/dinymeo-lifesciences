@@ -1,6 +1,7 @@
 ---
 import { t, type Locale } from '../lib/i18n';
 import { whatsappUrl, mailUrl, siteData } from '../lib/site';
+import { withBase } from '../lib/paths';
 
 interface Props {
   lang: Locale;
@@ -10,7 +11,7 @@ const { lang, compact = false } = Astro.props;
 const c = t(lang);
 ---
 
-<form class="enquiry" data-enquiry method="post" action="/api/enquiry" novalidate>
+<form class="enquiry" data-enquiry method="post" action={withBase('/api/enquiry')} novalidate>
   <input type="hidden" name="lang" value={lang} />
   <input type="text" name="company_website" class="hp" tabindex="-1" autocomplete="off" />
   <label>
