@@ -17,7 +17,7 @@ After `scripts/azure-bootstrap.sh`:
 3. For the apex `dinymeo.com`, use an ALIAS/ANAME if the registrar supports it, or Azure’s recommended A records from the portal.
 4. Azure issues a free managed TLS certificate.
 
-`public/CNAME` is set to `dinymeo.com` for GitHub Pages if you use Pages as a fallback.
+When the domain is purchased, add a `public/CNAME` file containing `dinymeo.com` (for GitHub Pages) or attach the hostname on the Azure Static Web App. Do not add the CNAME file until DNS is yours — it would steal the github.io preview.
 
 ## GitHub Pages (preview / fallback)
 
