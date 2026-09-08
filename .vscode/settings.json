@@ -1,0 +1,21 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "files.exclude": {
+    "**/.azure": true,
+    "**/node_modules": true,
+    "**/.data": true
+  },
+  "search.exclude": {
+    "**/dist": true,
+    "**/node_modules": true,
+    "**/playwright-report": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "github.copilot.enable": {
+    "*": true
+  }
+}

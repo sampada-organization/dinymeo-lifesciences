@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Site + API (dev:full)",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev:full"
+    },
+    {
+      "name": "Astro only",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev"
+    },
+    {
+      "name": "Preview production build",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run build && npm run preview"
+    }
+  ]
+}
