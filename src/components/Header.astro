@@ -1,6 +1,6 @@
 ---
-import { t, localeMeta, type Locale, locales } from '../lib/i18n';
-import { localePath, switchLocale } from '../lib/paths';
+import { t, type Locale } from '../lib/i18n';
+import { localePath } from '../lib/paths';
 import Logo from './Logo.astro';
 
 interface Props {
@@ -9,8 +9,6 @@ interface Props {
 }
 const { lang, current } = Astro.props;
 const c = t(lang);
-const pathname = Astro.url.pathname;
-const base = import.meta.env.BASE_URL || '/';
 const links = [
   { id: 'home' as const, href: localePath(lang, '/'), label: c.nav.home },
   { id: 'about' as const, href: localePath(lang, '/about'), label: c.nav.about },
@@ -40,20 +38,6 @@ const links = [
       }
     </nav>
     <div class="header-tools">
-      <div class="lang" role="navigation" aria-label="Language">
-        {
-          locales.map((loc) => (
-            <a
-              href={switchLocale(lang, loc, pathname, base)}
-              lang={localeMeta[loc].html}
-              hreflang={localeMeta[loc].html}
-              aria-current={loc === lang ? 'true' : undefined}
-            >
-              {loc.toUpperCase()}
-            </a>
-          ))
-        }
-      </div>
       <a class="btn quote" href={localePath(lang, '/contact')}>{c.cta.quote}</a>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" data-menu>
         <span class="sr-only">Menu</span>

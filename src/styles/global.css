@@ -1,17 +1,20 @@
 :root {
   --navy: #2e3192;
-  --navy-ink: #24265d;
+  --navy-ink: #1b1d4a;
   --blue: #3871c1;
   --cyan: #50ade5;
-  --orange: #f68712;
+  --gold: #c4a35a;
+  --gold-bright: #e0c078;
+  --gold-deep: #9a7b32;
+  --orange: #c4a35a;
   --d-outer: #2e3192;
-  --paper: #f4f7ff;
-  --white: #ffffff;
-  --ink: #101427;
-  --muted: #4a5370;
-  --line: color-mix(in srgb, var(--navy) 12%, transparent);
-  --shadow: 0 18px 50px color-mix(in srgb, var(--navy) 16%, transparent);
-  --radius: 4px;
+  --paper: #f6f3ec;
+  --white: #fffcf7;
+  --ink: #1c1f2e;
+  --muted: #5a5f73;
+  --line: color-mix(in srgb, var(--navy) 10%, transparent);
+  --shadow: 0 18px 50px color-mix(in srgb, var(--navy) 14%, transparent);
+  --radius: 6px;
   --header: 4.5rem;
   --font-display: 'Montserrat Variable', Montserrat, 'Noto Sans Devanagari', system-ui, sans-serif;
   --font-body: 'Source Sans 3 Variable', 'Source Sans 3', 'Noto Sans Devanagari', system-ui, sans-serif;
@@ -61,7 +64,7 @@ a:hover {
 }
 
 :focus-visible {
-  outline: 3px solid var(--orange);
+  outline: 2px solid var(--gold);
   outline-offset: 3px;
 }
 
@@ -115,7 +118,7 @@ h3 {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--blue);
+  color: var(--gold-deep);
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -126,8 +129,8 @@ h3 {
 .kicker::before {
   content: '';
   width: 1.6rem;
-  height: 2px;
-  background: var(--orange);
+  height: 1px;
+  background: var(--gold);
 }
 
 .lede {
@@ -137,29 +140,36 @@ h3 {
 }
 
 .btn {
-  --btn-bg: var(--orange);
-  --btn-fg: #1a0b00;
+  --btn-bg: var(--gold);
+  --btn-fg: #1b1d4a;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   min-height: 2.85rem;
-  padding: 0.55rem 1.15rem;
-  border: 2px solid var(--btn-bg);
+  padding: 0.55rem 1.25rem;
+  border: 1px solid var(--btn-bg);
   background: var(--btn-bg);
   color: var(--btn-fg);
   font-family: var(--font-display);
   font-weight: 700;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
   text-decoration: none;
   border-radius: var(--radius);
   cursor: pointer;
-  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    background 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease;
 }
 
 .btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 24px color-mix(in srgb, var(--orange) 40%, transparent);
+  transform: translateY(-2px);
+  background: var(--gold-bright);
+  border-color: var(--gold-bright);
+  box-shadow: 0 10px 28px color-mix(in srgb, var(--gold) 38%, transparent);
   color: var(--btn-fg);
 }
 
@@ -210,6 +220,11 @@ h3 {
   font-weight: 800;
   font-size: 1.05rem;
   letter-spacing: -0.03em;
+  transition: color 180ms ease;
+}
+
+.brand:hover {
+  color: var(--gold-deep);
 }
 
 .header-tools {
@@ -230,11 +245,18 @@ h3 {
   font-weight: 650;
   color: var(--ink);
   font-size: 0.95rem;
+  padding-bottom: 0.15rem;
+  transition: color 180ms ease, box-shadow 180ms ease;
+}
+
+.nav a:hover {
+  color: var(--navy);
+  box-shadow: inset 0 -1px 0 var(--gold);
 }
 
 .nav a[aria-current='page'] {
   color: var(--navy);
-  box-shadow: inset 0 -2px 0 var(--orange);
+  box-shadow: inset 0 -2px 0 var(--gold);
 }
 
 .lang {
@@ -345,10 +367,11 @@ h3 {
   background: color-mix(in srgb, var(--white) 35%, transparent);
   cursor: pointer;
   padding: 0;
+  transition: background 180ms ease;
 }
 
 .hero-dots button[aria-selected='true'] {
-  background: var(--orange);
+  background: var(--gold);
 }
 
 .ratio {
@@ -401,8 +424,47 @@ section {
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 1.25rem;
-  box-shadow: 0 1px 0 color-mix(in srgb, var(--navy) 6%, transparent);
+  padding: 1.35rem 1.3rem 1.45rem;
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--navy) 5%, transparent);
+}
+
+.card-hover {
+  transition:
+    transform 240ms ease,
+    box-shadow 240ms ease,
+    border-color 240ms ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  border-color: color-mix(in srgb, var(--gold) 70%, var(--line));
+  box-shadow: 0 18px 36px color-mix(in srgb, var(--navy) 12%, transparent);
+}
+
+.icon-tile {
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.9rem;
+  color: var(--navy);
+  border: 1px solid color-mix(in srgb, var(--gold) 55%, transparent);
+  background: color-mix(in srgb, var(--gold) 8%, var(--white));
+  border-radius: 2px;
+}
+
+.icon-tile.on-navy {
+  background: color-mix(in srgb, var(--white) 10%, transparent);
+  border-color: color-mix(in srgb, var(--gold) 45%, transparent);
+  color: var(--gold-bright);
+}
+
+.icon-tile .icon,
+.icon-tile svg {
+  width: 1.55rem;
+  height: 1.55rem;
+  margin: 0;
+  max-width: none;
 }
 
 .card .icon {
@@ -430,14 +492,80 @@ section {
   font-family: var(--font-display);
   font-weight: 750;
   font-size: 1.35rem;
+  transition: color 180ms ease, padding-left 180ms ease;
+}
+
+.intro-links a:hover {
+  color: var(--gold-deep);
+  padding-left: 0.35rem;
 }
 
 .claim {
   font-size: 0.85rem;
   color: var(--muted);
-  border-left: 3px solid var(--cyan);
+  border-left: 2px solid var(--gold);
   padding-left: 0.8rem;
   max-width: 48rem;
+}
+
+.split-about {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 1.6rem;
+  align-items: start;
+}
+
+.about-panel,
+.form-panel {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-panel {
+  justify-content: flex-start;
+  gap: 1.35rem;
+  border-top: 3px solid var(--gold);
+}
+
+.form-panel {
+  border-top: 3px solid var(--navy);
+}
+
+.about-points {
+  margin: 1.2rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.about-points li {
+  position: relative;
+  padding-left: 1.35rem;
+  color: var(--muted);
+}
+
+.about-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.45rem;
+  height: 0.45rem;
+  background: var(--gold);
+}
+
+.about-cta {
+  margin: 0;
+}
+
+.about-contact {
+  background:
+    linear-gradient(180deg, transparent 0%, color-mix(in srgb, var(--gold) 7%, transparent) 100%);
 }
 
 form.enquiry {
@@ -490,23 +618,34 @@ form.enquiry textarea {
 
 .dock {
   position: fixed;
-  right: 1rem;
-  bottom: 1rem;
+  right: 1.15rem;
+  bottom: 1.15rem;
   z-index: 35;
-  display: grid;
-  gap: 0.45rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .dock a {
-  width: 3.1rem;
-  height: 3.1rem;
+  width: 2.85rem;
+  height: 2.85rem;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex: 0 0 2.85rem;
   background: var(--navy);
   color: var(--white);
-  box-shadow: var(--shadow);
+  box-shadow: 0 8px 22px color-mix(in srgb, var(--navy) 28%, transparent);
   text-decoration: none;
+  transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
+}
+
+.dock a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px color-mix(in srgb, var(--navy) 32%, transparent);
 }
 
 .dock a.wa {
@@ -518,8 +657,11 @@ form.enquiry textarea {
 }
 
 .dock a svg {
-  width: 1.35rem;
-  height: 1.35rem;
+  width: 1.15rem;
+  height: 1.15rem;
+  max-width: none;
+  display: block;
+  flex-shrink: 0;
 }
 
 .site-footer {
@@ -539,7 +681,12 @@ form.enquiry textarea {
 }
 
 .site-footer a {
-  color: var(--cyan);
+  color: var(--gold-bright);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--white);
 }
 
 .foot-grid {
@@ -583,7 +730,7 @@ form.enquiry textarea {
   width: 2.3rem;
   height: 2.3rem;
   border-radius: 50%;
-  background: var(--cyan);
+  background: var(--gold);
   color: var(--navy-ink);
   font-family: var(--font-display);
   font-weight: 800;
@@ -632,7 +779,8 @@ form.enquiry textarea {
   .grid-4,
   .grid-3,
   .grid-2,
-  .foot-grid {
+  .foot-grid,
+  .split-about {
     grid-template-columns: 1fr;
   }
 

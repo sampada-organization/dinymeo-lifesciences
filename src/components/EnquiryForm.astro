@@ -54,10 +54,10 @@ const c = t(lang);
   <button class="btn navy" type="submit">{c.cta.send}</button>
   <p class="form-status" data-status role="status"></p>
   <p class="alt">
-    {c.cta.call}: <a href={`tel:${siteData.phoneTel}`}>{siteData.phone}</a>
-    ·
+    <a href={`tel:${siteData.phoneTel}`}>{siteData.phone}</a>
+    <span aria-hidden="true"> · </span>
     <a href={whatsappUrl()}>{c.cta.whatsapp}</a>
-    ·
+    <span aria-hidden="true"> · </span>
     <a href={mailUrl()}>{c.cta.email}</a>
   </p>
 </form>

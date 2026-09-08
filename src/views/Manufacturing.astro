@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Icon from '../components/Icon.astro';
+import PackIcon from '../components/PackIcon.astro';
 import { t, type Locale } from '../lib/i18n';
 import { productData, qualityNote } from '../lib/site';
 import { localePath } from '../lib/paths';
@@ -32,8 +33,10 @@ const c = t(lang);
       <div class="grid-4">
         {
           productData.items.map((item) => (
-            <article class="card" id={item.id}>
-              <Icon name={item.icon} />
+            <article class="card card-hover" id={item.id}>
+              <span class="icon-tile">
+                <Icon name={item.icon} />
+              </span>
               <h3>{item[lang].name}</h3>
               <p>{item[lang].blurb}</p>
             </article>
@@ -48,9 +51,12 @@ const c = t(lang);
       <div class="grid-4">
         {
           productData.packaging.map((p) => (
-            <article class="card">
-              <Icon name="pack" />
-              <h3>{p[lang]}</h3>
+            <article class="card card-hover pack-card">
+              <span class="icon-tile">
+                <PackIcon name={p.icon} />
+              </span>
+              <h3>{p[lang].name}</h3>
+              <p>{p[lang].blurb}</p>
             </article>
           ))
         }

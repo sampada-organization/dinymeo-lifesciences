@@ -48,7 +48,12 @@ export const copy = {
       promisesTitle: 'What you can count on',
       aboutTitle: 'A short word about us',
       aboutTeaser:
-        'We handle the back end — materials, formulation, testing and packing — so marketing companies can sell with confidence.',
+        'We handle the back end — materials, formulation, testing and packing — so marketing companies can sell with confidence. From Pune, we work only in allopathic medicines, with a named person on your account and batches that match the brief you send.',
+      aboutPoints: [
+        'Sourcing, recipe work and quality tests under one roof of process.',
+        'Flexible batch sizes for new brands and growing catalogues.',
+        'Packs chosen for shelf life: Alu-Alu, blister, strip or bottle.',
+      ],
       linksTitle: 'Find your way',
       contactTitle: 'Talk to us',
       formLead: 'Tell us what you need. A person will read this. No spam list.',
@@ -213,7 +218,12 @@ export const copy = {
       promisesTitle: 'आप हम पर यह भरोसा कर सकते हैं',
       aboutTitle: 'हमारे बारे में संक्षेप में',
       aboutTeaser:
-        'कच्चा माल, फॉर्मूलेशन, टेस्टिंग और पैकिंग हम सँभालते हैं, ताकि मार्केटिंग कंपनियाँ निश्चिंत होकर बेच सकें।',
+        'कच्चा माल, फॉर्मूलेशन, टेस्टिंग और पैकिंग हम सँभालते हैं, ताकि मार्केटिंग कंपनियाँ निश्चिंत होकर बेच सकें। पुणे से हम केवल एलोपैथिक दवाइयाँ बनाते हैं — आपके खाते पर एक नामित व्यक्ति, और बैच आपकी संक्षेप के अनुसार।',
+      aboutPoints: [
+        'सोर्सिंग, रेसिपी और गुणवत्ता जाँच एक ही प्रक्रिया में।',
+        'नए ब्रांड और बढ़ते कैटलॉग के लिए लचीला बैच साइज।',
+        'शेल्फ लाइफ के लिए पैक: अलु-अलु, ब्लिस्टर, स्ट्रिप या बोतल।',
+      ],
       linksTitle: 'आगे बढ़ें',
       contactTitle: 'बात करें',
       formLead: 'जरूरत लिखें। इसे कोई व्यक्ति पढ़ेगा। स्पैम नहीं।',
@@ -365,7 +375,12 @@ export const copy = {
       promisesTitle: 'तुम्ही हे अपेक्षित करू शकता',
       aboutTitle: 'आमच्याबद्दल थोडक्यात',
       aboutTeaser:
-        'कच्चा माल, फॉर्म्युलेशन, चाचणी आणि पॅकिंग आम्ही पाहतो, जेणेकरून मार्केटिंग कंपन्या विश्वासाने विकू शकतील.',
+        'कच्चा माल, फॉर्म्युलेशन, चाचणी आणि पॅकिंग आम्ही पाहतो, जेणेकरून मार्केटिंग कंपन्या विश्वासाने विकू शकतील. पुण्याहून आम्ही फक्त अॅलोपॅथिक औषधे बनवतो — तुमच्या खात्यावर नेमलेली व्यक्ती, आणि बॅच तुमच्या संक्षेपानुसार.',
+      aboutPoints: [
+        'सोर्सिंग, रेसिपी आणि गुणवत्ता चाचणी एकाच प्रक्रियेत.',
+        'नवीन ब्रँड व वाढत्या कॅटलॉगसाठी लवचिक बॅच आकार.',
+        'शेल्फ लाइफसाठी पॅक: अलु-अलु, ब्लिस्टर, स्ट्रिप किंवा बाटली.',
+      ],
       linksTitle: 'पुढे जा',
       contactTitle: 'संवाद साधा',
       formLead: 'गरज लिहा. हे माणूस वाचेल. स्पॅम नाही.',

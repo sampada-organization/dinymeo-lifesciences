@@ -19,15 +19,10 @@ test.describe('Dinymeo MVP', () => {
     );
   });
 
-  test('language switch to Hindi and Marathi', async ({ page }) => {
+  test('language switcher is not shown', async ({ page }) => {
     await page.goto('/');
-    await page.getByRole('link', { name: 'HI', exact: true }).click();
-    await expect(page).toHaveURL(/\/hi\/?$/);
-    await expect(page.locator('html')).toHaveAttribute('lang', 'hi-IN');
-    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
-    await page.getByRole('link', { name: 'MR', exact: true }).click();
-    await expect(page).toHaveURL(/\/mr\/?$/);
-    await expect(page.locator('html')).toHaveAttribute('lang', 'mr-IN');
+    await expect(page.getByRole('navigation', { name: 'Language' })).toHaveCount(0);
+    await expect(page.getByRole('link', { name: 'HI', exact: true })).toHaveCount(0);
   });
 
   test('inner pages and legal docs', async ({ page }) => {

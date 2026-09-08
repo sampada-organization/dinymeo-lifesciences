@@ -2,27 +2,31 @@
   "packaging": [
     {
       "id": "alu-alu",
-      "en": "Alu-Alu",
-      "hi": "अलु-अलु",
-      "mr": "अलु-अलु"
+      "icon": "alu-alu",
+      "en": { "name": "Alu-Alu", "blurb": "Cold-form foil. Strong against light and moisture." },
+      "hi": { "name": "अलु-अलु", "blurb": "कोल्ड-फॉर्म फॉयल। रोशनी और नमी से बचाव।" },
+      "mr": { "name": "अलु-अलु", "blurb": "कोल्ड-फॉर्म फॉइल. प्रकाश व ओलावा यांपासून संरक्षण." }
     },
     {
       "id": "blister",
-      "en": "Blister",
-      "hi": "ब्लिस्टर",
-      "mr": "ब्लिस्टर"
+      "icon": "blister",
+      "en": { "name": "Blister", "blurb": "Clear pockets, one dose at a time, easy to count." },
+      "hi": { "name": "ब्लिस्टर", "blurb": "साफ जेबें, एक डोज एक साथ, गिनना आसान।" },
+      "mr": { "name": "ब्लिस्टर", "blurb": "स्वच्छ खिस्से, एक डोस एकदा, मोजणे सोपे." }
     },
     {
       "id": "strip",
-      "en": "Strip",
-      "hi": "स्ट्रिप",
-      "mr": "स्ट्रिप"
+      "icon": "strip",
+      "en": { "name": "Strip", "blurb": "Foil strips for everyday tablets and a long shelf life." },
+      "hi": { "name": "स्ट्रिप", "blurb": "रोजमर्रा की गोली के लिए फॉयल स्ट्रिप, लंबी शेल्फ लाइफ।" },
+      "mr": { "name": "स्ट्रिप", "blurb": "रोजच्या गोळ्यांसाठी फॉइल स्ट्रिप, दीर्घ शेल्फ लाइफ." }
     },
     {
       "id": "bottle",
-      "en": "Custom bottles",
-      "hi": "कस्टम बोतल",
-      "mr": "कस्टम बाटल्या"
+      "icon": "bottle",
+      "en": { "name": "Custom bottles", "blurb": "Glass or PET, labelled to your brand, sealed for the road." },
+      "hi": { "name": "कस्टम बोतल", "blurb": "काँच या PET, आपके ब्रांड का लेबल, रास्ते के लिए सील।" },
+      "mr": { "name": "कस्टम बाटल्या", "blurb": "काच किंवा PET, तुमच्या ब्रँडचे लेबल, रस्त्यासाठी सील." }
     }
   ],
   "items": [

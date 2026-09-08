@@ -51,8 +51,10 @@ const links = [
       <div class="grid-4">
         {
           c.promises.map((p) => (
-            <article class="card">
-              <Icon name={p.icon} />
+            <article class="card card-hover">
+              <span class="icon-tile on-navy">
+                <Icon name={p.icon} />
+              </span>
               <h3>{p.title}</h3>
               <p>{p.text}</p>
             </article>
@@ -63,20 +65,26 @@ const links = [
     </div>
   </section>
 
-  <section>
-    <div class="wrap grid-2">
-      <div>
-        <h2>{c.home.aboutTitle}</h2>
-        <p class="lede">{c.home.aboutTeaser}</p>
-        <p>
+  <section class="about-contact">
+    <div class="wrap split-about">
+      <article class="about-panel">
+        <div>
+          <p class="kicker">{c.nav.about}</p>
+          <h2>{c.home.aboutTitle}</h2>
+          <p class="lede">{c.home.aboutTeaser}</p>
+          <ul class="about-points">
+            {c.home.aboutPoints.map((point) => <li>{point}</li>)}
+          </ul>
+        </div>
+        <p class="about-cta">
           <a class="btn navy" href={localePath(lang, '/about')}>{c.nav.about}</a>
         </p>
-      </div>
-      <div>
+      </article>
+      <aside class="form-panel">
         <h2>{c.home.contactTitle}</h2>
         <p>{c.home.formLead}</p>
         <EnquiryForm lang={lang} compact />
-      </div>
+      </aside>
     </div>
   </section>
 </Base>
