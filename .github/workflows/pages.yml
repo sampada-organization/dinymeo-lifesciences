@@ -23,11 +23,22 @@ jobs:
         with:
           node-version: '22'
           cache: npm
+      - name: Resolve public URL
+        id: site
+        run: |
+          DOMAIN="${{ vars.PRODUCTION_DOMAIN }}"
+          if [ -n "$DOMAIN" ]; then
+            echo "url=https://${DOMAIN}" >> "$GITHUB_OUTPUT"
+            echo "base=/" >> "$GITHUB_OUTPUT"
+          else
+            echo "url=https://sampada-organization.github.io" >> "$GITHUB_OUTPUT"
+            echo "base=/dinymeo-lifesciences/" >> "$GITHUB_OUTPUT"
+          fi
       - run: npm ci
       - run: npm run build
         env:
-          PUBLIC_SITE_URL: https://sampada-organization.github.io
-          ASTRO_BASE: /dinymeo-lifesciences/
+          PUBLIC_SITE_URL: ${{ steps.site.outputs.url }}
+          ASTRO_BASE: ${{ steps.site.outputs.base }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
