@@ -5,4 +5,5 @@
 - Do not invent WHO-GMP certificate numbers, turnover, or product counts. See `docs/legal-claims.md`.
 - Do not ship the packaged Mont Heavy DEMO font.
 - Forms post to `/api/enquiry`. Local API: `scripts/api-dev.mjs`.
-- Brand colours: navy `#01008E`, blue `#1E78FE`, cyan `#4FD8FE`, orange `#FF7F00`.
+- Brand colours from the final logo PDF: navy `#2E3192`, blue `#3871C1`, cyan `#50ADE5`, orange `#F68712`.
+- Do not redraw the logo. Use `public/brand/logo-mark.svg` / `Logo.astro` (paths from the supplied AI/PDF).

@@ -91,7 +91,7 @@ const en: Record<'disclaimer' | 'privacy' | 'terms', LegalDoc> = {
       {
         heading: 'Intellectual property',
         body: [
-          'The Dinymeo name, the golden-ratio mark, and the site design are used with the owner’s permission. The packaged logo font “Mont Heavy DEMO” is a demo font and is not used on this website; the live wordmark uses the open Montserrat family.',
+          'The Dinymeo name and the golden-ratio device on this site are the company’s own mark, taken from the supplied final artwork. The packaged “Mont Heavy DEMO” font file is not loaded here; the wordmark is the outline already in that artwork. UI type uses open fonts (Montserrat, Noto Sans Devanagari).',
           'You may link to us. You may not hotlink files in a way that misrepresents the company.',
         ],
       },
@@ -200,7 +200,7 @@ const hi: Record<'disclaimer' | 'privacy' | 'terms', LegalDoc> = {
       {
         heading: 'बौद्धिक संपदा',
         body: [
-          'डिनिमियो नाम, गोल्डन-रेशियो चिह्न, और डिजाइन मालिक की अनुमति से हैं। पैक में मिला “Mont Heavy DEMO” फॉन्ट डेमो है और इस साइट पर नहीं लगा। लाइव वर्डमार्क खुले Montserrat परिवार का है।',
+          'डिनिमियो नाम और गोल्डन-रेशियो चिह्न इस साइट पर कंपनी का अपना चिह्न है, दी गई अंतिम आर्टवर्क से। पैक में मिला “Mont Heavy DEMO” फॉन्ट यहाँ लोड नहीं होता; वर्डमार्क उसी आर्टवर्क की रूपरेखा है।',
         ],
       },
       {
@@ -305,7 +305,7 @@ const mr: Record<'disclaimer' | 'privacy' | 'terms', LegalDoc> = {
       {
         heading: 'बौद्धिक संपदा',
         body: [
-          'डिनिमियो नाव, सुवर्ण-गुणोत्तर चिन्ह आणि डिझाइन मालकाच्या परवानगीने. “Mont Heavy DEMO” फॉन्ट डेमो आहे आणि या साइटवर वापरला नाही; लाइव्ह वर्डमार्क खुल्या Montserrat कुटुंबाचा आहे.',
+          'डिनिमियो नाव आणि सुवर्ण-गुणोत्तर चिन्ह या साइटवर कंपनीचे स्वतःचे चिन्ह आहे, दिलेल्या अंतिम आर्टवर्कमधून. “Mont Heavy DEMO” फॉन्ट येथे लोड होत नाही; वर्डमार्क त्या आर्टवर्कची रूपरेषा आहे.',
         ],
       },
       {

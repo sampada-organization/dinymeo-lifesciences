@@ -27,7 +27,7 @@ Home (slideshow, intro, promises, short about, enquiry) · About · Manufacturin
 
 ## Brand
 
-Navy `#01008E`, blue `#1E78FE`, cyan `#4FD8FE`, orange `#FF7F00`. Animated SVG mark (golden-ratio leaves + D), decorative construction, and icon set. Raster heroes are decorative only — no product claims in the pictures.
+Navy `#2E3192`, blue `#3871C1`, cyan `#50ADE5`, orange `#F68712` — taken from the supplied golden-ratio final artwork. The SVG mark is that original device, not a redraw. Raster heroes are decorative only.
 
 ## Legal (v1)
 

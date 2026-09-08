@@ -27,9 +27,15 @@ This is not legal advice. It records how v1 treats statements from the client br
 - `/legal/terms` — IP, quotes are not contracts, Pune jurisdiction.
 - Footer quality note on every page that mentions WHO-GMP.
 
-## Font
+## Logo and type
 
-The packaged **Mont Heavy DEMO** file is a demo font and is **not** used on the website. The live wordmark uses the open **Montserrat** family.
+The live SVG is traced from the supplied **Dinymeo golden ratio Final LOGO** PDF/AI (and the `final/` lockup). It is the company device, not a redrawn lookalike. Using a mismatched mark on a pharma site is a trademark risk; the site now uses the original outlines.
+
+The packaged **Mont Heavy DEMO** font file is still **not** loaded on the website (demo licences forbid that). The wordmark you see is the outline already drawn in the logo artwork.
+
+## Font leftover
+
+UI text (headings, body, Hindi/Marathi) uses Montserrat and Noto Sans Devanagari, not the demo font.
 
 ## Still needed from the client before stronger claims
 
