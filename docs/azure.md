@@ -1,45 +1,48 @@
-# Azure + GitHub CI/CD
+# Azure host — Free SKU only (billing zero)
 
-GitHub is already authenticated in this environment as `sampada-organization`. **Azure CLI is not logged in** (and may not be installed). The website is wired so that Azure login is the only missing production step.
+The production host is **Azure Static Web Apps, SKU Free**. That SKU has no compute charge. Do not change it to Standard.
 
-## Free tier used
-
-| Resource | SKU | Role |
+| Resource | SKU | Cost |
 |---|---|---|
-| Azure Static Web Apps | Free | Host, TLS, custom domain, proxied `/api` |
-| Azure Functions (SWA managed) | Consumption, included | Enquiry form + CMS password gate |
-| GitHub Actions | Included | Test, build, deploy |
+| Static Web App + managed TLS | Free | $0 |
+| Managed `/api` functions | included | $0 |
+| GitHub Actions on this public repo | included | $0 |
+| Enquiry inbox | private GitHub issues | $0 |
 
-No App Service plan, no Cosmos, no Front Door in v1.
+No App Service, Storage, Cosmos, Front Door, Application Insights, or email service is created.
 
-## One-time Azure login
+## One-time login and create
 
 ```bash
-# install CLI if needed
-curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-az login
+export PATH="$HOME/.local/bin:$PATH"
+az login --use-device-code
 bash scripts/azure-bootstrap.sh
 ```
 
-The script creates `rg-dinymeo` + a Free Static Web App and sets the GitHub secret `AZURE_STATIC_WEB_APPS_API_TOKEN`.
+The script:
 
-Optional secrets:
+1. Creates `rg-dinymeo` tagged `billing=zero`
+2. Creates `dinymeo-web` with **SKU=Free** and aborts if the SKU is anything else
+3. Stores form mail as issues on the **private** repo `dinymeo-enquiries` (never on the public website repo)
+4. Sets GitHub secret `AZURE_STATIC_WEB_APPS_API_TOKEN` so `main` deploys
+5. Tries to attach a $1 monthly budget alert (1% = a penny) if the subscription allows it
 
-- `CMS_PASSWORD` — admin editor at `/admin`
-- `ENQUIRY_GITHUB_TOKEN` — turn form posts into private GitHub issues
+Then re-run the **Azure Static Web Apps** workflow, or `git push`.
 
-## Pipelines
+## Contact form
 
-- `.github/workflows/ci.yml` — unit tests, production build, Playwright
-- `.github/workflows/azure-swa.yml` — deploy to Azure (no-ops until the token secret exists)
-- `.github/workflows/pages.yml` — GitHub Pages preview
+`POST /api/enquiry` on the Static Web App:
 
-## Local API that matches Azure
+- honeypot, fill-time check, 5 posts / IP / hour
+- CORS only for this SWA origin and local dev
+- writes a **private** GitHub issue, not a public one, not Azure Table (Table would bill)
 
-```bash
-npm run dev:full
-# site  http://127.0.0.1:4321
-# api   http://127.0.0.1:8788  (proxied as /api on the site)
-```
+## What would start a bill (do not do)
 
-Enquiries without a GitHub token are appended to `.data/enquiries.json` (gitignored).
+- Switching the Static Web App to Standard
+- Adding Application Insights
+- Adding Azure Communication Services / SendGrid on Azure
+- Adding a custom domain through a paid Front Door
+- Turning off a spending limit on a trial subscription and then creating paid SKUs
+
+Custom domain on the **Free** SWA itself is still $0 (Azure-managed certificate).

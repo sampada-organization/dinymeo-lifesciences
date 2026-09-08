@@ -13,7 +13,8 @@ const c = t(lang);
 
 <form class="enquiry" data-enquiry method="post" action={withBase('/api/enquiry')} novalidate>
   <input type="hidden" name="lang" value={lang} />
-  <input type="text" name="company_website" class="hp" tabindex="-1" autocomplete="off" />
+  <input type="hidden" name="started_at" value="" data-started />
+  <input type="text" name="company_website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
   <label>
     {c.form.name}
     <input name="name" required maxlength="80" autocomplete="name" />
@@ -85,10 +86,8 @@ const c = t(lang);
     status.textContent = msg;
   }
 
-  function waFallback(data) {
-    const text = `${data.name} / ${data.company}\n${data.phone}\n${data.email}\n\n${data.message}`;
-    window.location.href = `https://wa.me/917775000425?text=${encodeURIComponent(text)}`;
-  }
+  const started = form?.querySelector('[data-started]');
+  if (started) started.value = String(Date.now());
 
   form?.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -108,9 +107,9 @@ const c = t(lang);
       if (!res.ok) throw new Error('fail');
       setStatus('ok', strings.sent);
       form.reset();
+      if (started) started.value = String(Date.now());
     } catch {
       setStatus('err', strings.fail);
-      waFallback(data);
     }
   });
 </script>

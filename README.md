@@ -35,7 +35,14 @@ WHO-GMP / GLP / ISO wording is a **site footnote**: certificates belong to manuf
 
 ## Azure / GitHub / domain
 
-GitHub account `sampada-organization` is ready. **Log in to Azure** (`az login`) then run `bash scripts/azure-bootstrap.sh`. Domain notes: [docs/domain.md](docs/domain.md). Pipelines: [docs/azure.md](docs/azure.md).
+Production is **Azure Static Web Apps, SKU Free only** (no compute charge). Contact form posts land as issues on the private `dinymeo-enquiries` repo — never on the public website repo.
+
+```bash
+az login --use-device-code
+bash scripts/azure-bootstrap.sh
+```
+
+Details: [docs/azure.md](docs/azure.md). Domain: [docs/domain.md](docs/domain.md).
 
 Suggested domains (unchecked-out on 7 Sep 2026): `dinymeo.com`, `dinymeo.in`.
 

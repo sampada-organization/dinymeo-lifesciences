@@ -4,6 +4,8 @@ import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
+process.env.CMS_PASSWORD ||= 'dinymeo-dev';
+
 const require = createRequire(import.meta.url);
 const enquiry = require('../api/enquiry/index.js');
 const cms = require('../api/cms/index.js');
