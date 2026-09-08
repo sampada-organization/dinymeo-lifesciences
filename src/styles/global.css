@@ -8,8 +8,8 @@
   --gold-deep: #9a7b32;
   --orange: #c4a35a;
   --d-outer: #2e3192;
-  --paper: #f6f3ec;
-  --white: #fffcf7;
+  --paper: #f5f6fa;
+  --white: #ffffff;
   --ink: #1c1f2e;
   --muted: #5a5f73;
   --line: color-mix(in srgb, var(--navy) 10%, transparent);
@@ -194,9 +194,8 @@ h3 {
   top: 0;
   z-index: 40;
   height: var(--header);
-  background: color-mix(in srgb, var(--white) 92%, transparent);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--line);
+  background: #ffffff;
+  border-bottom: 1px solid color-mix(in srgb, var(--navy) 12%, #e6e8ef);
 }
 
 .site-header .bar {
@@ -218,8 +217,9 @@ h3 {
 .brand span {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 1.05rem;
+  font-size: clamp(0.88rem, 3.6vw, 1.05rem);
   letter-spacing: -0.03em;
+  line-height: 1.15;
   transition: color 180ms ease;
 }
 
@@ -517,8 +517,8 @@ section {
 
 .about-panel,
 .form-panel {
-  background: var(--white);
-  border: 1px solid var(--line);
+  background: #ffffff;
+  border: 1px solid color-mix(in srgb, var(--navy) 14%, #e6e8ef);
   border-radius: var(--radius);
   padding: 2rem 1.8rem;
   display: flex;
@@ -564,8 +564,7 @@ section {
 }
 
 .about-contact {
-  background:
-    linear-gradient(180deg, transparent 0%, color-mix(in srgb, var(--gold) 7%, transparent) 100%);
+  background: var(--paper);
 }
 
 form.enquiry {
@@ -584,10 +583,23 @@ form.enquiry input,
 form.enquiry textarea {
   font: inherit;
   padding: 0.65rem 0.75rem;
-  border: 1px solid color-mix(in srgb, var(--navy) 22%, transparent);
+  border: 1.5px solid #b7bdd0;
   border-radius: var(--radius);
-  background: var(--white);
+  background: #ffffff;
+  color: var(--ink);
   min-height: 2.75rem;
+}
+
+form.enquiry input:hover,
+form.enquiry textarea:hover {
+  border-color: #8e96b0;
+}
+
+form.enquiry input:focus,
+form.enquiry textarea:focus {
+  outline: none;
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--navy) 16%, transparent);
 }
 
 form.enquiry textarea {
@@ -774,6 +786,7 @@ form.enquiry textarea {
 
   .nav.is-open {
     display: flex;
+    background: #ffffff;
   }
 
   .grid-4,
@@ -784,12 +797,31 @@ form.enquiry textarea {
     grid-template-columns: 1fr;
   }
 
+  .brand {
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: 0.5rem;
+  }
+
   .brand span {
-    display: none;
+    display: inline;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .logo.mark {
+    width: 2.15rem;
+    flex-shrink: 0;
   }
 
   .hero-copy {
     padding-top: 4.5rem;
+  }
+
+  .form-panel,
+  .about-panel {
+    background: #ffffff;
   }
 }
 

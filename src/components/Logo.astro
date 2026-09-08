@@ -40,7 +40,10 @@ const viewBox = variant === 'mark' ? '345.375 284.340 194.395 157.883' : '345.37
 
 <style>
   .logo { width: 100%; height: auto; overflow: visible; }
-  .logo.mark { width: 2.6rem; }
+  .logo.mark { width: 2.6rem; flex-shrink: 0; }
+  @media (max-width: 760px) {
+    .logo.mark { width: 2.15rem; }
+  }
   .logo.lockup { width: 9.2rem; }
   .invert .d-outer,
   .invert .d-drop,
