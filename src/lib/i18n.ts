@@ -50,6 +50,20 @@ export const copy = {
         'We connect healthcare innovation with the market. Dinymeo makes a full range of allopathic medicines for marketing partners.',
       body:
         'As a premium pharmaceutical company in India, we specialise in a comprehensive range of essential medicines.',
+      flowTitle: 'How we stay in sync',
+      flowLead: 'You bring the market. We run the back end. Each step talks to the next, so the batch you sell is the brief you sent.',
+      flowPartner: 'You',
+      flowOps: 'Dinymeo',
+      flowSync: 'In sync',
+      flow: [
+        { title: 'Brief', text: 'Molecule, pack, market.' },
+        { title: 'Formulation', text: 'Stable product work.' },
+        { title: 'QA sync', text: 'Specs you can see.' },
+        { title: 'Make', text: 'Documented batch.' },
+        { title: 'Pack', text: 'Barrier pack chosen.' },
+        { title: 'Dispatch', text: 'On the promised date.' },
+        { title: 'Your brand', text: 'You take it to market.' },
+      ],
       promisesTitle: 'What you can count on',
       aboutTitle: 'A short word about us',
       aboutTeaser:
@@ -226,6 +240,20 @@ export const copy = {
         'हम स्वास्थ्य नवाचार को बाजार तक लाते हैं। डिनिमियो मार्केटिंग पार्टनर के लिए एलोपैथिक दवाइयाँ बनाती है।',
       body:
         'भारत की एक प्रीमियम फार्मा कंपनी के रूप में, हम ज़रूरी दवाइयों की व्यापक रेंज में विशेषज्ञ हैं।',
+      flowTitle: 'हम कैसे साथ चलते हैं',
+      flowLead: 'बाजार आपका। बैक एंड हमारा। हर कदम अगले से जुड़ा, ताकि बैच वही हो जो आपने कहा।',
+      flowPartner: 'आप',
+      flowOps: 'डिनिमियो',
+      flowSync: 'साथ',
+      flow: [
+        { title: 'संक्षेप', text: 'मॉलीक्यूल, पैक, बाजार।' },
+        { title: 'फॉर्मूलेशन', text: 'स्थिर उत्पाद कार्य।' },
+        { title: 'QA साथ', text: 'स्पेक जो दिखें।' },
+        { title: 'बनाना', text: 'दर्ज बैच।' },
+        { title: 'पैक', text: 'बैरियर पैक।' },
+        { title: 'डिस्पैच', text: 'तय तारीख पर।' },
+        { title: 'आपका ब्रांड', text: 'बाजार आप ले जाएँ।' },
+      ],
       promisesTitle: 'आप हम पर यह भरोसा कर सकते हैं',
       aboutTitle: 'हमारे बारे में संक्षेप में',
       aboutTeaser:
@@ -389,6 +417,20 @@ export const copy = {
         'आम्ही आरोग्य नावीन्य बाजारपेठेपर्यंत नेतो. डिनिमियो मार्केटिंग भागीदारांसाठी अॅलोपॅथिक औषधे बनवते.',
       body:
         'भारतातील एक प्रीमियम फार्मा कंपनी म्हणून, आम्ही आवश्यक औषधांच्या व्यापक श्रेणीत विशेषज्ञ आहोत.',
+      flowTitle: 'आम्ही कसे एकत्र राहतो',
+      flowLead: 'बाजार तुमचा. बॅक एंड आमचा. प्रत्येक टप्पा पुढच्याशी जोडलेला, जेणेकरून बॅच तुमच्या संक्षेपाइतकीच असेल.',
+      flowPartner: 'तुम्ही',
+      flowOps: 'डिनिमियो',
+      flowSync: 'एकत्र',
+      flow: [
+        { title: 'संक्षेप', text: 'मॉलिक्यूल, पॅक, बाजार.' },
+        { title: 'फॉर्म्युलेशन', text: 'स्थिर उत्पादन कार्य.' },
+        { title: 'QA एकत्र', text: 'दिसणारे स्पेक.' },
+        { title: 'बनवणे', text: 'नोंदवलेला बॅच.' },
+        { title: 'पॅक', text: 'बॅरियर पॅक.' },
+        { title: 'डिस्पॅच', text: 'ठरलेल्या तारखेला.' },
+        { title: 'तुमचा ब्रँड', text: 'बाजार तुम्ही नेता.' },
+      ],
       promisesTitle: 'तुम्ही हे अपेक्षित करू शकता',
       aboutTitle: 'आमच्याबद्दल थोडक्यात',
       aboutTeaser:

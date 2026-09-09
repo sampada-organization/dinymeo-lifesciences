@@ -469,6 +469,10 @@ section {
   padding: clamp(3rem, 8vw, 6rem) 0;
 }
 
+.flow-kicker {
+  margin-top: 2.2rem;
+}
+
 .band-navy {
   background: var(--navy);
   color: var(--white);
@@ -492,6 +496,7 @@ section {
 
 .pack-hero img {
   width: 100%;
+  max-width: 100%;
   height: min(22rem, 52vw);
   object-fit: cover;
   object-position: 70% 55%;
@@ -967,6 +972,19 @@ form.enquiry textarea {
   .logo.mark {
     width: 2.15rem;
     flex-shrink: 0;
+  }
+
+  .hero {
+    min-height: min(78vh, 34rem);
+  }
+
+  .hero-slide img {
+    object-position: 22% 50%;
+  }
+
+  .hero-slide .overview-map,
+  .hero-slide .pack-mindmap {
+    display: none;
   }
 
   .hero-copy {

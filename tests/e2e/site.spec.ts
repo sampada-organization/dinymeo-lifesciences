@@ -82,9 +82,13 @@ test.describe('Dinymeo MVP', () => {
     await expect(page.getByRole('button', { name: 'Previous slide' })).toBeVisible();
     await expect(page.getByRole('button', { name: 'Next slide' })).toBeVisible();
     await expect(page.locator('.hero-hold')).toContainText(/Hold to pause/i);
-    await expect(page.locator('.hero-slide.is-active svg.overview-map')).toBeVisible();
+    const narrow = (page.viewportSize()?.width ?? 1200) < 761;
     await expect(page.locator('.hero-slide.is-active img')).toHaveAttribute('src', /flyer-overview/);
-    await expect(page.locator('.overview-map')).toContainText('Dinymeo');
+    await expect(page.locator('svg.flow-scene')).toBeVisible();
+    if (!narrow) {
+      await expect(page.locator('.hero-slide.is-active svg.overview-map')).toBeVisible();
+      await expect(page.locator('.overview-map')).toContainText('Dinymeo');
+    }
     await expect(page.locator('body')).not.toContainText(/research-led/i);
     await expect(page.locator('body')).toContainText(/premium pharmaceutical company in India/i);
     await page.getByRole('button', { name: 'Next slide' }).click();
@@ -92,9 +96,11 @@ test.describe('Dinymeo MVP', () => {
     await expect(page.locator('.hero-slide.is-active img')).toHaveAttribute('src', /flyer-manufacturing/);
     await page.getByRole('button', { name: 'Next slide' }).click();
     await expect(page.locator('[data-title]')).toContainText(/Packs that protect/i);
-    await expect(page.locator('.hero-slide.is-active svg.pack-mindmap')).toBeVisible();
     await expect(page.locator('.hero-slide.is-active img')).toHaveAttribute('src', /flyer-packaging/);
-    await expect(page.locator('.pack-mindmap')).toContainText('ICH Q1A');
+    if (!narrow) {
+      await expect(page.locator('.hero-slide.is-active svg.pack-mindmap')).toBeVisible();
+      await expect(page.locator('.pack-mindmap')).toContainText('ICH Q1A');
+    }
     await page.getByRole('button', { name: 'Next slide' }).click();
     await expect(page.locator('[data-title]')).toContainText(/worldwide/i);
     await expect(page.locator('.hero-slide.is-active img')).toHaveAttribute('src', /flyer-supply/);

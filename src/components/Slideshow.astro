@@ -27,6 +27,8 @@ const slides = slideData.items;
           {'image' in slide && slide.image ? (
             <img
               src={asset(slide.image)}
+              srcset={`${asset(slide.image.replace(/(\.[a-z]+)$/i, '-sm$1'))} 640w, ${asset(slide.image)} 1156w`}
+              sizes="100vw"
               alt=""
               width="1156"
               height="658"
