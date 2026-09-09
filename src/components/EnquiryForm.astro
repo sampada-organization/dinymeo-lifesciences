@@ -39,10 +39,6 @@ const c = t(lang);
     {c.form.message}
     <textarea name="message" required maxlength="2000"></textarea>
   </label>
-  <label class="consent">
-    <input type="checkbox" name="consent" value="yes" required />
-    <span>{c.form.consent}</span>
-  </label>
   <button class="btn navy" type="submit">{c.cta.send}</button>
   <p class="form-status" data-status role="status"></p>
   <p class="alt">
@@ -81,7 +77,7 @@ const c = t(lang);
   }
 </style>
 
-<script define:vars={{ strings: c.cta, formCopy: c.form }}>
+<script define:vars={{ strings: c.cta }}>
   const form = document.querySelector('[data-enquiry]');
   const status = form?.querySelector('[data-status]');
 
@@ -98,10 +94,6 @@ const c = t(lang);
     event.preventDefault();
     const fd = new FormData(form);
     const data = Object.fromEntries(fd.entries());
-    if (!data.consent) {
-      setStatus('err', formCopy.consent);
-      return;
-    }
     setStatus('', strings.sending);
     try {
       const res = await fetch(form.getAttribute('action'), {

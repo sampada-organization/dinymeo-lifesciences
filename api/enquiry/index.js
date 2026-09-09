@@ -56,9 +56,8 @@ module.exports = async function (context, req) {
   const company = String(body.company || '').trim().slice(0, 120);
   const message = String(body.message || '').trim().slice(0, 2000);
   const lang = String(body.lang || 'en').trim().slice(0, 8);
-  const consent = String(body.consent || '').toLowerCase();
 
-  if (!name || !email || !phone || !company || !message || consent !== 'yes') {
+  if (!name || !email || !phone || !company || !message) {
     context.res = json(req, 400, { ok: false, reason: 'fields' });
     return;
   }

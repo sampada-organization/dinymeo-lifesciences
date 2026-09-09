@@ -58,7 +58,7 @@ const en: Record<'disclaimer' | 'privacy' | 'terms', LegalDoc> = {
       {
         heading: 'Why we use it',
         body: [
-          'We use enquiry details only to reply, to understand a manufacturing request, and to keep a short business record. Lawful basis: your consent (the checkbox) and our need to take steps at your request before a contract.',
+          'We use enquiry details only to reply, to understand a manufacturing request, and to keep a short business record. Lawful basis: our need to take steps at your request before a contract.',
           'We do not sell personal data. We do not use it for public drug advertising.',
         ],
       },

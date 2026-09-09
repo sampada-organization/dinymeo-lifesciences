@@ -9,12 +9,12 @@ function invoke(handler: Function, req: object) {
 }
 
 describe('enquiry API', () => {
-  it('rejects missing consent and does not use wildcard CORS', async () => {
+  it('rejects missing fields and does not use wildcard CORS', async () => {
     const handler = require('../../api/enquiry/index.js');
     const res = await invoke(handler, {
       method: 'POST',
       headers: { origin: 'https://evil.example' },
-      body: { name: 'A', email: 'a@b.co', phone: '7775000425', company: 'X', message: 'hi', consent: '' },
+      body: { email: 'a@b.co', phone: '7775000425', company: 'X', message: 'hi' },
     });
     expect(res.status).toBe(400);
     expect(res.headers['Access-Control-Allow-Origin']).toBeUndefined();
@@ -31,7 +31,6 @@ describe('enquiry API', () => {
         phone: '7775000425',
         company: 'Acme Pharma',
         message: 'Need a quote for blister packs',
-        consent: 'yes',
         lang: 'en',
       },
     });

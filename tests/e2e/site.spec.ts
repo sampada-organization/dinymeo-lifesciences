@@ -38,7 +38,7 @@ test.describe('Dinymeo MVP', () => {
     await expect(page.locator('main')).not.toContainText(/small or large/i);
   });
 
-  test('enquiry form requires consent and has five fields', async ({ page }) => {
+  test('enquiry form has five fields', async ({ page }) => {
     await page.goto('/contact');
     const form = page.locator('form.enquiry');
     await expect(form.getByRole('textbox', { name: 'Name', exact: true })).toBeVisible();
