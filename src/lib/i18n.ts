@@ -46,13 +46,13 @@ export const copy = {
       description:
         'Allopathic contract manufacturing. Formulate, test, pack, ship — for marketing partners.',
       welcome: 'Dinymeo Lifesciences',
-      intro: 'You sell. We make.',
+      intro: 'Allopathic contract manufacturing for marketing partners.',
       body: 'Premium allopathic science. Essential medicines. India-based. Global partners.',
-      flowTitle: 'Brief → brand',
+      flowTitle: 'Brief to brand',
       flowLead: '',
       flowPartner: 'You',
       flowOps: 'Dinymeo',
-      flowSync: 'In sync',
+      flowSync: 'Together',
       flow: [
         { title: 'Brief', text: 'Signed need.' },
         { title: 'Source', text: 'API in.' },
@@ -60,28 +60,28 @@ export const copy = {
         { title: 'Stability', text: 'ICH data.' },
         { title: 'QA', text: 'COA on file.' },
         { title: 'Make', text: 'Documented batch.' },
-        { title: 'Pack', text: 'Sealed barrier.' },
-        { title: 'Dispatch', text: 'Leaves on date.' },
-        { title: 'Your brand', text: 'You sell.' },
+        { title: 'Pack', text: 'Filled and sealed.' },
+        { title: 'Dispatch', text: 'Released as agreed.' },
+        { title: 'Your brand', text: 'On your label.' },
       ],
-      casesTitle: 'If this is you',
+      casesTitle: 'Who we work with',
       cases: [
         { icon: 'spark', title: 'New brand', text: 'First SKU. We formulate and pack.' },
         { icon: 'pack', title: 'Grow the list', text: 'Add a line. No new plant.' },
         { icon: 'lock', title: 'Private label', text: 'Your name. Our batch.' },
         { icon: 'pulse', title: 'Hospital line', text: 'Critical-care packs. Records on file.' },
       ],
-      promisesTitle: 'The contract',
+      promisesTitle: 'What we deliver',
       aboutTitle: 'Who we are',
-      aboutTeaser: 'Back end only: source, formulate, test, pack. You keep the market.',
+      aboutTeaser: 'We source, formulate, test and pack. You keep the brand and the market.',
       aboutPoints: [
         'One process. One named person.',
         'Batch size that fits the brief.',
         'Alu-Alu, blister, strip, bottle, tube.',
       ],
-      linksTitle: 'Go',
-      contactTitle: 'Talk',
-      formLead: 'One human reads this.',
+      linksTitle: 'Explore',
+      contactTitle: 'Enquiry',
+      formLead: 'We read every enquiry.',
     },
     promises: [
       {
@@ -91,18 +91,18 @@ export const copy = {
       },
       {
         icon: 'pack',
-        title: 'Barrier pack',
+        title: 'Packaging',
         text: 'Alu-Alu, blister, strip, bottle, tube.',
       },
       {
         icon: 'globe',
-        title: 'Ships out',
-        text: 'Your market. On the date.',
+        title: 'Dispatch',
+        text: 'Released for your market as agreed.',
       },
       {
         icon: 'clock',
-        title: 'Visible clock',
-        text: 'Brief to dispatch. You see it.',
+        title: 'Timeline',
+        text: 'Brief through dispatch, visible to you.',
       },
     ],
     about: {
@@ -110,10 +110,10 @@ export const copy = {
       description:
         'Dinymeo is a pharmaceutical company making allopathic medicines for marketing partners, with a focus on compliance, confidentiality and practical supply.',
       kicker: 'Company',
-      headline: 'Partners first.',
+      headline: 'A manufacturing partner.',
       overview:
         'Dinymeo Lifesciences Pvt. Ltd. makes allopathic medicines for marketing companies. End to end. Confidential.',
-      operations: 'Source. Formulate. Test. Pack. You brand it.',
+      operations: 'Source, formulate, test and pack — under your brand.',
       valuesTitle: 'How we work',
       values: [
         {
@@ -129,12 +129,12 @@ export const copy = {
           text: 'One account. Flexible size.',
         },
         {
-          title: 'Clinic + shelf',
-          text: 'Retail and critical-care packs.',
+          title: 'Retail and hospital',
+          text: 'Shelf packs and critical-care packs.',
         },
       ],
       whyTitle: 'Why us',
-      why: ['Quality on file', 'Science first', 'Confidential batches', 'Ships on the date'],
+      why: ['Quality on file', 'Documented science', 'Confidential batches', 'Dispatch as agreed'],
       specialtiesTitle: 'Therapy',
       specialties:
         'Heart. Infection. Women’s health. Skin. Child. Gut. Surgery. Everyday care.',
@@ -144,17 +144,17 @@ export const copy = {
       description:
         'Allopathic contract manufacturing across cardiology, antibiotics, gynaecology, dermatology, paediatrics and general medicine. Alu-Alu, blister, strip, bottle and tube packing.',
       kicker: 'Range',
-      headline: 'Brand our science.',
+      headline: 'Manufacturing for your brand.',
       lead: 'Therapy categories for licensed partners.',
       productsTitle: 'Therapy',
       packTitle: 'Pack',
       packImageAlt: 'Premium pharmaceutical packs: Alu-Alu, blister, strip, bottle and tube.',
-      processTitle: 'The path',
+      processTitle: 'From brief to dispatch',
       steps: [
         { title: 'Brief', text: 'Molecule. Strength. Pack. Market.' },
         { title: 'Formulation', text: 'Stability and specs. Then lock.' },
         { title: 'Make', text: 'Documented batch. Then pack.' },
-        { title: 'Dispatch', text: 'Checked. On the date.' },
+        { title: 'Dispatch', text: 'Checked, then released.' },
       ],
     },
     contact: {
@@ -162,7 +162,7 @@ export const copy = {
       description:
         'Partner with Dinymeo Lifesciences Pvt Ltd. Call, WhatsApp or email for third-party manufacturing.',
       kicker: 'Enquiry',
-      headline: 'Let’s make it.',
+      headline: 'Send a brief.',
       lead: 'Companies and licensed traders only.',
       office: 'Registered office',
       hours: 'Business hours',
