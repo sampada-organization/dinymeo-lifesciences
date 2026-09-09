@@ -18,14 +18,14 @@ const c = t(lang);
   description={c.manufacturing.description}
   current="manufacturing"
 >
-  <section>
+  <section data-section={c.manufacturing.kicker}>
     <div class="wrap">
       <p class="kicker">{c.manufacturing.kicker}</p>
       <h1>{c.manufacturing.headline}</h1>
       <p class="lede">{c.manufacturing.lead}</p>
     </div>
   </section>
-  <section>
+  <section data-section={c.manufacturing.productsTitle}>
     <div class="wrap">
       <h2>{c.manufacturing.productsTitle}</h2>
       <div class="grid-4">
@@ -43,7 +43,7 @@ const c = t(lang);
       </div>
     </div>
   </section>
-  <section class="pack-band">
+  <section class="pack-band" data-section={c.manufacturing.packTitle}>
     <div class="wrap">
       <h2>{c.manufacturing.packTitle}</h2>
       <figure class="pack-hero">
@@ -80,7 +80,7 @@ const c = t(lang);
       </div>
     </div>
   </section>
-  <section>
+  <section data-section={c.manufacturing.processTitle}>
     <div class="wrap">
       <h2>{c.manufacturing.processTitle}</h2>
       <ol class="process">

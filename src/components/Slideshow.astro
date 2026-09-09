@@ -11,7 +11,7 @@ const c = t(lang);
 const slides = slideData.items;
 ---
 
-<section class="hero" aria-roledescription="carousel" aria-label="Highlights">
+<section class="hero" data-section="Overview" aria-roledescription="carousel" aria-label="Highlights">
   {
     slides.map((slide, i) => {
       const visual = 'visual' in slide ? slide.visual : 'photo';

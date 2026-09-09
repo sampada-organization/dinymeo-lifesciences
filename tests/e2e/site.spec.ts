@@ -83,6 +83,17 @@ test.describe('Dinymeo MVP', () => {
     await expect(page.locator('body')).not.toContainText(/no consumer doses/i);
   });
 
+  test('section roller names the current view', async ({ page }) => {
+    await page.goto('/');
+    const roller = page.locator('.section-roller');
+    await expect(roller).toBeVisible();
+    await expect(roller.getByRole('button', { name: 'Overview' })).toHaveCount(1);
+    await roller.getByRole('button', { name: 'Who we work with' }).click({ force: true });
+    await expect(roller.locator('.roller-item.is-current')).toHaveText('Who we work with');
+    await page.goto('/legal/disclaimer');
+    await expect(page.locator('.section-roller')).toHaveCount(0);
+  });
+
   test('hero has hold-to-pause controls and a pack-science mindmap', async ({ page }) => {
     await page.goto('/');
     await expect(page.getByRole('button', { name: 'Previous slide' })).toBeVisible();
@@ -93,13 +104,13 @@ test.describe('Dinymeo MVP', () => {
     await expect(page.locator('.flow-scene')).toContainText('Formulation');
     await expect(page.locator('body')).not.toContainText(/research-led/i);
     await expect(page.getByRole('heading', { name: 'Who we work with' })).toBeVisible();
-    await page.getByRole('button', { name: 'Next slide' }).click();
+    await page.locator('.hero-nav.next').click();
     await expect(page.locator('[data-title]')).toContainText(/Stability, then manufacture/i);
     await expect(page.locator('.hero-slide.is-active img')).toHaveAttribute('src', /flyer-manufacturing/);
-    await page.getByRole('button', { name: 'Next slide' }).click();
+    await page.locator('.hero-nav.next').click();
     await expect(page.locator('[data-title]')).toContainText(/Packaging for the formulation/i);
     await expect(page.locator('.hero-slide.is-active img')).toHaveAttribute('src', /flyer-packaging/);
-    await page.getByRole('button', { name: 'Next slide' }).click();
+    await page.locator('.hero-nav.next').click();
     await expect(page.locator('[data-title]')).toContainText(/Dispatch as agreed/i);
     await expect(page.locator('.hero-slide.is-active img')).toHaveAttribute('src', /flyer-supply/);
   });

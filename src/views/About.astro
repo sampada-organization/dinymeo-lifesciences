@@ -14,7 +14,7 @@ const c = t(lang);
 ---
 
 <Base lang={lang} title={c.about.title} description={c.about.description} current="about">
-  <section>
+  <section data-section={c.about.kicker}>
     <div class="wrap">
       <p class="kicker">{c.about.kicker}</p>
       <h1>{c.about.headline}</h1>
@@ -22,7 +22,7 @@ const c = t(lang);
       <p>{c.about.operations}</p>
     </div>
   </section>
-  <section class="band-navy">
+  <section class="band-navy" data-section={c.about.valuesTitle}>
     <div class="wrap">
       <h2>{c.about.valuesTitle}</h2>
       <div class="grid-2">
@@ -40,7 +40,7 @@ const c = t(lang);
       </div>
     </div>
   </section>
-  <section>
+  <section data-section={c.about.whyTitle}>
     <div class="wrap grid-2">
       <div>
         <h2>{c.about.whyTitle}</h2>

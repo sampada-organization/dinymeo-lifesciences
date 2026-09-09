@@ -7,6 +7,7 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ContactDock from '../components/ContactDock.astro';
+import SectionRoller from '../components/SectionRoller.astro';
 import { localeMeta, type Locale, t } from '../lib/i18n';
 import { localePath, withBase, unprefixedPath } from '../lib/paths';
 import { siteData } from '../lib/site';
@@ -18,6 +19,7 @@ interface Props {
   current: 'home' | 'about' | 'manufacturing' | 'contact' | 'legal' | 'admin';
 }
 const { lang, title, description, current } = Astro.props;
+const paged = current === 'home' || current === 'about' || current === 'manufacturing' || current === 'contact';
 const meta = localeMeta[lang];
 const origin = Astro.site ?? new URL('https://dinymeo.com');
 const page = unprefixedPath(Astro.url.pathname);
@@ -67,13 +69,27 @@ const jsonLd = {
     <meta name="generator" content={Astro.generator} />
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   </head>
-  <body data-lang={lang}>
+  <body class:list={[{ 'is-paged': paged }]} data-lang={lang}>
     <Header lang={lang} current={current} />
-    <main id="main">
-      <slot />
-    </main>
-    <Footer lang={lang} />
+    {
+      paged ? (
+        <div class="page-flow" id="page-flow">
+          <main id="main">
+            <slot />
+          </main>
+          <Footer lang={lang} />
+        </div>
+      ) : (
+        <>
+          <main id="main">
+            <slot />
+          </main>
+          <Footer lang={lang} />
+        </>
+      )
+    }
     <ContactDock lang={lang} />
+    {paged ? <SectionRoller lang={lang} /> : null}
     <noscript>
       <p class="wrap">{t(lang).footer.b2b}</p>
     </noscript>

@@ -23,18 +23,24 @@ const links = [
 <Base lang={lang} title={c.home.title} description={c.home.description} current="home">
   <Slideshow lang={lang} />
 
-  <section>
+  <section data-section="Welcome">
     <div class="wrap">
       <p class="kicker">Dinymeo</p>
       <h2>{c.home.welcome}</h2>
       <p class="lede">{c.home.intro}</p>
       <p>{c.home.body}</p>
-      <p class="kicker flow-kicker">{c.home.flowTitle}</p>
+    </div>
+  </section>
+
+  <section data-section={c.home.flowTitle}>
+    <div class="wrap">
+      <p class="kicker">Process</p>
+      <h2>{c.home.flowTitle}</h2>
       <ProcessScene lang={lang} />
     </div>
   </section>
 
-  <section>
+  <section data-section={c.home.casesTitle}>
     <div class="wrap">
       <p class="kicker">Partners</p>
       <h2>{c.home.casesTitle}</h2>
@@ -54,7 +60,7 @@ const links = [
     </div>
   </section>
 
-  <section>
+  <section data-section={c.home.linksTitle}>
     <div class="wrap">
       <h2>{c.home.linksTitle}</h2>
       <div class="intro-links">
@@ -68,7 +74,7 @@ const links = [
     </div>
   </section>
 
-  <section class="band-navy">
+  <section class="band-navy" data-section={c.home.promisesTitle}>
     <div class="wrap">
       <h2>{c.home.promisesTitle}</h2>
       <div class="grid-4">
@@ -87,7 +93,7 @@ const links = [
     </div>
   </section>
 
-  <section class="about-contact">
+  <section class="about-contact" data-section={c.home.contactTitle}>
     <div class="wrap split-about">
       <article class="about-panel">
         <div>
