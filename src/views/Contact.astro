@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import EnquiryForm from '../components/EnquiryForm.astro';
+import Icon from '../components/Icon.astro';
 import { t, type Locale } from '../lib/i18n';
 import { siteData, hours, mapsUrl, telUrl, mailUrl, whatsappUrl } from '../lib/site';
 
@@ -18,24 +19,44 @@ const c = t(lang);
         <p class="kicker">{c.contact.kicker}</p>
         <h1>{c.contact.headline}</h1>
         <p class="lede">{c.contact.lead}</p>
-        <p>
-          <strong>{c.contact.office}</strong><br />
-          {siteData.address.lines.map((line) => <span>{line}<br /></span>)}
-          <a href={mapsUrl()}>{c.contact.map}</a>
-        </p>
-        <p>
-          <strong>{c.contact.phone}</strong><br />
-          <a href={telUrl()}>{siteData.phone}</a><br />
-          <a href={whatsappUrl()}>{c.cta.whatsapp}</a>
-        </p>
-        <p>
-          <strong>{c.contact.email}</strong><br />
-          <a href={mailUrl()}>{siteData.email}</a>
-        </p>
-        <p>
-          <strong>{c.contact.hours}</strong><br />
-          {hours(lang)}
-        </p>
+        <ul class="contact-list">
+          <li>
+            <span class="icon-tile"><Icon name="pin" /></span>
+            <p>
+              <strong>{c.contact.office}</strong><br />
+              {siteData.address.lines.map((line) => <span>{line}<br /></span>)}
+              <a href={mapsUrl()}>{c.contact.map}</a>
+            </p>
+          </li>
+          <li>
+            <span class="icon-tile"><Icon name="phone" /></span>
+            <p>
+              <strong>{c.contact.phone}</strong><br />
+              <a href={telUrl()}>{siteData.phone}</a>
+            </p>
+          </li>
+          <li>
+            <span class="icon-tile"><Icon name="wa" /></span>
+            <p>
+              <strong>{c.cta.whatsapp}</strong><br />
+              <a href={whatsappUrl()}>{siteData.phone}</a>
+            </p>
+          </li>
+          <li>
+            <span class="icon-tile"><Icon name="mail" /></span>
+            <p>
+              <strong>{c.contact.email}</strong><br />
+              <a href={mailUrl()}>{siteData.email}</a>
+            </p>
+          </li>
+          <li>
+            <span class="icon-tile"><Icon name="clock" /></span>
+            <p>
+              <strong>{c.contact.hours}</strong><br />
+              {hours(lang)}
+            </p>
+          </li>
+        </ul>
       </div>
       <div>
         <EnquiryForm lang={lang} />

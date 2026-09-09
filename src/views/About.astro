@@ -1,7 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
 import { t, type Locale } from '../lib/i18n';
 import { localePath } from '../lib/paths';
+
+const valueIcons = ['lock', 'spark', 'user', 'cross'] as const;
 
 interface Props {
   lang: Locale;
@@ -24,8 +27,11 @@ const c = t(lang);
       <h2>{c.about.valuesTitle}</h2>
       <div class="grid-2">
         {
-          c.about.values.map((v) => (
+          c.about.values.map((v, i) => (
             <article class="card card-hover">
+              <span class="icon-tile on-navy">
+                <Icon name={valueIcons[i]} />
+              </span>
               <h3>{v.title}</h3>
               <p>{v.text}</p>
             </article>
