@@ -3,6 +3,7 @@
     {
       "id": "overview",
       "visual": "overview",
+      "image": "/media/flyer-overview.jpg",
       "en": {
         "kicker": "Overview",
         "title": "You market. We make.",
@@ -22,7 +23,7 @@
     {
       "id": "precision",
       "visual": "photo",
-      "image": "/media/hero-manufacturing.jpg",
+      "image": "/media/flyer-manufacturing.jpg",
       "en": {
         "kicker": "Manufacturing",
         "title": "The science of healing.",
@@ -42,6 +43,7 @@
     {
       "id": "packaging",
       "visual": "mindmap",
+      "image": "/media/flyer-packaging.jpg",
       "en": {
         "kicker": "Pack science",
         "title": "Packs that protect the dose.",
@@ -61,7 +63,7 @@
     {
       "id": "global",
       "visual": "photo",
-      "image": "/media/hero-network.jpg",
+      "image": "/media/flyer-supply.jpg",
       "en": {
         "kicker": "Supply",
         "title": "Partners worldwide.",

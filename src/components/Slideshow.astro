@@ -24,21 +24,19 @@ const slides = slideData.items;
           data-slide={i}
           data-visual={visual}
         >
-          {visual === 'overview' ? (
-            <OverviewMap />
-          ) : visual === 'mindmap' ? (
-            <PackMindmap />
-          ) : 'image' in slide && slide.image ? (
+          {'image' in slide && slide.image ? (
             <img
               src={asset(slide.image)}
               alt=""
-              width="1280"
-              height="720"
+              width="1156"
+              height="658"
               loading={i === 0 ? 'eager' : 'lazy'}
               decoding={i === 0 ? 'sync' : 'async'}
               fetchpriority={i === 0 ? 'high' : 'low'}
             />
           ) : null}
+          {visual === 'overview' ? <OverviewMap /> : null}
+          {visual === 'mindmap' ? <PackMindmap /> : null}
         </div>
       );
     })

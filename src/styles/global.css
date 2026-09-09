@@ -311,19 +311,24 @@ h3 {
 }
 
 .hero-slide img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: saturate(0.85) contrast(1.05);
+  object-position: 72% 48%;
+  filter: saturate(0.92) contrast(1.06);
 }
 
 .hero-slide::after {
   content: '';
   position: absolute;
   inset: 0;
+  z-index: 1;
   background:
-    linear-gradient(90deg, color-mix(in srgb, var(--navy-ink) 88%, transparent) 0%, color-mix(in srgb, var(--navy) 45%, transparent) 48%, color-mix(in srgb, var(--navy-ink) 25%, transparent) 100%),
-    linear-gradient(180deg, transparent 40%, color-mix(in srgb, var(--navy-ink) 70%, transparent));
+    linear-gradient(90deg, color-mix(in srgb, var(--navy-ink) 92%, #000) 0%, color-mix(in srgb, var(--navy-ink) 78%, transparent) 34%, color-mix(in srgb, var(--navy) 28%, transparent) 58%, color-mix(in srgb, var(--navy-ink) 18%, transparent) 100%),
+    linear-gradient(180deg, transparent 42%, color-mix(in srgb, var(--navy-ink) 55%, transparent));
+  pointer-events: none;
 }
 
 .hero-copy {
@@ -338,12 +343,14 @@ h3 {
 .hero-copy h1 {
   color: var(--white);
   max-width: 14ch;
+  text-shadow: 0 2px 28px color-mix(in srgb, var(--navy-ink) 70%, transparent);
 }
 
 .hero-copy p {
   max-width: 38rem;
-  color: color-mix(in srgb, var(--cyan) 55%, white);
+  color: color-mix(in srgb, var(--cyan) 42%, white);
   font-size: 1.15rem;
+  text-shadow: 0 1px 16px color-mix(in srgb, var(--navy-ink) 55%, transparent);
 }
 
 .hero-actions {
@@ -442,17 +449,10 @@ h3 {
   opacity: 0;
 }
 
-.hero-slide[data-visual='mindmap'],
-.hero-slide[data-visual='overview'] {
-  background:
-    radial-gradient(ellipse at 72% 48%, color-mix(in srgb, var(--navy) 55%, transparent), transparent 52%),
-    var(--navy-ink);
-}
-
 .hero-slide[data-visual='mindmap']::after,
 .hero-slide[data-visual='overview']::after {
   background:
-    linear-gradient(90deg, color-mix(in srgb, var(--navy-ink) 92%, transparent) 0%, color-mix(in srgb, var(--navy-ink) 35%, transparent) 46%, transparent 72%);
+    linear-gradient(90deg, color-mix(in srgb, var(--navy-ink) 94%, #000) 0%, color-mix(in srgb, var(--navy-ink) 72%, transparent) 36%, color-mix(in srgb, var(--navy-ink) 48%, transparent) 100%);
 }
 
 .ratio {

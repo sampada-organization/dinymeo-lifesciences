@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { copy, locales, type Locale } from '../../src/lib/i18n';
 import { localePath, switchLocale, withBase, unprefixedPath } from '../../src/lib/paths';
 import products from '../../src/content/products.json';
+import slides from '../../src/content/slides.json';
 
 function keysOf(value: unknown, prefix = ''): string[] {
   if (value === null || typeof value !== 'object') return [prefix];
@@ -66,5 +67,14 @@ describe('packaging catalogue', () => {
     const blob = JSON.stringify(products);
     expect(blob.toLowerCase()).not.toMatch(/recipe/);
     expect(blob).not.toMatch(/रेसिपी/);
+  });
+});
+
+describe('flyer images', () => {
+  it('gives every slide its own background file', () => {
+    const imgs = slides.items.map((s) => s.image);
+    expect(imgs).toHaveLength(4);
+    expect(new Set(imgs).size).toBe(4);
+    expect(imgs.every((src) => src.startsWith('/media/flyer-'))).toBe(true);
   });
 });
