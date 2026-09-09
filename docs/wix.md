@@ -2,7 +2,7 @@
 
 The site stays on **GitHub Pages**. Wix cannot host this Astro build. Domain **dinymeo.com** was bought at Wix: keep Wix as the registrar and point DNS at Pages. Wix does **not** let you change nameservers on a Wix-purchased domain — only the records.
 
-GitHub Pages is already attached to `dinymeo.com`. After the Wix records below propagate, **https://dinymeo.com** is the main URL.
+`www.dinymeo.com` already points at GitHub Pages. The **apex** `dinymeo.com` still has Wix A records (`185.230.63.*`) until you delete them. Until those change, GitHub Pages is attached to **www.dinymeo.com** so the site is reachable. After the apex A records are GitHub’s, we switch the primary URL to `https://dinymeo.com`.
 
 Fallback until DNS is updated: https://sampada-organization.github.io/dinymeo-lifesciences/
 
@@ -12,7 +12,7 @@ Fallback until DNS is updated: https://sampada-organization.github.io/dinymeo-li
 2. Next to the domain, **Domain Actions** → **Manage DNS Records**.
 3. Do **not** connect the domain to a Wix site. Do **not** switch nameservers.
 
-### Apex (`yourdomain.com`)
+### Apex (`dinymeo.com`)
 
 Delete any existing A records that point at Wix (`185.230.63.*` or similar). Add these four:
 
@@ -40,20 +40,11 @@ Edit the `www` CNAME. Point it at GitHub Pages, not `pointing.wixdns.net`:
 
 Save. TTL 300 seconds is enough while launching.
 
-## What we do here once you send the exact hostname
+## GitHub side (already done for dinymeo.com)
 
-Tell us the domain (example `dinymeo.com`). Then from this repo:
+`PRODUCTION_DOMAIN=dinymeo.com` is set. Pages custom domain is `dinymeo.com`. CI builds with `ASTRO_BASE=/`.
 
-```bash
-gh variable set PRODUCTION_DOMAIN --body YOURDOMAIN
-gh api -X PUT repos/sampada-organization/dinymeo-lifesciences/pages \
-  -f cname='YOURDOMAIN' -F https_enforced=true
-git commit --allow-empty -m "Launch YOURDOMAIN" && git push
-```
-
-GitHub issues a free Let's Encrypt certificate. HTTPS can take up to an hour after DNS answers.
-
-Until `PRODUCTION_DOMAIN` is set, Pages keeps serving at `/dinymeo-lifesciences/`. After it is set, the build uses `/` so `https://YOURDOMAIN` works.
+After your Wix A/CNAME records answer, GitHub issues a free Let's Encrypt certificate (up to an hour). Then we turn on HTTPS enforce so `http://dinymeo.com` redirects to `https://dinymeo.com`.
 
 ## Wix slideshow plugins (if you ever use the Wix editor)
 
