@@ -33,6 +33,9 @@ test.describe('Dinymeo MVP', () => {
       expect(res?.ok()).toBeTruthy();
       await expect(page.locator('h1')).toBeVisible();
     }
+    await page.goto('/about');
+    await expect(page.locator('h1')).not.toContainText(/Made in India/i);
+    await expect(page.locator('main')).not.toContainText(/small or large/i);
   });
 
   test('enquiry form requires consent and has five fields', async ({ page }) => {
@@ -79,6 +82,12 @@ test.describe('Dinymeo MVP', () => {
     await expect(page.getByRole('button', { name: 'Previous slide' })).toBeVisible();
     await expect(page.getByRole('button', { name: 'Next slide' })).toBeVisible();
     await expect(page.locator('.hero-hold')).toContainText(/Hold to pause/i);
+    await expect(page.locator('.hero-slide.is-active svg.overview-map')).toBeVisible();
+    await expect(page.locator('.overview-map')).toContainText('Dinymeo');
+    await expect(page.locator('body')).not.toContainText(/research-led/i);
+    await expect(page.locator('body')).toContainText(/premium pharmaceutical company in India/i);
+    await page.getByRole('button', { name: 'Next slide' }).click();
+    await expect(page.locator('[data-title]')).toContainText(/science of healing/i);
     await page.getByRole('button', { name: 'Next slide' }).click();
     await expect(page.locator('[data-title]')).toContainText(/Packs that protect/i);
     await expect(page.locator('.hero-slide.is-active svg.pack-mindmap')).toBeVisible();

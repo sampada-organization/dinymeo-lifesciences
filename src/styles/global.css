@@ -437,17 +437,20 @@ h3 {
   color: var(--gold-bright);
 }
 
-.hero:has(.hero-slide.is-active[data-visual='mindmap']) .ratio {
+.hero:has(.hero-slide.is-active[data-visual='mindmap']) .ratio,
+.hero:has(.hero-slide.is-active[data-visual='overview']) .ratio {
   opacity: 0;
 }
 
-.hero-slide[data-visual='mindmap'] {
+.hero-slide[data-visual='mindmap'],
+.hero-slide[data-visual='overview'] {
   background:
     radial-gradient(ellipse at 72% 48%, color-mix(in srgb, var(--navy) 55%, transparent), transparent 52%),
     var(--navy-ink);
 }
 
-.hero-slide[data-visual='mindmap']::after {
+.hero-slide[data-visual='mindmap']::after,
+.hero-slide[data-visual='overview']::after {
   background:
     linear-gradient(90deg, color-mix(in srgb, var(--navy-ink) 92%, transparent) 0%, color-mix(in srgb, var(--navy-ink) 35%, transparent) 46%, transparent 72%);
 }

@@ -4,6 +4,7 @@ import { localePath, asset } from '../lib/paths';
 import { slideData } from '../lib/site';
 import GoldenRatio from './GoldenRatio.astro';
 import PackMindmap from './PackMindmap.astro';
+import OverviewMap from './OverviewMap.astro';
 
 interface Props {
   lang: Locale;
@@ -23,7 +24,9 @@ const slides = slideData.items;
           data-slide={i}
           data-visual={visual}
         >
-          {visual === 'mindmap' ? (
+          {visual === 'overview' ? (
+            <OverviewMap />
+          ) : visual === 'mindmap' ? (
             <PackMindmap />
           ) : 'image' in slide && slide.image ? (
             <img

@@ -42,18 +42,18 @@ export const copy = {
       hold: 'Hold to pause',
     },
     home: {
-      title: 'Dinymeo Lifesciences | Pharma contract manufacturing in India',
+      title: 'Dinymeo Lifesciences | Pharma contract manufacturing',
       description:
-        'Dinymeo Lifesciences Pvt Ltd — allopathic medicine contract manufacturing from Pune, for partners in India and worldwide.',
+        'Dinymeo Lifesciences Pvt Ltd — allopathic medicine contract manufacturing for marketing partners worldwide.',
       welcome: 'Welcome to Dinymeo Lifesciences Pvt. Ltd.',
       intro:
-        'We connect healthcare innovation with the market. Dinymeo is a pharmaceutical company in India that makes a full range of allopathic medicines for marketing partners.',
+        'We connect healthcare innovation with the market. Dinymeo makes a full range of allopathic medicines for marketing partners.',
       body:
-        'We focus on research-led formulations, careful quality, and medicines people can actually get. Built on clinical care and safety, we make high-efficacy treatments for today’s health needs.',
+        'As a premium pharmaceutical company in India, we specialise in a comprehensive range of essential medicines.',
       promisesTitle: 'What you can count on',
       aboutTitle: 'A short word about us',
       aboutTeaser:
-        'We handle the back end — materials, formulation, testing and packing — so marketing companies can sell with confidence. From Pune, we work only in allopathic medicines, with a named person on your account and batches that match the brief you send.',
+        'We handle the back end — materials, formulation, testing and packing — so marketing companies can sell with confidence. We work only in allopathic medicines, with a named person on your account and batches that match the brief you send.',
       aboutPoints: [
         'Sourcing, formulation work and quality tests under one roof of process.',
         'Flexible batch sizes for new brands and growing catalogues.',
@@ -75,9 +75,9 @@ export const copy = {
         text: 'Alu-Alu, blister, strip, custom bottles and tubes — chosen for shelf life and a clean look.',
       },
       {
-        icon: 'india',
-        title: 'Pan-India delivery',
-        text: 'A working supply chain so consignments reach any corner of India on a promised date.',
+        icon: 'globe',
+        title: 'Global supply',
+        text: 'A working supply chain so consignments reach your market on a promised date.',
       },
       {
         icon: 'clock',
@@ -88,11 +88,11 @@ export const copy = {
     about: {
       title: 'About Dinymeo Lifesciences Pvt. Ltd.',
       description:
-        'Dinymeo is a Pune-based pharmaceutical company making allopathic medicines for marketing partners, with a focus on compliance, confidentiality and practical supply.',
+        'Dinymeo is a pharmaceutical company making allopathic medicines for marketing partners, with a focus on compliance, confidentiality and practical supply.',
       kicker: 'Company',
-      headline: 'Made in India. Built for partners.',
+      headline: 'Built for partners worldwide.',
       overview:
-        'Dinymeo Lifesciences Pvt. Ltd. is a growing, lawfully set-up pharmaceutical company. We work only in the allopathic segment and give end-to-end manufacturing to pharmaceutical marketing companies across India.',
+        'Dinymeo Lifesciences Pvt. Ltd. is a growing, lawfully set-up pharmaceutical company. We work only in the allopathic segment and give end-to-end manufacturing to pharmaceutical marketing companies worldwide.',
       operations:
         'Our work rests on clear dealing, regulatory care, and science. We take care of the whole back end — sourcing, formulation, strict quality testing, and modern packing.',
       valuesTitle: 'How we work',
@@ -107,7 +107,7 @@ export const copy = {
         },
         {
           title: 'Customer first',
-          text: 'Flexible batch sizes and a named person for your account, whether you are small or large.',
+          text: 'Flexible batch sizes and a named person for your account.',
         },
         {
           title: 'Surgical & clinical care',
@@ -141,13 +141,13 @@ export const copy = {
         { title: 'Share the brief', text: 'Molecule, strength, pack and market — or ask us to suggest a range.' },
         { title: 'Formulation & tests', text: 'Formulation work, stability thinking, and quality specs before a batch is locked.' },
         { title: 'Make & pack', text: 'Documented manufacturing in certified facilities, then Alu-Alu, blister, strip, bottle or tube.' },
-        { title: 'Dispatch', text: 'Checked, packed, and sent through the India network on the agreed date.' },
+        { title: 'Dispatch', text: 'Checked, packed, and sent on the agreed date.' },
       ],
     },
     contact: {
-      title: 'Contact Dinymeo Lifesciences | Pune',
+      title: 'Contact Dinymeo Lifesciences',
       description:
-        'Partner with Dinymeo Lifesciences Pvt Ltd. Registered office in Punawale, Pune. Call, WhatsApp or email for third-party manufacturing.',
+        'Partner with Dinymeo Lifesciences Pvt Ltd. Call, WhatsApp or email for third-party manufacturing.',
       kicker: 'Enquiry',
       headline: 'Partner with us today.',
       lead: 'This form is for companies and licensed traders.',
@@ -171,7 +171,7 @@ export const copy = {
     },
     footer: {
       blurb:
-        'Allopathic contract manufacturing from Pune. Quality, packing and pan-India supply for marketing partners.',
+        'Allopathic contract manufacturing. Quality, packing and global supply for marketing partners.',
       legal: 'Legal',
       disclaimer: 'Disclaimer',
       privacy: 'Privacy',
@@ -218,18 +218,18 @@ export const copy = {
       hold: 'रोकने के लिए दबाए रखें',
     },
     home: {
-      title: 'डिनिमियो लाइफसाइंसेस | भारत में फार्मा कॉन्ट्रैक्ट मैन्युफैक्चरिंग',
+      title: 'डिनिमियो लाइफसाइंसेस | फार्मा कॉन्ट्रैक्ट मैन्युफैक्चरिंग',
       description:
-        'डिनिमियो लाइफसाइंसेस प्राइवेट लिमिटेड — पुणे से एलोपैथिक दवाओं का कॉन्ट्रैक्ट निर्माण, भारत और दुनिया के पार्टनर के लिए।',
+        'डिनिमियो लाइफसाइंसेस प्राइवेट लिमिटेड — मार्केटिंग पार्टनर के लिए एलोपैथिक दवाओं का कॉन्ट्रैक्ट निर्माण।',
       welcome: 'डिनिमियो लाइफसाइंसेस प्राइवेट लिमिटेड में आपका स्वागत है',
       intro:
-        'हम स्वास्थ्य नवाचार को बाजार तक लाते हैं। डिनिमियो भारत की एक फार्मा कंपनी है, जो मार्केटिंग पार्टनर के लिए एलोपैथिक दवाइयाँ बनाती है।',
+        'हम स्वास्थ्य नवाचार को बाजार तक लाते हैं। डिनिमियो मार्केटिंग पार्टनर के लिए एलोपैथिक दवाइयाँ बनाती है।',
       body:
-        'हम अच्छे फॉर्मूलेशन, सख्त गुणवत्ता, और ऐसी दवाइयों पर काम करते हैं जो लोगों तक सच में पहुँचें। सुरक्षा और क्लिनिकल देखभाल हमारे आधार हैं।',
+        'भारत की एक प्रीमियम फार्मा कंपनी के रूप में, हम ज़रूरी दवाइयों की व्यापक रेंज में विशेषज्ञ हैं।',
       promisesTitle: 'आप हम पर यह भरोसा कर सकते हैं',
       aboutTitle: 'हमारे बारे में संक्षेप में',
       aboutTeaser:
-        'कच्चा माल, फॉर्मूलेशन, टेस्टिंग और पैकिंग हम सँभालते हैं, ताकि मार्केटिंग कंपनियाँ निश्चिंत होकर बेच सकें। पुणे से हम केवल एलोपैथिक दवाइयाँ बनाते हैं — आपके खाते पर एक नामित व्यक्ति, और बैच आपकी संक्षेप के अनुसार।',
+        'कच्चा माल, फॉर्मूलेशन, टेस्टिंग और पैकिंग हम सँभालते हैं, ताकि मार्केटिंग कंपनियाँ निश्चिंत होकर बेच सकें। हम केवल एलोपैथिक दवाइयाँ बनाते हैं — आपके खाते पर एक नामित व्यक्ति, और बैच आपकी संक्षेप के अनुसार।',
       aboutPoints: [
         'सोर्सिंग, फॉर्मूलेशन और गुणवत्ता जाँच एक ही प्रक्रिया में।',
         'नए ब्रांड और बढ़ते कैटलॉग के लिए लचीला बैच साइज।',
@@ -251,9 +251,9 @@ export const copy = {
         text: 'अलु-अलु, ब्लिस्टर, स्ट्रिप, कस्टम बोतल और ट्यूब — शेल्फ लाइफ और साफ लुक के लिए।',
       },
       {
-        icon: 'india',
-        title: 'पूरे भारत में डिलीवरी',
-        text: 'काम करने वाली सप्लाई चेन, ताकि माल तय तारीख पर भारत के किसी भी कोने पहुँचे।',
+        icon: 'globe',
+        title: 'वैश्विक सप्लाई',
+        text: 'काम करने वाली सप्लाई चेन, ताकि माल तय तारीख पर आपके बाजार पहुँचे।',
       },
       {
         icon: 'clock',
@@ -264,18 +264,18 @@ export const copy = {
     about: {
       title: 'डिनिमियो लाइफसाइंसेस प्राइवेट लिमिटेड के बारे में',
       description:
-        'डिनिमियो पुणे की फार्मा कंपनी है। मार्केटिंग पार्टनर के लिए एलोपैथिक दवाइयाँ, नियमों का पालन, गोपनीयता और व्यावहारिक सप्लाई।',
+        'डिनिमियो मार्केटिंग पार्टनर के लिए एलोपैथिक दवाइयाँ बनाती है — नियमों का पालन, गोपनीयता और व्यावहारिक सप्लाई।',
       kicker: 'कंपनी',
-      headline: 'भारत में बनी। पार्टनर के लिए बनी।',
+      headline: 'दुनिया भर के पार्टनर के लिए बनी।',
       overview:
-        'डिनिमियो लाइफसाइंसेस प्राइवेट लिमिटेड एक बढ़ती, कानूनी रूप से बनी फार्मा कंपनी है। हम केवल एलोपैथिक सेगमेंट में काम करते हैं और भारत की मार्केटिंग कंपनियों को पूरा निर्माण देते हैं।',
+        'डिनिमियो लाइफसाइंसेस प्राइवेट लिमिटेड एक बढ़ती, कानूनी रूप से बनी फार्मा कंपनी है। हम केवल एलोपैथिक सेगमेंट में काम करते हैं और मार्केटिंग कंपनियों को पूरा निर्माण देते हैं।',
       operations:
         'हमारा काम साफ लेन-देन, नियमों की देखभाल, और विज्ञान पर टिका है। कच्चा माल, फॉर्मूलेशन, सख्त गुणवत्ता जाँच और आधुनिक पैकिंग — पूरा बैक एंड हम सँभालते हैं।',
       valuesTitle: 'हम कैसे काम करते हैं',
       values: [
         { title: 'ईमानदारी', text: 'आपकी कस्टम फॉर्मूलेशन और व्यापार डेटा गोपनीय रहते हैं।' },
         { title: 'नवाचार', text: 'आधुनिक चिकित्सा के साथ चलते हैं, ताकि इलाज असरदार और स्थिर रहें।' },
-        { title: 'ग्राहक पहले', text: 'लचीला बैच साइज और आपके खाते के लिए एक नामित व्यक्ति — छोटे या बड़े दोनों के लिए।' },
+        { title: 'ग्राहक पहले', text: 'लचीला बैच साइज और आपके खाते के लिए एक नामित व्यक्ति।' },
         { title: 'सर्जिकल और क्लिनिकल देखभाल', text: 'केवल दुकान नहीं, गंभीर देखभाल और प्रक्रिया के लिए भी फॉर्मूलेशन।' },
       ],
       whyTitle: 'पार्टनर हमें क्यों चुनते हैं',
@@ -305,13 +305,13 @@ export const copy = {
         { title: 'जरूरत बताएँ', text: 'मॉलीक्यूल, ताकत, पैक और बाजार — या हम रेंज सुझाएँ।' },
         { title: 'फॉर्मूलेशन और टेस्ट', text: 'फॉर्मूलेशन, स्थिरता, और गुणवत्ता स्पेक — बैच लॉक करने से पहले।' },
         { title: 'बनाना और पैक', text: 'प्रमाणित प्लांट में दर्ज निर्माण, फिर अलु-अलु, ब्लिस्टर, स्ट्रिप, बोतल या ट्यूब।' },
-        { title: 'डिस्पैच', text: 'जाँच, पैक, और तय तारीख पर भारत नेटवर्क से रवाना।' },
+        { title: 'डिस्पैच', text: 'जाँच, पैक, और तय तारीख पर रवाना।' },
       ],
     },
     contact: {
-      title: 'संपर्क | डिनिमियो लाइफसाइंसेस, पुणे',
+      title: 'संपर्क | डिनिमियो लाइफसाइंसेस',
       description:
-        'डिनिमियो लाइफसाइंसेस प्राइवेट लिमिटेड के साथ साझेदारी करें। पंजीकृत कार्यालय पुनावले, पुणे। थर्ड-पार्टी निर्माण के लिए कॉल, व्हाट्सऐप या ईमेल।',
+        'डिनिमियो लाइफसाइंसेस प्राइवेट लिमिटेड के साथ साझेदारी करें। थर्ड-पार्टी निर्माण के लिए कॉल, व्हाट्सऐप या ईमेल।',
       kicker: 'पूछताछ',
       headline: 'आज साझेदारी करें।',
       lead: 'यह फॉर्म कंपनियों और लाइसेंसधारी व्यापारियों के लिए है।',
@@ -334,7 +334,7 @@ export const copy = {
       invalidPhone: 'सही भारतीय मोबाइल या लैंडलाइन लिखें।',
     },
     footer: {
-      blurb: 'पुणे से एलोपैथिक कॉन्ट्रैक्ट निर्माण। मार्केटिंग पार्टनर के लिए गुणवत्ता, पैकिंग और पूरे भारत में सप्लाई।',
+      blurb: 'एलोपैथिक कॉन्ट्रैक्ट निर्माण। मार्केटिंग पार्टनर के लिए गुणवत्ता, पैकिंग और वैश्विक सप्लाई।',
       legal: 'कानूनी',
       disclaimer: 'अस्वीकरण',
       privacy: 'गोपनीयता',
@@ -381,18 +381,18 @@ export const copy = {
       hold: 'थांबवण्यासाठी दाबून धरा',
     },
     home: {
-      title: 'डिनिमियो लाइफसायन्सेस | भारतात फार्मा कॉन्ट्रॅक्ट मॅन्युफॅक्चरिंग',
+      title: 'डिनिमियो लाइफसायन्सेस | फार्मा कॉन्ट्रॅक्ट मॅन्युफॅक्चरिंग',
       description:
-        'डिनिमियो लाइफसायन्सेस प्रा. लि. — पुण्याहून अॅलोपॅथिक औषधांचे कॉन्ट्रॅक्ट उत्पादन, भारत आणि जगभरातील भागीदारांसाठी.',
+        'डिनिमियो लाइफसायन्सेस प्रा. लि. — मार्केटिंग भागीदारांसाठी अॅलोपॅथिक औषधांचे कॉन्ट्रॅक्ट उत्पादन.',
       welcome: 'डिनिमियो लाइफसायन्सेस प्रा. लि. मध्ये स्वागत',
       intro:
-        'आम्ही आरोग्य नावीन्य बाजारपेठेपर्यंत नेतो. डिनिमियो ही भारतातील फार्मा कंपनी आहे, जी मार्केटिंग भागीदारांसाठी अॅलोपॅथिक औषधे बनवते.',
+        'आम्ही आरोग्य नावीन्य बाजारपेठेपर्यंत नेतो. डिनिमियो मार्केटिंग भागीदारांसाठी अॅलोपॅथिक औषधे बनवते.',
       body:
-        'आम्ही चांगल्या फॉर्म्युलेशन, कडक गुणवत्ता, आणि लोकांपर्यंत खरोखर पोहोचणारी औषधे यावर काम करतो. सुरक्षा आणि क्लिनिकल काळजी हा आमचा पाया आहे.',
+        'भारतातील एक प्रीमियम फार्मा कंपनी म्हणून, आम्ही आवश्यक औषधांच्या व्यापक श्रेणीत विशेषज्ञ आहोत.',
       promisesTitle: 'तुम्ही हे अपेक्षित करू शकता',
       aboutTitle: 'आमच्याबद्दल थोडक्यात',
       aboutTeaser:
-        'कच्चा माल, फॉर्म्युलेशन, चाचणी आणि पॅकिंग आम्ही पाहतो, जेणेकरून मार्केटिंग कंपन्या विश्वासाने विकू शकतील. पुण्याहून आम्ही फक्त अॅलोपॅथिक औषधे बनवतो — तुमच्या खात्यावर नेमलेली व्यक्ती, आणि बॅच तुमच्या संक्षेपानुसार.',
+        'कच्चा माल, फॉर्म्युलेशन, चाचणी आणि पॅकिंग आम्ही पाहतो, जेणेकरून मार्केटिंग कंपन्या विश्वासाने विकू शकतील. आम्ही फक्त अॅलोपॅथिक औषधे बनवतो — तुमच्या खात्यावर नेमलेली व्यक्ती, आणि बॅच तुमच्या संक्षेपानुसार.',
       aboutPoints: [
         'सोर्सिंग, फॉर्म्युलेशन आणि गुणवत्ता चाचणी एकाच प्रक्रियेत.',
         'नवीन ब्रँड व वाढत्या कॅटलॉगसाठी लवचिक बॅच आकार.',
@@ -414,9 +414,9 @@ export const copy = {
         text: 'अलु-अलु, ब्लिस्टर, स्ट्रिप, कस्टम बाटल्या आणि ट्यूब — शेल्फ लाइफ व स्वच्छ रूपासाठी.',
       },
       {
-        icon: 'india',
-        title: 'अखिल भारत डिलिव्हरी',
-        text: 'कामाची पुरवठा साखळी, जेणेकरून माल ठरलेल्या तारखेला भारताच्या कोणत्याही कोपऱ्यात पोहोचेल.',
+        icon: 'globe',
+        title: 'जागतिक पुरवठा',
+        text: 'कामाची पुरवठा साखळी, जेणेकरून माल ठरलेल्या तारखेला तुमच्या बाजारात पोहोचेल.',
       },
       {
         icon: 'clock',
@@ -427,18 +427,18 @@ export const copy = {
     about: {
       title: 'डिनिमियो लाइफसायन्सेस प्रा. लि. बद्दल',
       description:
-        'डिनिमियो ही पुण्यातील फार्मा कंपनी आहे. मार्केटिंग भागीदारांसाठी अॅलोपॅथिक औषधे, नियमांचे पालन, गोपनीयता आणि व्यवहार्य पुरवठा.',
+        'डिनिमियो मार्केटिंग भागीदारांसाठी अॅलोपॅथिक औषधे बनवते — नियमांचे पालन, गोपनीयता आणि व्यवहार्य पुरवठा.',
       kicker: 'कंपनी',
-      headline: 'भारतात बनवले. भागीदारांसाठी बनवले.',
+      headline: 'जगभरातील भागीदारांसाठी बनवले.',
       overview:
-        'डिनिमियो लाइफसायन्सेस प्रा. लि. ही वाढणारी, कायदेशीररीत्या स्थापन झालेली फार्मा कंपनी आहे. आम्ही फक्त अॅलोपॅथिक विभागात काम करतो आणि भारतातील मार्केटिंग कंपन्यांना संपूर्ण उत्पादन देतो.',
+        'डिनिमियो लाइफसायन्सेस प्रा. लि. ही वाढणारी, कायदेशीररीत्या स्थापन झालेली फार्मा कंपनी आहे. आम्ही फक्त अॅलोपॅथिक विभागात काम करतो आणि मार्केटिंग कंपन्यांना संपूर्ण उत्पादन देतो.',
       operations:
         'आमचे काम स्पष्ट व्यवहार, नियामक काळजी आणि विज्ञान यावर आधारलेले आहे. कच्चा माल, फॉर्म्युलेशन, कडक गुणवत्ता चाचणी आणि आधुनिक पॅकिंग — संपूर्ण बॅक एंड आम्ही पाहतो.',
       valuesTitle: 'आम्ही कसे काम करतो',
       values: [
         { title: 'प्रामाणिकपणा', text: 'तुमच्या कस्टम फॉर्म्युलेशन आणि व्यवसाय डेटा गोपनीय राहतात.' },
         { title: 'नावीन्य', text: 'आधुनिक औषधांबरोबर चालतो, जेणेकरून उपचार प्रभावी व स्थिर राहतील.' },
-        { title: 'ग्राहक प्रथम', text: 'लवचिक बॅच आकार आणि तुमच्या खात्यासाठी नेमलेली व्यक्ती — छोटे किंवा मोठे दोघांसाठी.' },
+        { title: 'ग्राहक प्रथम', text: 'लवचिक बॅच आकार आणि तुमच्या खात्यासाठी नेमलेली व्यक्ती.' },
         { title: 'शस्त्रक्रिया व क्लिनिकल काळजी', text: 'फक्त दुकान नाही, गंभीर देखभाल आणि प्रक्रियांसाठीही फॉर्म्युलेशन.' },
       ],
       whyTitle: 'भागीदार आम्हाला का निवडतात',
@@ -468,13 +468,13 @@ export const copy = {
         { title: 'गरज सांगा', text: 'मॉलिक्यूल, क्षमता, पॅक आणि बाजार — किंवा आम्ही श्रेणी सुचवू.' },
         { title: 'फॉर्म्युलेशन आणि चाचणी', text: 'फॉर्म्युलेशन, स्थिरता आणि गुणवत्ता स्पेक — बॅच लॉक करण्यापूर्वी.' },
         { title: 'बनवणे आणि पॅक', text: 'प्रमाणित प्लांटमध्ये नोंदवलेले उत्पादन, नंतर अलु-अलु, ब्लिस्टर, स्ट्रिप, बाटली किंवा ट्यूब.' },
-        { title: 'डिस्पॅच', text: 'तपासणी, पॅक, आणि ठरलेल्या तारखेला भारत नेटवर्कवरून रवाना.' },
+        { title: 'डिस्पॅच', text: 'तपासणी, पॅक, आणि ठरलेल्या तारखेला रवाना.' },
       ],
     },
     contact: {
-      title: 'संपर्क | डिनिमियो लाइफसायन्सेस, पुणे',
+      title: 'संपर्क | डिनिमियो लाइफसायन्सेस',
       description:
-        'डिनिमियो लाइफसायन्सेस प्रा. लि. सोबत भागीदारी करा. नोंदणीकृत कार्यालय पुनावले, पुणे. थर्ड-पार्टी उत्पादनासाठी कॉल, व्हाट्सअॅप किंवा ईमेल.',
+        'डिनिमियो लाइफसायन्सेस प्रा. लि. सोबत भागीदारी करा. थर्ड-पार्टी उत्पादनासाठी कॉल, व्हाट्सअॅप किंवा ईमेल.',
       kicker: 'चौकशी',
       headline: 'आज भागीदारी करा.',
       lead: 'हा फॉर्म कंपन्या आणि परवानाधारक व्यापाऱ्यांसाठी आहे.',
@@ -497,7 +497,7 @@ export const copy = {
       invalidPhone: 'योग्य भारतीय मोबाइल किंवा लँडलाइन लिहा.',
       },
     footer: {
-      blurb: 'पुण्याहून अॅलोपॅथिक कॉन्ट्रॅक्ट उत्पादन. मार्केटिंग भागीदारांसाठी गुणवत्ता, पॅकिंग आणि अखिल भारत पुरवठा.',
+      blurb: 'अॅलोपॅथिक कॉन्ट्रॅक्ट उत्पादन. मार्केटिंग भागीदारांसाठी गुणवत्ता, पॅकिंग आणि जागतिक पुरवठा.',
       legal: 'कायदेशीर',
       disclaimer: 'अस्वीकरण',
       privacy: 'गोपनीयता',

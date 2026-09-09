@@ -1,6 +1,25 @@
 {
   "items": [
     {
+      "id": "overview",
+      "visual": "overview",
+      "en": {
+        "kicker": "Overview",
+        "title": "You market. We make.",
+        "text": "One partner for formulation, quality, packing and supply — a short path from brief to batch."
+      },
+      "hi": {
+        "kicker": "परिचय",
+        "title": "आप बेचें। हम बनाएँ।",
+        "text": "फॉर्मूलेशन, गुणवत्ता, पैकिंग और सप्लाई — एक साथी, संक्षेप से बैच तक।"
+      },
+      "mr": {
+        "kicker": "ओव्हरव्ह्यू",
+        "title": "तुम्ही विका. आम्ही बनवतो.",
+        "text": "फॉर्म्युलेशन, गुणवत्ता, पॅकिंग आणि पुरवठा — एक भागीदार, संक्षेप ते बॅच."
+      }
+    },
+    {
       "id": "precision",
       "visual": "photo",
       "image": "/media/hero-manufacturing.jpg",
@@ -44,19 +63,19 @@
       "visual": "photo",
       "image": "/media/hero-network.jpg",
       "en": {
-        "kicker": "Global",
-        "title": "From Pune to partners worldwide.",
-        "text": "A supply chain built to reach your market — in India and overseas — on the date we promise."
+        "kicker": "Supply",
+        "title": "Partners worldwide.",
+        "text": "A supply chain built to reach your market on the date we promise."
       },
       "hi": {
-        "kicker": "वैश्विक",
-        "title": "पुणे से दुनिया भर के पार्टनर तक।",
-        "text": "भारत और विदेश — आपके बाजार तक, जिस तारीख का वादा हो।"
+        "kicker": "सप्लाई",
+        "title": "दुनिया भर के पार्टनर।",
+        "text": "आपके बाजार तक, जिस तारीख का वादा हो।"
       },
       "mr": {
-        "kicker": "जागतिक",
-        "title": "पुण्याहून जगभरातील भागीदारांपर्यंत.",
-        "text": "भारत आणि परदेश — तुमच्या बाजारात, ठरलेल्या तारखेला."
+        "kicker": "पुरवठा",
+        "title": "जगभरातील भागीदार.",
+        "text": "तुमच्या बाजारात, ठरलेल्या तारखेला."
       }
     }
   ]
