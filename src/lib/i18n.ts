@@ -145,10 +145,10 @@ export const copy = {
         'Allopathic contract manufacturing across cardiology, antibiotics, gynaecology, dermatology, paediatrics and general medicine. Alu-Alu, blister, strip, bottle and tube packing.',
       kicker: 'Range',
       headline: 'Brand our science.',
-      lead: 'Categories for licensed partners. No consumer doses on this page.',
+      lead: 'Therapy categories for licensed partners.',
       productsTitle: 'Therapy',
       packTitle: 'Pack',
-      packImageAlt: 'Aluminium cream tubes.',
+      packImageAlt: 'Premium pharmaceutical packs: Alu-Alu, blister, strip, bottle and tube.',
       processTitle: 'The path',
       steps: [
         { title: 'Brief', text: 'Molecule. Strength. Pack. Market.' },
@@ -330,11 +330,10 @@ export const copy = {
         'हृदय, एंटीबायोटिक, स्त्री रोग, त्वचा, बाल रोग और सामान्य दवाइयों का एलोपैथिक कॉन्ट्रैक्ट निर्माण। अलु-अलु, ब्लिस्टर, स्ट्रिप, बोतल, ट्यूब।',
       kicker: 'क्षमता',
       headline: 'एक कैटलॉग, आपका ब्रांड।',
-      lead:
-        'हम कई थेरेपी क्षेत्रों में एलोपैथिक रेंज देते हैं। यह पेज श्रेणियाँ बताता है, उपभोक्ता ब्रांड या डोज नहीं। प्रिस्क्रिप्शन दवा की बातचीत केवल योग्य पेशेवरों और लाइसेंसधारी पार्टनर के लिए है।',
+      lead: 'लाइसेंसधारी पार्टनर के लिए थेरेपी श्रेणियाँ।',
       productsTitle: 'थेरेपी क्षेत्र',
       packTitle: 'पैकेजिंग',
-      packImageAlt: 'क्रीम और ऑइंटमेंट की एल्युमिनियम ट्यूब — पाँचवाँ पैक मानक, अलु-अलु, ब्लिस्टर, स्ट्रिप और बोतल के साथ।',
+      packImageAlt: 'प्रीमियम फार्मा पैक: अलु-अलु, ब्लिस्टर, स्ट्रिप, बोतल और ट्यूब।',
       processTitle: 'संक्षेप से बैच तक',
       steps: [
         { title: 'जरूरत बताएँ', text: 'मॉलीक्यूल, ताकत, पैक और बाजार — या हम रेंज सुझाएँ।' },
@@ -516,11 +515,10 @@ export const copy = {
         'हृदय, अँटीबायोटिक्स, स्त्रीरोग, त्वचा, बालरोग आणि सामान्य औषधांचे अॅलोपॅथिक कॉन्ट्रॅक्ट उत्पादन. अलु-अलु, ब्लिस्टर, स्ट्रिप, बाटली, ट्यूब.',
       kicker: 'क्षमता',
       headline: 'एक कॅटलॉग, तुमचा ब्रँड.',
-      lead:
-        'आम्ही अनेक थेरेपी क्षेत्रांत अॅलोपॅथिक श्रेणी देतो. हे पान श्रेणी सांगते, ग्राहक ब्रँड किंवा डोज नाही. प्रिस्क्रिप्शन औषधांची माहिती फक्त पात्र व्यावसायिक व परवानाधारक भागीदारांसाठी आहे.',
+      lead: 'परवानाधारक भागीदारांसाठी थेरेपी श्रेणी.',
       productsTitle: 'थेरेपी क्षेत्रे',
       packTitle: 'पॅकेजिंग',
-      packImageAlt: 'क्रीम व ऑइंटमेंटच्या अॅल्युमिनियम ट्यूब — पाचवे पॅक मानक, अलु-अलु, ब्लिस्टर, स्ट्रिप आणि बाटलीसोबत.',
+      packImageAlt: 'प्रीमियम फार्मा पॅक: अलु-अलु, ब्लिस्टर, स्ट्रिप, बाटली आणि ट्यूब.',
       processTitle: 'संक्षेप ते बॅच',
       steps: [
         { title: 'गरज सांगा', text: 'मॉलिक्यूल, क्षमता, पॅक आणि बाजार — किंवा आम्ही श्रेणी सुचवू.' },

@@ -498,15 +498,39 @@ section {
 .pack-hero img {
   width: 100%;
   max-width: 100%;
-  height: min(22rem, 52vw);
+  height: min(24rem, 56vw);
   object-fit: cover;
-  object-position: 70% 55%;
+  object-position: 50% 55%;
 }
 
 .pack-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 1.1rem;
+}
+
+.pack-card {
+  padding: 0 0 1.15rem;
+  overflow: hidden;
+}
+
+.pack-shot {
+  margin: 0 0 0.95rem;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #10131c;
+}
+
+.pack-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pack-card h3,
+.pack-card p {
+  padding: 0 1.15rem;
 }
 
 .card h3 {
@@ -1002,6 +1026,10 @@ form.enquiry.compact .consent {
 }
 
 @media (max-width: 760px) {
+  .pack-shot {
+    aspect-ratio: 16 / 10;
+  }
+
   .menu-btn {
     display: grid;
     place-items: center;

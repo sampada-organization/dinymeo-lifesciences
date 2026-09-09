@@ -64,6 +64,7 @@ describe('packaging catalogue', () => {
       'bottle',
       'tube',
     ]);
+    expect(products.packaging.every((p) => p.image.startsWith('/media/pack-'))).toBe(true);
     const blob = JSON.stringify(products);
     expect(blob.toLowerCase()).not.toMatch(/recipe/);
     expect(blob).not.toMatch(/रेसिपी/);

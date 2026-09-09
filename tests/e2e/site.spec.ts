@@ -73,7 +73,10 @@ test.describe('Dinymeo MVP', () => {
     await page.goto('/manufacturing');
     await expect(page.getByRole('heading', { name: 'Tubes', exact: true })).toBeVisible();
     await expect(page.locator('.pack-hero img')).toBeVisible();
+    await expect(page.locator('.pack-hero img')).toHaveAttribute('src', /pack-hero/);
+    await expect(page.locator('.pack-card img')).toHaveCount(5);
     await expect(page.locator('body')).not.toContainText(/recipe/i);
+    await expect(page.locator('body')).not.toContainText(/no consumer doses/i);
   });
 
   test('hero has hold-to-pause controls and a pack-science mindmap', async ({ page }) => {

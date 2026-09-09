@@ -1,7 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
 import Icon from '../components/Icon.astro';
-import PackIcon from '../components/PackIcon.astro';
 import { t, type Locale } from '../lib/i18n';
 import { productData } from '../lib/site';
 import { localePath, asset } from '../lib/paths';
@@ -49,10 +48,11 @@ const c = t(lang);
       <h2>{c.manufacturing.packTitle}</h2>
       <figure class="pack-hero">
         <img
-          src={asset('/media/packaging-tubes.jpg')}
+          src={asset('/media/pack-hero.jpg')}
+          srcset={`${asset('/media/pack-hero-sm.jpg')} 640w, ${asset('/media/pack-hero.jpg')} 1150w`}
           alt={c.manufacturing.packImageAlt}
-          width="1072"
-          height="615"
+          width="1150"
+          height="665"
           sizes="(max-width: 760px) 100vw, min(72rem, 100vw)"
           loading="lazy"
           decoding="async"
@@ -62,9 +62,16 @@ const c = t(lang);
         {
           productData.packaging.map((p) => (
             <article class="card card-hover pack-card">
-              <span class="icon-tile">
-                <PackIcon name={p.icon} />
-              </span>
+              <figure class="pack-shot">
+                <img
+                  src={asset(p.image)}
+                  alt={p[lang].name}
+                  width="954"
+                  height="954"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
               <h3>{p[lang].name}</h3>
               <p>{p[lang].blurb}</p>
             </article>
