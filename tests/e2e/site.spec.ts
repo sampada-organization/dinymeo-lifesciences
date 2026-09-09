@@ -8,7 +8,9 @@ test.describe('Dinymeo MVP', () => {
     const menu = page.getByRole('button', { name: 'Menu' });
     if (await menu.isVisible()) await menu.click();
     await expect(page.getByRole('navigation', { name: 'Primary' })).toContainText('About');
-    await expect(page.locator('body')).toContainText(/WHO-GMP/);
+    await expect(page.locator('.site-footer')).toContainText(/WHO-GMP/);
+    await expect(page.locator('.hero')).not.toContainText(/WHO-GMP/);
+    await expect(page.locator('body')).not.toContainText(/self-medication/i);
     await expect(page.getByRole('link', { name: /Call Dinymeo/i })).toHaveAttribute(
       'href',
       'tel:+917775000425',
@@ -70,5 +72,18 @@ test.describe('Dinymeo MVP', () => {
     await expect(page.getByRole('heading', { name: 'Tubes', exact: true })).toBeVisible();
     await expect(page.locator('.pack-hero img')).toBeVisible();
     await expect(page.locator('body')).not.toContainText(/recipe/i);
+  });
+
+  test('hero has hold-to-pause controls and a pack-science mindmap', async ({ page }) => {
+    await page.goto('/');
+    await expect(page.getByRole('button', { name: 'Previous slide' })).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Next slide' })).toBeVisible();
+    await expect(page.locator('.hero-hold')).toContainText(/Hold to pause/i);
+    await page.getByRole('button', { name: 'Next slide' }).click();
+    await expect(page.locator('[data-title]')).toContainText(/Packs that protect/i);
+    await expect(page.locator('.hero-slide.is-active svg.pack-mindmap')).toBeVisible();
+    await expect(page.locator('.pack-mindmap')).toContainText('ICH Q1A');
+    await page.getByRole('button', { name: 'Next slide' }).click();
+    await expect(page.locator('[data-title]')).toContainText(/worldwide/i);
   });
 });

@@ -5,7 +5,7 @@ import EnquiryForm from '../components/EnquiryForm.astro';
 import Icon from '../components/Icon.astro';
 import { t, type Locale } from '../lib/i18n';
 import { localePath } from '../lib/paths';
-import { qualityNote } from '../lib/site';
+
 
 interface Props {
   lang: Locale;
@@ -61,7 +61,6 @@ const links = [
           ))
         }
       </div>
-      <p class="claim" style="margin-top:1.5rem;color:#cfefff">{qualityNote(lang)}</p>
     </div>
   </section>
 

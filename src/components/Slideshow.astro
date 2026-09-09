@@ -3,6 +3,7 @@ import { t, type Locale } from '../lib/i18n';
 import { localePath, asset } from '../lib/paths';
 import { slideData } from '../lib/site';
 import GoldenRatio from './GoldenRatio.astro';
+import PackMindmap from './PackMindmap.astro';
 
 interface Props {
   lang: Locale;
@@ -15,18 +16,26 @@ const slides = slideData.items;
 <section class="hero" aria-roledescription="carousel" aria-label="Highlights">
   {
     slides.map((slide, i) => {
-      const copy = slide[lang];
+      const visual = 'visual' in slide ? slide.visual : 'photo';
       return (
-        <div class:list={['hero-slide', { 'is-active': i === 0 }]} data-slide={i}>
-          <img
-            src={asset(slide.image)}
-            alt=""
-            width="1280"
-            height="720"
-            loading={i === 0 ? 'eager' : 'lazy'}
-            decoding={i === 0 ? 'sync' : 'async'}
-            fetchpriority={i === 0 ? 'high' : 'low'}
-          />
+        <div
+          class:list={['hero-slide', { 'is-active': i === 0 }]}
+          data-slide={i}
+          data-visual={visual}
+        >
+          {visual === 'mindmap' ? (
+            <PackMindmap />
+          ) : 'image' in slide && slide.image ? (
+            <img
+              src={asset(slide.image)}
+              alt=""
+              width="1280"
+              height="720"
+              loading={i === 0 ? 'eager' : 'lazy'}
+              decoding={i === 0 ? 'sync' : 'async'}
+              fetchpriority={i === 0 ? 'high' : 'low'}
+            />
+          ) : null}
         </div>
       );
     })
@@ -41,6 +50,16 @@ const slides = slideData.items;
       <a class="btn ghost" href={localePath(lang, '/manufacturing')}>{c.cta.range}</a>
     </div>
   </div>
+  <button class="hero-nav prev" type="button" data-dir="-1" aria-label={c.slideshow.prev}>
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M20 6 10 16l10 10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </button>
+  <button class="hero-nav next" type="button" data-dir="1" aria-label={c.slideshow.next}>
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M12 6l10 10-10 10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </button>
   <div class="hero-dots" role="tablist">
     {
       slides.map((slide, i) => (
@@ -54,10 +73,12 @@ const slides = slideData.items;
       ))
     }
   </div>
+  <p class="hero-hold">{c.slideshow.hold}</p>
 </section>
 
 <script define:vars={{ slides: slides.map((s) => s[lang]) }}>
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const hero = document.querySelector('.hero');
   const nodes = [...document.querySelectorAll('[data-slide]')];
   const dots = [...document.querySelectorAll('[data-go]')];
   const kicker = document.querySelector('[data-kicker]');
@@ -65,6 +86,9 @@ const slides = slideData.items;
   const text = document.querySelector('[data-text]');
   let i = 0;
   let timer;
+  let holding = false;
+  let holdFrom = 0;
+  let startX = 0;
 
   function show(next) {
     i = (next + nodes.length) % nodes.length;
@@ -76,20 +100,83 @@ const slides = slideData.items;
     if (text) text.textContent = s.text;
   }
 
+  function stop() {
+    clearInterval(timer);
+    timer = null;
+  }
+
   function start() {
-    if (reduced || nodes.length < 2) return;
+    stop();
+    if (reduced || holding || nodes.length < 2) return;
     timer = setInterval(() => show(i + 1), 6500);
+  }
+
+  function pauseHold() {
+    holding = true;
+    hero?.classList.add('is-holding');
+    stop();
+  }
+
+  function releaseHold() {
+    holding = false;
+    hero?.classList.remove('is-holding');
+    start();
   }
 
   dots.forEach((d) =>
     d.addEventListener('click', () => {
-      clearInterval(timer);
       show(Number(d.getAttribute('data-go')));
       start();
     }),
   );
 
-  document.querySelector('.hero')?.addEventListener('mouseenter', () => clearInterval(timer));
-  document.querySelector('.hero')?.addEventListener('mouseleave', start);
+  document.querySelectorAll('[data-dir]').forEach((btn) => {
+    btn.addEventListener('click', (event) => {
+      if (Date.now() - holdFrom > 220) {
+        event.preventDefault();
+        return;
+      }
+      show(i + Number(btn.getAttribute('data-dir')));
+      start();
+    });
+  });
+
+  hero?.addEventListener('pointerdown', (event) => {
+    const t = event.target;
+    if (t && t.closest && t.closest('a, .hero-dots')) return;
+    holdFrom = Date.now();
+    startX = event.clientX;
+    pauseHold();
+  });
+  const endHold = (event) => {
+    if (!holding) return;
+    const dx = event.clientX - startX;
+    const held = Date.now() - holdFrom > 220;
+    const t = event.target;
+    releaseHold();
+    if (!held && Math.abs(dx) > 56 && !(t && t.closest && t.closest('a, button'))) {
+      show(i + (dx < 0 ? 1 : -1));
+      start();
+    }
+  };
+  hero?.addEventListener('pointerup', endHold);
+  hero?.addEventListener('pointercancel', releaseHold);
+  hero?.addEventListener('pointerleave', () => {
+    if (holding) releaseHold();
+  });
+
+  window.addEventListener('keydown', (event) => {
+    const t = event.target;
+    if (t && t.closest && t.closest('input, textarea, a')) return;
+    if (event.key === 'ArrowRight') {
+      show(i + 1);
+      start();
+    }
+    if (event.key === 'ArrowLeft') {
+      show(i - 1);
+      start();
+    }
+  });
+
   start();
 </script>

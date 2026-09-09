@@ -53,6 +53,24 @@ GitHub issues a free Let's Encrypt certificate. HTTPS can take up to an hour aft
 
 Until `PRODUCTION_DOMAIN` is set, Pages keeps serving at `/dinymeo-lifesciences/`. After it is set, the build uses `/` so `https://YOURDOMAIN` works.
 
+## Wix slideshow plugins (if you ever use the Wix editor)
+
+This GitHub Pages site **cannot** load Wix App Market plugins. The home hero already has the same controls: autoplay, **hold to pause**, full-height shadowy prev/next, and dots.
+
+To add a slideshow inside a *separate* Wix site:
+
+1. Open the Wix Editor.
+2. **Add Elements** (left) → **Interactive** → pick a **full-width** or **box** slideshow, or **Add** → **Gallery** → **Slideshows**.
+3. Click the slideshow → **Manage Slides** to add or replace slides.
+4. Click **Settings**:
+   - **Autoplay** on, set seconds per slide.
+   - **Pause on hover** if you want hover instead of hold.
+   - **Show pause & play** if you want a button.
+   - **Continuous loop** on.
+5. **Display elements** / **Design**: enable **navigation buttons** (side arrows) and **slide indicators**. For Pro Gallery, Design → **Navigation Arrows** → show arrows, background **Shadow**.
+
+Do not mix that Wix page with this Astro build. Park the domain on Pages as above; keep Wix only as the registrar.
+
 ## What not to do
 
 - Do not rebuild this site in the Wix editor.

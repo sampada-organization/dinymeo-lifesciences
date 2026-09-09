@@ -2,59 +2,61 @@
   "items": [
     {
       "id": "precision",
+      "visual": "photo",
       "image": "/media/hero-manufacturing.jpg",
       "en": {
         "kicker": "Manufacturing",
         "title": "The science of healing.",
-        "text": "Allopathic medicines made in WHO-GMP, GLP and ISO certified facilities, with documented quality at every step."
+        "text": "Allopathic medicines made with documented quality at every step — from brief to batch."
       },
       "hi": {
         "kicker": "निर्माण",
         "title": "उपचार का विज्ञान।",
-        "text": "WHO-GMP, GLP और ISO प्रमाणित प्लांट में बनी एलोपैथिक दवाइयाँ। हर कदम पर दर्ज गुणवत्ता।"
+        "text": "हर कदम पर दर्ज गुणवत्ता के साथ बनी एलोपैथिक दवाइयाँ — संक्षेप से बैच तक।"
       },
       "mr": {
         "kicker": "उत्पादन",
         "title": "उपचाराचे शास्त्र.",
-        "text": "WHO-GMP, GLP आणि ISO प्रमाणित प्लांटमध्ये बनलेली अॅलोपॅथिक औषधे. प्रत्येक टप्प्यावर नोंदवलेली गुणवत्ता."
+        "text": "प्रत्येक टप्प्यावर नोंदवलेली गुणवत्ता — संक्षेप ते बॅच."
       }
     },
     {
       "id": "packaging",
-      "image": "/media/hero-packaging.jpg",
+      "visual": "mindmap",
       "en": {
-        "kicker": "Packaging",
+        "kicker": "Pack science",
         "title": "Packs that protect the dose.",
-        "text": "Alu-Alu, blister, strip, custom bottles and tubes — chosen to keep shelf life and look clean on a pharmacy shelf."
+        "text": "Barrier first: ICH Q1A/Q1B, WVTR and OTR decide Alu-Alu, blister, strip, bottle or tube."
       },
       "hi": {
-        "kicker": "पैकेजिंग",
+        "kicker": "पैक विज्ञान",
         "title": "पैक जो दवा की रक्षा करें।",
-        "text": "अलु-अलु, ब्लिस्टर, स्ट्रिप, कस्टम बोतल और ट्यूब — शेल्फ लाइफ और साफ दिखने के लिए।"
+        "text": "पहले बैरियर: ICH Q1A/Q1B, WVTR और OTR से अलु-अलु, ब्लिस्टर, स्ट्रिप, बोतल या ट्यूब।"
       },
       "mr": {
-        "kicker": "पॅकेजिंग",
+        "kicker": "पॅक शास्त्र",
         "title": "डोस सुरक्षित ठेवणारे पॅक.",
-        "text": "अलु-अलु, ब्लिस्टर, स्ट्रिप, कस्टम बाटल्या आणि ट्यूब — शेल्फ लाइफ आणि स्वच्छ दिसण्यासाठी."
+        "text": "आधी बॅरियर: ICH Q1A/Q1B, WVTR आणि OTR नुसार अलु-अलु, ब्लिस्टर, स्ट्रिप, बाटली किंवा ट्यूब."
       }
     },
     {
-      "id": "india",
+      "id": "global",
+      "visual": "photo",
       "image": "/media/hero-network.jpg",
       "en": {
-        "kicker": "Supply",
-        "title": "From Pune to every corner of India.",
-        "text": "A practical supply chain so your consignment leaves on time and arrives where your market is."
+        "kicker": "Global",
+        "title": "From Pune to partners worldwide.",
+        "text": "A supply chain built to reach your market — in India and overseas — on the date we promise."
       },
       "hi": {
-        "kicker": "आपूर्ति",
-        "title": "पुणे से भारत के हर कोने तक।",
-        "text": "सीधी सप्लाई चेन, ताकि आपका माल समय पर निकले और आपके बाजार तक पहुँचे।"
+        "kicker": "वैश्विक",
+        "title": "पुणे से दुनिया भर के पार्टनर तक।",
+        "text": "भारत और विदेश — आपके बाजार तक, जिस तारीख का वादा हो।"
       },
       "mr": {
-        "kicker": "पुरवठा",
-        "title": "पुण्याहून भारताच्या प्रत्येक कोपऱ्यापर्यंत.",
-        "text": "व्यवहार्य पुरवठा साखळी, जेणेकरून तुमचा माल वेळेत निघेल आणि बाजारात पोहोचेल."
+        "kicker": "जागतिक",
+        "title": "पुण्याहून जगभरातील भागीदारांपर्यंत.",
+        "text": "भारत आणि परदेश — तुमच्या बाजारात, ठरलेल्या तारखेला."
       }
     }
   ]

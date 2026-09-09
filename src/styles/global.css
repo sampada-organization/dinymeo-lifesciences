@@ -328,10 +328,11 @@ h3 {
 
 .hero-copy {
   position: relative;
-  z-index: 2;
+  z-index: 4;
   width: min(100% - 2 * var(--space), var(--content));
   margin: auto;
   padding: 5rem 0 4rem;
+  pointer-events: none;
 }
 
 .hero-copy h1 {
@@ -354,7 +355,7 @@ h3 {
 
 .hero-dots {
   position: absolute;
-  z-index: 3;
+  z-index: 5;
   left: var(--space);
   bottom: 1.4rem;
   display: flex;
@@ -373,6 +374,82 @@ h3 {
 
 .hero-dots button[aria-selected='true'] {
   background: var(--gold);
+}
+
+.hero-nav {
+  position: absolute;
+  top: 0;
+  bottom: 3.4rem;
+  z-index: 3;
+  width: min(18vw, 8.5rem);
+  height: auto;
+  border: 0;
+  padding: 0;
+  color: var(--white);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  opacity: 0.42;
+  transition: opacity 200ms ease, background 200ms ease;
+}
+
+.hero-nav svg {
+  width: 2.1rem;
+  height: 2.1rem;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.55));
+}
+
+.hero-nav.prev {
+  left: 0;
+  background: linear-gradient(90deg, rgba(10, 12, 20, 0.55), transparent);
+}
+
+.hero-nav.next {
+  right: 0;
+  background: linear-gradient(270deg, rgba(10, 12, 20, 0.55), transparent);
+}
+
+.hero-nav:hover,
+.hero-nav:focus-visible {
+  opacity: 1;
+}
+
+.hero-copy a,
+.hero-copy .btn {
+  pointer-events: auto;
+}
+
+.hero-hold {
+  position: absolute;
+  z-index: 4;
+  right: var(--space);
+  bottom: 1.35rem;
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: color-mix(in srgb, var(--white) 55%, transparent);
+  transition: color 180ms ease;
+}
+
+.hero.is-holding .hero-hold {
+  color: var(--gold-bright);
+}
+
+.hero:has(.hero-slide.is-active[data-visual='mindmap']) .ratio {
+  opacity: 0;
+}
+
+.hero-slide[data-visual='mindmap'] {
+  background:
+    radial-gradient(ellipse at 72% 48%, color-mix(in srgb, var(--navy) 55%, transparent), transparent 52%),
+    var(--navy-ink);
+}
+
+.hero-slide[data-visual='mindmap']::after {
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--navy-ink) 92%, transparent) 0%, color-mix(in srgb, var(--navy-ink) 35%, transparent) 46%, transparent 72%);
 }
 
 .ratio {
@@ -891,6 +968,10 @@ form.enquiry textarea {
 
   .hero-copy {
     padding-top: 4.5rem;
+  }
+
+  .hero-nav {
+    width: 2.85rem;
   }
 
   .form-panel,

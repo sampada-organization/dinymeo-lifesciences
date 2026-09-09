@@ -36,10 +36,15 @@ export const copy = {
       sent: 'Received. We will reply on a working day.',
       fail: 'Could not send. Use call, WhatsApp or email instead.',
     },
+    slideshow: {
+      prev: 'Previous slide',
+      next: 'Next slide',
+      hold: 'Hold to pause',
+    },
     home: {
       title: 'Dinymeo Lifesciences | Pharma contract manufacturing in India',
       description:
-        'Dinymeo Lifesciences Pvt Ltd — allopathic medicine contract manufacturing from Pune. WHO-GMP, GLP and ISO certified partner facilities, pan-India delivery.',
+        'Dinymeo Lifesciences Pvt Ltd — allopathic medicine contract manufacturing from Pune, for partners in India and worldwide.',
       welcome: 'Welcome to Dinymeo Lifesciences Pvt. Ltd.',
       intro:
         'We connect healthcare innovation with the market. Dinymeo is a pharmaceutical company in India that makes a full range of allopathic medicines for marketing partners.',
@@ -62,7 +67,7 @@ export const copy = {
       {
         icon: 'shield',
         title: 'Documented quality',
-        text: 'Batches from WHO-GMP, GLP and ISO certified facilities, with clean-room discipline and test records.',
+        text: 'Batches made with clean-room discipline and full test records.',
       },
       {
         icon: 'pack',
@@ -145,7 +150,7 @@ export const copy = {
         'Partner with Dinymeo Lifesciences Pvt Ltd. Registered office in Punawale, Pune. Call, WhatsApp or email for third-party manufacturing.',
       kicker: 'Enquiry',
       headline: 'Partner with us today.',
-      lead: 'This form is for companies and licensed traders. We do not sell medicines to patients through this site.',
+      lead: 'This form is for companies and licensed traders.',
       office: 'Registered office',
       hours: 'Business hours',
       phone: 'Phone / WhatsApp',
@@ -172,7 +177,7 @@ export const copy = {
       privacy: 'Privacy',
       terms: 'Terms',
       rights: 'All rights reserved.',
-      b2b: 'B2B manufacturing only. Not for patient self-medication.',
+      b2b: 'B2B manufacturing only.',
     },
     legal: {
       disclaimerTitle: 'Disclaimer',
@@ -207,10 +212,15 @@ export const copy = {
       sent: 'मिल गया। काम के दिन जवाब देंगे।',
       fail: 'नहीं भेजा जा सका। कॉल, व्हाट्सऐप या ईमेल करें।',
     },
+    slideshow: {
+      prev: 'पिछली स्लाइड',
+      next: 'अगली स्लाइड',
+      hold: 'रोकने के लिए दबाए रखें',
+    },
     home: {
       title: 'डिनिमियो लाइफसाइंसेस | भारत में फार्मा कॉन्ट्रैक्ट मैन्युफैक्चरिंग',
       description:
-        'डिनिमियो लाइफसाइंसेस प्राइवेट लिमिटेड — पुणे से एलोपैथिक दवाओं का कॉन्ट्रैक्ट निर्माण। WHO-GMP, GLP और ISO प्रमाणित पार्टनर प्लांट, पूरे भारत में डिलीवरी।',
+        'डिनिमियो लाइफसाइंसेस प्राइवेट लिमिटेड — पुणे से एलोपैथिक दवाओं का कॉन्ट्रैक्ट निर्माण, भारत और दुनिया के पार्टनर के लिए।',
       welcome: 'डिनिमियो लाइफसाइंसेस प्राइवेट लिमिटेड में आपका स्वागत है',
       intro:
         'हम स्वास्थ्य नवाचार को बाजार तक लाते हैं। डिनिमियो भारत की एक फार्मा कंपनी है, जो मार्केटिंग पार्टनर के लिए एलोपैथिक दवाइयाँ बनाती है।',
@@ -233,7 +243,7 @@ export const copy = {
       {
         icon: 'shield',
         title: 'दर्ज गुणवत्ता',
-        text: 'WHO-GMP, GLP और ISO प्रमाणित प्लांट के बैच, क्लीनरूम अनुशासन और टेस्ट रिकॉर्ड के साथ।',
+        text: 'क्लीनरूम अनुशासन और पूरे टेस्ट रिकॉर्ड के साथ बने बैच।',
       },
       {
         icon: 'pack',
@@ -304,7 +314,7 @@ export const copy = {
         'डिनिमियो लाइफसाइंसेस प्राइवेट लिमिटेड के साथ साझेदारी करें। पंजीकृत कार्यालय पुनावले, पुणे। थर्ड-पार्टी निर्माण के लिए कॉल, व्हाट्सऐप या ईमेल।',
       kicker: 'पूछताछ',
       headline: 'आज साझेदारी करें।',
-      lead: 'यह फॉर्म कंपनियों और लाइसेंसधारी व्यापारियों के लिए है। हम इस साइट से मरीजों को दवा नहीं बेचते।',
+      lead: 'यह फॉर्म कंपनियों और लाइसेंसधारी व्यापारियों के लिए है।',
       office: 'पंजीकृत कार्यालय',
       hours: 'काम के घंटे',
       phone: 'फोन / व्हाट्सऐप',
@@ -330,7 +340,7 @@ export const copy = {
       privacy: 'गोपनीयता',
       terms: 'नियम',
       rights: 'सर्वाधिकार सुरक्षित।',
-      b2b: 'केवल व्यापार-से-व्यापार निर्माण। मरीज खुद दवा न लें।',
+      b2b: 'केवल व्यापार-से-व्यापार निर्माण।',
     },
     legal: {
       disclaimerTitle: 'अस्वीकरण',
@@ -365,10 +375,15 @@ export const copy = {
       sent: 'मिळाले. कामाच्या दिवशी उत्तर देऊ.',
       fail: 'पाठवता आले नाही. कॉल, व्हाट्सअॅप किंवा ईमेल करा.',
     },
+    slideshow: {
+      prev: 'मागील स्लाइड',
+      next: 'पुढील स्लाइड',
+      hold: 'थांबवण्यासाठी दाबून धरा',
+    },
     home: {
       title: 'डिनिमियो लाइफसायन्सेस | भारतात फार्मा कॉन्ट्रॅक्ट मॅन्युफॅक्चरिंग',
       description:
-        'डिनिमियो लाइफसायन्सेस प्रा. लि. — पुण्याहून अॅलोपॅथिक औषधांचे कॉन्ट्रॅक्ट उत्पादन. WHO-GMP, GLP आणि ISO प्रमाणित भागीदार प्लांट, अखिल भारत डिलिव्हरी.',
+        'डिनिमियो लाइफसायन्सेस प्रा. लि. — पुण्याहून अॅलोपॅथिक औषधांचे कॉन्ट्रॅक्ट उत्पादन, भारत आणि जगभरातील भागीदारांसाठी.',
       welcome: 'डिनिमियो लाइफसायन्सेस प्रा. लि. मध्ये स्वागत',
       intro:
         'आम्ही आरोग्य नावीन्य बाजारपेठेपर्यंत नेतो. डिनिमियो ही भारतातील फार्मा कंपनी आहे, जी मार्केटिंग भागीदारांसाठी अॅलोपॅथिक औषधे बनवते.',
@@ -391,7 +406,7 @@ export const copy = {
       {
         icon: 'shield',
         title: 'नोंदवलेली गुणवत्ता',
-        text: 'WHO-GMP, GLP आणि ISO प्रमाणित प्लांटमधील बॅच, क्लीनरूम शिस्त आणि चाचणी नोंदींसह.',
+        text: 'क्लीनरूम शिस्त आणि पूर्ण चाचणी नोंदींसह बनवलेले बॅच.',
       },
       {
         icon: 'pack',
@@ -462,7 +477,7 @@ export const copy = {
         'डिनिमियो लाइफसायन्सेस प्रा. लि. सोबत भागीदारी करा. नोंदणीकृत कार्यालय पुनावले, पुणे. थर्ड-पार्टी उत्पादनासाठी कॉल, व्हाट्सअॅप किंवा ईमेल.',
       kicker: 'चौकशी',
       headline: 'आज भागीदारी करा.',
-      lead: 'हा फॉर्म कंपन्या आणि परवानाधारक व्यापाऱ्यांसाठी आहे. आम्ही या साइटवरून रुग्णांना औषधे विकत नाही.',
+      lead: 'हा फॉर्म कंपन्या आणि परवानाधारक व्यापाऱ्यांसाठी आहे.',
       office: 'नोंदणीकृत कार्यालय',
       hours: 'कामाचे तास',
       phone: 'फोन / व्हाट्सअॅप',
@@ -488,7 +503,7 @@ export const copy = {
       privacy: 'गोपनीयता',
       terms: 'नियम',
       rights: 'सर्व हक्क राखीव.',
-      b2b: 'फक्त व्यवसाय-ते-व्यवसाय उत्पादन. रुग्णाने स्वतः औषध घेऊ नये.',
+      b2b: 'फक्त व्यवसाय-ते-व्यवसाय उत्पादन.',
     },
     legal: {
       disclaimerTitle: 'अस्वीकरण',

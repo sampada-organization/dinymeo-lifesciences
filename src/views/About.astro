@@ -1,7 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
 import { t, type Locale } from '../lib/i18n';
-import { qualityNote } from '../lib/site';
 import { localePath } from '../lib/paths';
 
 interface Props {
@@ -18,7 +17,6 @@ const c = t(lang);
       <h1>{c.about.headline}</h1>
       <p class="lede">{c.about.overview}</p>
       <p>{c.about.operations}</p>
-      <p class="claim">{qualityNote(lang)}</p>
     </div>
   </section>
   <section class="band-navy">
