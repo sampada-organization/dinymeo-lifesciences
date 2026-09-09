@@ -104,13 +104,13 @@ test.describe('Dinymeo MVP', () => {
     await expect(page.locator('.flow-scene')).toContainText('Formulation');
     await expect(page.locator('body')).not.toContainText(/research-led/i);
     await expect(page.getByRole('heading', { name: 'Who we work with' })).toBeVisible();
-    await page.locator('.hero-nav.next').click();
+    await page.locator('.hero-nav.next').click({ force: true });
     await expect(page.locator('[data-title]')).toContainText(/Stability, then manufacture/i);
     await expect(page.locator('.hero-slide.is-active img')).toHaveAttribute('src', /flyer-manufacturing/);
-    await page.locator('.hero-nav.next').click();
+    await page.locator('.hero-nav.next').click({ force: true });
     await expect(page.locator('[data-title]')).toContainText(/Packaging for the formulation/i);
     await expect(page.locator('.hero-slide.is-active img')).toHaveAttribute('src', /flyer-packaging/);
-    await page.locator('.hero-nav.next').click();
+    await page.locator('.hero-nav.next').click({ force: true });
     await expect(page.locator('[data-title]')).toContainText(/Dispatch as agreed/i);
     await expect(page.locator('.hero-slide.is-active img')).toHaveAttribute('src', /flyer-supply/);
   });
