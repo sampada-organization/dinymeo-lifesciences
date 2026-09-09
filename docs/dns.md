@@ -4,6 +4,8 @@ Set repo variable `PRODUCTION_DOMAIN` to the bought hostname (example `dinymeo.c
 
 GitHub Pages is $0 and already deploying. Azure Static Web Apps Free is also $0 once `az login` finishes; switch the CNAME when that host exists.
 
+**Domain bought at Wix?** Keep Wix nameservers. Edit records only. Full steps: [wix.md](wix.md).
+
 ## Records to add at the registrar
 
 Replace `YOURDOMAIN` and keep `www` + apex.

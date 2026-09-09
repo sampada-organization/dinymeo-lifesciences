@@ -15,7 +15,12 @@ const year = new Date().getFullYear();
 <footer class="site-footer">
   <div class="wrap foot-grid">
     <div>
-      <Logo variant="lockup" invert title={c.brand} />
+      <a class="footer-brand" href={localePath(lang, '/')}>
+        <span class="logo-plate">
+          <Logo variant="mark" title={c.brand} />
+        </span>
+        <span>{c.brand}</span>
+      </a>
       <p>{c.footer.blurb}</p>
       <p class="claim">{qualityNote(lang)}</p>
     </div>

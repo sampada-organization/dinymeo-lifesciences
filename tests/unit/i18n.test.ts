@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { copy, locales, type Locale } from '../../src/lib/i18n';
 import { localePath, switchLocale, withBase, unprefixedPath } from '../../src/lib/paths';
+import products from '../../src/content/products.json';
 
 function keysOf(value: unknown, prefix = ''): string[] {
   if (value === null || typeof value !== 'object') return [prefix];
@@ -19,6 +20,12 @@ describe('i18n parity', () => {
       expect(keysOf(copy[lang as Locale]).sort()).toEqual(enKeys);
     });
   }
+
+  it('uses formulation, not recipe', () => {
+    const blob = JSON.stringify(copy);
+    expect(blob.toLowerCase()).not.toMatch(/recipe/);
+    expect(blob).not.toMatch(/रेसिपी/);
+  });
 });
 
 describe('paths', () => {
@@ -43,5 +50,21 @@ describe('paths', () => {
       '/about',
     );
     expect(unprefixedPath('/about', '/')).toBe('/about');
+  });
+});
+
+describe('packaging catalogue', () => {
+  it('lists five packing standards including tubes', () => {
+    expect(products.packaging).toHaveLength(5);
+    expect(products.packaging.map((p) => p.id)).toEqual([
+      'alu-alu',
+      'blister',
+      'strip',
+      'bottle',
+      'tube',
+    ]);
+    const blob = JSON.stringify(products);
+    expect(blob.toLowerCase()).not.toMatch(/recipe/);
+    expect(blob).not.toMatch(/रेसिपी/);
   });
 });

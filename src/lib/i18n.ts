@@ -44,15 +44,15 @@ export const copy = {
       intro:
         'We connect healthcare innovation with the market. Dinymeo is a pharmaceutical company in India that makes a full range of allopathic medicines for marketing partners.',
       body:
-        'We focus on research-led recipes, careful quality, and medicines people can actually get. Built on clinical care and safety, we make high-efficacy treatments for today’s health needs.',
+        'We focus on research-led formulations, careful quality, and medicines people can actually get. Built on clinical care and safety, we make high-efficacy treatments for today’s health needs.',
       promisesTitle: 'What you can count on',
       aboutTitle: 'A short word about us',
       aboutTeaser:
         'We handle the back end — materials, formulation, testing and packing — so marketing companies can sell with confidence. From Pune, we work only in allopathic medicines, with a named person on your account and batches that match the brief you send.',
       aboutPoints: [
-        'Sourcing, recipe work and quality tests under one roof of process.',
+        'Sourcing, formulation work and quality tests under one roof of process.',
         'Flexible batch sizes for new brands and growing catalogues.',
-        'Packs chosen for shelf life: Alu-Alu, blister, strip or bottle.',
+        'Packs chosen for shelf life: Alu-Alu, blister, strip, bottle or tube.',
       ],
       linksTitle: 'Find your way',
       contactTitle: 'Talk to us',
@@ -67,7 +67,7 @@ export const copy = {
       {
         icon: 'pack',
         title: 'Packs that last',
-        text: 'Alu-Alu, blister, strip and custom bottles — chosen for shelf life and a clean look.',
+        text: 'Alu-Alu, blister, strip, custom bottles and tubes — chosen for shelf life and a clean look.',
       },
       {
         icon: 'india',
@@ -77,7 +77,7 @@ export const copy = {
       {
         icon: 'clock',
         title: 'On-time work',
-        text: 'From recipe to dispatch, we keep turnaround short and visible to you.',
+        text: 'From formulation to dispatch, we keep turnaround short and visible to you.',
       },
     ],
     about: {
@@ -94,7 +94,7 @@ export const copy = {
       values: [
         {
           title: 'Integrity',
-          text: 'Your custom recipes and business data stay confidential.',
+          text: 'Your custom formulations and business data stay confidential.',
         },
         {
           title: 'Innovation',
@@ -123,18 +123,19 @@ export const copy = {
     manufacturing: {
       title: 'Manufacturing & products | Dinymeo Lifesciences',
       description:
-        'Allopathic contract manufacturing across cardiology, antibiotics, gynaecology, dermatology, paediatrics and general medicine. Alu-Alu, blister, strip and bottle packing.',
+        'Allopathic contract manufacturing across cardiology, antibiotics, gynaecology, dermatology, paediatrics and general medicine. Alu-Alu, blister, strip, bottle and tube packing.',
       kicker: 'Capabilities',
       headline: 'A catalogue you can brand.',
       lead:
         'We offer a wide allopathic range across many therapy areas. This page lists categories, not consumer brands or doses. Product communication for prescription medicines is for qualified professionals and licensed partners only.',
       productsTitle: 'Therapy areas',
       packTitle: 'Packaging',
+      packImageAlt: 'Aluminium ointment and cream tubes — a fifth packing standard beside Alu-Alu, blister, strip and bottles.',
       processTitle: 'From brief to batch',
       steps: [
         { title: 'Share the brief', text: 'Molecule, strength, pack and market — or ask us to suggest a range.' },
-        { title: 'Recipe & tests', text: 'Formulation work, stability thinking, and quality specs before a batch is locked.' },
-        { title: 'Make & pack', text: 'Documented manufacturing in certified facilities, then Alu-Alu, blister, strip or bottle.' },
+        { title: 'Formulation & tests', text: 'Formulation work, stability thinking, and quality specs before a batch is locked.' },
+        { title: 'Make & pack', text: 'Documented manufacturing in certified facilities, then Alu-Alu, blister, strip, bottle or tube.' },
         { title: 'Dispatch', text: 'Checked, packed, and sent through the India network on the agreed date.' },
       ],
     },
@@ -214,15 +215,15 @@ export const copy = {
       intro:
         'हम स्वास्थ्य नवाचार को बाजार तक लाते हैं। डिनिमियो भारत की एक फार्मा कंपनी है, जो मार्केटिंग पार्टनर के लिए एलोपैथिक दवाइयाँ बनाती है।',
       body:
-        'हम अच्छी रेसिपी, सख्त गुणवत्ता, और ऐसी दवाइयों पर काम करते हैं जो लोगों तक सच में पहुँचें। सुरक्षा और क्लिनिकल देखभाल हमारे आधार हैं।',
+        'हम अच्छे फॉर्मूलेशन, सख्त गुणवत्ता, और ऐसी दवाइयों पर काम करते हैं जो लोगों तक सच में पहुँचें। सुरक्षा और क्लिनिकल देखभाल हमारे आधार हैं।',
       promisesTitle: 'आप हम पर यह भरोसा कर सकते हैं',
       aboutTitle: 'हमारे बारे में संक्षेप में',
       aboutTeaser:
         'कच्चा माल, फॉर्मूलेशन, टेस्टिंग और पैकिंग हम सँभालते हैं, ताकि मार्केटिंग कंपनियाँ निश्चिंत होकर बेच सकें। पुणे से हम केवल एलोपैथिक दवाइयाँ बनाते हैं — आपके खाते पर एक नामित व्यक्ति, और बैच आपकी संक्षेप के अनुसार।',
       aboutPoints: [
-        'सोर्सिंग, रेसिपी और गुणवत्ता जाँच एक ही प्रक्रिया में।',
+        'सोर्सिंग, फॉर्मूलेशन और गुणवत्ता जाँच एक ही प्रक्रिया में।',
         'नए ब्रांड और बढ़ते कैटलॉग के लिए लचीला बैच साइज।',
-        'शेल्फ लाइफ के लिए पैक: अलु-अलु, ब्लिस्टर, स्ट्रिप या बोतल।',
+        'शेल्फ लाइफ के लिए पैक: अलु-अलु, ब्लिस्टर, स्ट्रिप, बोतल या ट्यूब।',
       ],
       linksTitle: 'आगे बढ़ें',
       contactTitle: 'बात करें',
@@ -237,7 +238,7 @@ export const copy = {
       {
         icon: 'pack',
         title: 'टिकाऊ पैक',
-        text: 'अलु-अलु, ब्लिस्टर, स्ट्रिप और कस्टम बोतल — शेल्फ लाइफ और साफ लुक के लिए।',
+        text: 'अलु-अलु, ब्लिस्टर, स्ट्रिप, कस्टम बोतल और ट्यूब — शेल्फ लाइफ और साफ लुक के लिए।',
       },
       {
         icon: 'india',
@@ -247,7 +248,7 @@ export const copy = {
       {
         icon: 'clock',
         title: 'समय पर काम',
-        text: 'रेसिपी से डिस्पैच तक, काम छोटा और आपको दिखता रहे।',
+        text: 'फॉर्मूलेशन से डिस्पैच तक, काम छोटा और आपको दिखता रहे।',
       },
     ],
     about: {
@@ -262,7 +263,7 @@ export const copy = {
         'हमारा काम साफ लेन-देन, नियमों की देखभाल, और विज्ञान पर टिका है। कच्चा माल, फॉर्मूलेशन, सख्त गुणवत्ता जाँच और आधुनिक पैकिंग — पूरा बैक एंड हम सँभालते हैं।',
       valuesTitle: 'हम कैसे काम करते हैं',
       values: [
-        { title: 'ईमानदारी', text: 'आपकी कस्टम रेसिपी और व्यापार डेटा गोपनीय रहते हैं।' },
+        { title: 'ईमानदारी', text: 'आपकी कस्टम फॉर्मूलेशन और व्यापार डेटा गोपनीय रहते हैं।' },
         { title: 'नवाचार', text: 'आधुनिक चिकित्सा के साथ चलते हैं, ताकि इलाज असरदार और स्थिर रहें।' },
         { title: 'ग्राहक पहले', text: 'लचीला बैच साइज और आपके खाते के लिए एक नामित व्यक्ति — छोटे या बड़े दोनों के लिए।' },
         { title: 'सर्जिकल और क्लिनिकल देखभाल', text: 'केवल दुकान नहीं, गंभीर देखभाल और प्रक्रिया के लिए भी फॉर्मूलेशन।' },
@@ -281,18 +282,19 @@ export const copy = {
     manufacturing: {
       title: 'निर्माण और उत्पाद | डिनिमियो लाइफसाइंसेस',
       description:
-        'हृदय, एंटीबायोटिक, स्त्री रोग, त्वचा, बाल रोग और सामान्य दवाइयों का एलोपैथिक कॉन्ट्रैक्ट निर्माण। अलु-अलु, ब्लिस्टर, स्ट्रिप, बोतल।',
+        'हृदय, एंटीबायोटिक, स्त्री रोग, त्वचा, बाल रोग और सामान्य दवाइयों का एलोपैथिक कॉन्ट्रैक्ट निर्माण। अलु-अलु, ब्लिस्टर, स्ट्रिप, बोतल, ट्यूब।',
       kicker: 'क्षमता',
       headline: 'एक कैटलॉग, आपका ब्रांड।',
       lead:
         'हम कई थेरेपी क्षेत्रों में एलोपैथिक रेंज देते हैं। यह पेज श्रेणियाँ बताता है, उपभोक्ता ब्रांड या डोज नहीं। प्रिस्क्रिप्शन दवा की बातचीत केवल योग्य पेशेवरों और लाइसेंसधारी पार्टनर के लिए है।',
       productsTitle: 'थेरेपी क्षेत्र',
       packTitle: 'पैकेजिंग',
+      packImageAlt: 'क्रीम और ऑइंटमेंट की एल्युमिनियम ट्यूब — पाँचवाँ पैक मानक, अलु-अलु, ब्लिस्टर, स्ट्रिप और बोतल के साथ।',
       processTitle: 'संक्षेप से बैच तक',
       steps: [
         { title: 'जरूरत बताएँ', text: 'मॉलीक्यूल, ताकत, पैक और बाजार — या हम रेंज सुझाएँ।' },
-        { title: 'रेसिपी और टेस्ट', text: 'फॉर्मूलेशन, स्थिरता, और गुणवत्ता स्पेक — बैच लॉक करने से पहले।' },
-        { title: 'बनाना और पैक', text: 'प्रमाणित प्लांट में दर्ज निर्माण, फिर अलु-अलु, ब्लिस्टर, स्ट्रिप या बोतल।' },
+        { title: 'फॉर्मूलेशन और टेस्ट', text: 'फॉर्मूलेशन, स्थिरता, और गुणवत्ता स्पेक — बैच लॉक करने से पहले।' },
+        { title: 'बनाना और पैक', text: 'प्रमाणित प्लांट में दर्ज निर्माण, फिर अलु-अलु, ब्लिस्टर, स्ट्रिप, बोतल या ट्यूब।' },
         { title: 'डिस्पैच', text: 'जाँच, पैक, और तय तारीख पर भारत नेटवर्क से रवाना।' },
       ],
     },
@@ -371,15 +373,15 @@ export const copy = {
       intro:
         'आम्ही आरोग्य नावीन्य बाजारपेठेपर्यंत नेतो. डिनिमियो ही भारतातील फार्मा कंपनी आहे, जी मार्केटिंग भागीदारांसाठी अॅलोपॅथिक औषधे बनवते.',
       body:
-        'आम्ही चांगल्या रेसिपी, कडक गुणवत्ता, आणि लोकांपर्यंत खरोखर पोहोचणारी औषधे यावर काम करतो. सुरक्षा आणि क्लिनिकल काळजी हा आमचा पाया आहे.',
+        'आम्ही चांगल्या फॉर्म्युलेशन, कडक गुणवत्ता, आणि लोकांपर्यंत खरोखर पोहोचणारी औषधे यावर काम करतो. सुरक्षा आणि क्लिनिकल काळजी हा आमचा पाया आहे.',
       promisesTitle: 'तुम्ही हे अपेक्षित करू शकता',
       aboutTitle: 'आमच्याबद्दल थोडक्यात',
       aboutTeaser:
         'कच्चा माल, फॉर्म्युलेशन, चाचणी आणि पॅकिंग आम्ही पाहतो, जेणेकरून मार्केटिंग कंपन्या विश्वासाने विकू शकतील. पुण्याहून आम्ही फक्त अॅलोपॅथिक औषधे बनवतो — तुमच्या खात्यावर नेमलेली व्यक्ती, आणि बॅच तुमच्या संक्षेपानुसार.',
       aboutPoints: [
-        'सोर्सिंग, रेसिपी आणि गुणवत्ता चाचणी एकाच प्रक्रियेत.',
+        'सोर्सिंग, फॉर्म्युलेशन आणि गुणवत्ता चाचणी एकाच प्रक्रियेत.',
         'नवीन ब्रँड व वाढत्या कॅटलॉगसाठी लवचिक बॅच आकार.',
-        'शेल्फ लाइफसाठी पॅक: अलु-अलु, ब्लिस्टर, स्ट्रिप किंवा बाटली.',
+        'शेल्फ लाइफसाठी पॅक: अलु-अलु, ब्लिस्टर, स्ट्रिप, बाटली किंवा ट्यूब.',
       ],
       linksTitle: 'पुढे जा',
       contactTitle: 'संवाद साधा',
@@ -394,7 +396,7 @@ export const copy = {
       {
         icon: 'pack',
         title: 'टिकाऊ पॅक',
-        text: 'अलु-अलु, ब्लिस्टर, स्ट्रिप आणि कस्टम बाटल्या — शेल्फ लाइफ व स्वच्छ रूपासाठी.',
+        text: 'अलु-अलु, ब्लिस्टर, स्ट्रिप, कस्टम बाटल्या आणि ट्यूब — शेल्फ लाइफ व स्वच्छ रूपासाठी.',
       },
       {
         icon: 'india',
@@ -404,7 +406,7 @@ export const copy = {
       {
         icon: 'clock',
         title: 'वेळेवर काम',
-        text: 'रेसिपी ते डिस्पॅच, काम छोटे आणि तुम्हाला दिसत राहील.',
+        text: 'फॉर्म्युलेशन ते डिस्पॅच, काम छोटे आणि तुम्हाला दिसत राहील.',
       },
     ],
     about: {
@@ -419,7 +421,7 @@ export const copy = {
         'आमचे काम स्पष्ट व्यवहार, नियामक काळजी आणि विज्ञान यावर आधारलेले आहे. कच्चा माल, फॉर्म्युलेशन, कडक गुणवत्ता चाचणी आणि आधुनिक पॅकिंग — संपूर्ण बॅक एंड आम्ही पाहतो.',
       valuesTitle: 'आम्ही कसे काम करतो',
       values: [
-        { title: 'प्रामाणिकपणा', text: 'तुमच्या कस्टम रेसिपी आणि व्यवसाय डेटा गोपनीय राहतात.' },
+        { title: 'प्रामाणिकपणा', text: 'तुमच्या कस्टम फॉर्म्युलेशन आणि व्यवसाय डेटा गोपनीय राहतात.' },
         { title: 'नावीन्य', text: 'आधुनिक औषधांबरोबर चालतो, जेणेकरून उपचार प्रभावी व स्थिर राहतील.' },
         { title: 'ग्राहक प्रथम', text: 'लवचिक बॅच आकार आणि तुमच्या खात्यासाठी नेमलेली व्यक्ती — छोटे किंवा मोठे दोघांसाठी.' },
         { title: 'शस्त्रक्रिया व क्लिनिकल काळजी', text: 'फक्त दुकान नाही, गंभीर देखभाल आणि प्रक्रियांसाठीही फॉर्म्युलेशन.' },
@@ -438,18 +440,19 @@ export const copy = {
     manufacturing: {
       title: 'उत्पादन आणि उत्पादने | डिनिमियो लाइफसायन्सेस',
       description:
-        'हृदय, अँटीबायोटिक्स, स्त्रीरोग, त्वचा, बालरोग आणि सामान्य औषधांचे अॅलोपॅथिक कॉन्ट्रॅक्ट उत्पादन. अलु-अलु, ब्लिस्टर, स्ट्रिप, बाटली.',
+        'हृदय, अँटीबायोटिक्स, स्त्रीरोग, त्वचा, बालरोग आणि सामान्य औषधांचे अॅलोपॅथिक कॉन्ट्रॅक्ट उत्पादन. अलु-अलु, ब्लिस्टर, स्ट्रिप, बाटली, ट्यूब.',
       kicker: 'क्षमता',
       headline: 'एक कॅटलॉग, तुमचा ब्रँड.',
       lead:
         'आम्ही अनेक थेरेपी क्षेत्रांत अॅलोपॅथिक श्रेणी देतो. हे पान श्रेणी सांगते, ग्राहक ब्रँड किंवा डोज नाही. प्रिस्क्रिप्शन औषधांची माहिती फक्त पात्र व्यावसायिक व परवानाधारक भागीदारांसाठी आहे.',
       productsTitle: 'थेरेपी क्षेत्रे',
       packTitle: 'पॅकेजिंग',
+      packImageAlt: 'क्रीम व ऑइंटमेंटच्या अॅल्युमिनियम ट्यूब — पाचवे पॅक मानक, अलु-अलु, ब्लिस्टर, स्ट्रिप आणि बाटलीसोबत.',
       processTitle: 'संक्षेप ते बॅच',
       steps: [
         { title: 'गरज सांगा', text: 'मॉलिक्यूल, क्षमता, पॅक आणि बाजार — किंवा आम्ही श्रेणी सुचवू.' },
-        { title: 'रेसिपी आणि चाचणी', text: 'फॉर्म्युलेशन, स्थिरता आणि गुणवत्ता स्पेक — बॅच लॉक करण्यापूर्वी.' },
-        { title: 'बनवणे आणि पॅक', text: 'प्रमाणित प्लांटमध्ये नोंदवलेले उत्पादन, नंतर अलु-अलु, ब्लिस्टर, स्ट्रिप किंवा बाटली.' },
+        { title: 'फॉर्म्युलेशन आणि चाचणी', text: 'फॉर्म्युलेशन, स्थिरता आणि गुणवत्ता स्पेक — बॅच लॉक करण्यापूर्वी.' },
+        { title: 'बनवणे आणि पॅक', text: 'प्रमाणित प्लांटमध्ये नोंदवलेले उत्पादन, नंतर अलु-अलु, ब्लिस्टर, स्ट्रिप, बाटली किंवा ट्यूब.' },
         { title: 'डिस्पॅच', text: 'तपासणी, पॅक, आणि ठरलेल्या तारखेला भारत नेटवर्कवरून रवाना.' },
       ],
     },

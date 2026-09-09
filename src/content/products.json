@@ -27,6 +27,13 @@
       "en": { "name": "Custom bottles", "blurb": "Glass or PET, labelled to your brand, sealed for the road." },
       "hi": { "name": "कस्टम बोतल", "blurb": "काँच या PET, आपके ब्रांड का लेबल, रास्ते के लिए सील।" },
       "mr": { "name": "कस्टम बाटल्या", "blurb": "काच किंवा PET, तुमच्या ब्रँडचे लेबल, रस्त्यासाठी सील." }
+    },
+    {
+      "id": "tube",
+      "icon": "tube",
+      "en": { "name": "Tubes", "blurb": "Aluminium or laminate tubes for creams, gels and ointments." },
+      "hi": { "name": "ट्यूब", "blurb": "क्रीम, जेल और ऑइंटमेंट के लिए एल्युमिनियम या लैमिनेट ट्यूब।" },
+      "mr": { "name": "ट्यूब", "blurb": "क्रीम, जेल आणि ऑइंटमेंटसाठी अॅल्युमिनियम किंवा लॅमिनेट ट्यूब." }
     }
   ],
   "items": [
@@ -54,9 +61,9 @@
     {
       "id": "dermatology",
       "icon": "leaf",
-      "en": { "name": "Dermatology", "blurb": "Skin-care allopathic products with stable, tested recipes." },
-      "hi": { "name": "त्वचा रोग", "blurb": "त्वचा की एलोपैथिक दवाइयाँ, स्थिर और जाँची हुई रेसिपी के साथ।" },
-      "mr": { "name": "त्वचारोग", "blurb": "त्वचेच्या अॅलोपॅथिक औषधी, स्थिर व तपासलेल्या रेसिपीसह." }
+      "en": { "name": "Dermatology", "blurb": "Skin-care allopathic products with stable, tested formulations." },
+      "hi": { "name": "त्वचा रोग", "blurb": "त्वचा की एलोपैथिक दवाइयाँ, स्थिर और जाँचे हुए फॉर्मूलेशन के साथ।" },
+      "mr": { "name": "त्वचारोग", "blurb": "त्वचेच्या अॅलोपॅथिक औषधी, स्थिर व तपासलेल्या फॉर्म्युलेशनसह." }
     },
     {
       "id": "paediatrics",

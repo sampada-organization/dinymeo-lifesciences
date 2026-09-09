@@ -12,6 +12,7 @@
   --white: #ffffff;
   --ink: #1c1f2e;
   --muted: #5a5f73;
+  --footer: #10131c;
   --line: color-mix(in srgb, var(--navy) 10%, transparent);
   --shadow: 0 18px 50px color-mix(in srgb, var(--navy) 14%, transparent);
   --radius: 6px;
@@ -397,6 +398,31 @@ section {
   color: var(--white);
 }
 
+.pack-band {
+  background: #eef1f8;
+}
+
+.pack-hero {
+  margin: 0 0 1.5rem;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: 1px solid color-mix(in srgb, var(--navy) 12%, #e6e8ef);
+  background: var(--white);
+}
+
+.pack-hero img {
+  width: 100%;
+  height: min(22rem, 52vw);
+  object-fit: cover;
+  object-position: 70% 55%;
+}
+
+.pack-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+
 .card h3 {
   color: var(--navy-ink);
 }
@@ -677,14 +703,42 @@ form.enquiry textarea {
 }
 
 .site-footer {
-  background: var(--navy-ink);
-  color: color-mix(in srgb, var(--cyan) 40%, white);
+  background: var(--footer);
+  color: #c5cbd8;
   padding: 3rem 0 1.5rem;
+  border-top: 4px solid var(--gold);
 }
 
-.site-footer .logo {
-  width: 7.5rem;
-  margin-bottom: 1rem;
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--white);
+  margin-bottom: 1.1rem;
+}
+
+.footer-brand span:last-child {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.logo-plate {
+  display: grid;
+  place-items: center;
+  width: 3.15rem;
+  height: 3.15rem;
+  flex-shrink: 0;
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 8px 22px color-mix(in srgb, #000 28%, transparent);
+}
+
+.logo-plate .logo.mark {
+  width: 2.15rem;
 }
 
 .site-footer h2,
@@ -699,6 +753,19 @@ form.enquiry textarea {
 
 .site-footer a:hover {
   color: var(--white);
+}
+
+.site-footer a.footer-brand {
+  color: var(--white);
+}
+
+.site-footer a.footer-brand:hover {
+  color: var(--gold-bright);
+}
+
+.site-footer .claim {
+  color: #aeb6c6;
+  border-left-color: var(--gold);
 }
 
 .foot-grid {
@@ -750,6 +817,12 @@ form.enquiry textarea {
   place-items: center;
 }
 
+@media (max-width: 1100px) {
+  .pack-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 980px) {
   .grid-4,
   .grid-3,
@@ -793,7 +866,8 @@ form.enquiry textarea {
   .grid-3,
   .grid-2,
   .foot-grid,
-  .split-about {
+  .split-about,
+  .pack-grid {
     grid-template-columns: 1fr;
   }
 

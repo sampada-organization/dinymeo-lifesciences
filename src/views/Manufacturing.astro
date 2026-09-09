@@ -4,7 +4,7 @@ import Icon from '../components/Icon.astro';
 import PackIcon from '../components/PackIcon.astro';
 import { t, type Locale } from '../lib/i18n';
 import { productData, qualityNote } from '../lib/site';
-import { localePath } from '../lib/paths';
+import { localePath, asset } from '../lib/paths';
 
 interface Props {
   lang: Locale;
@@ -45,10 +45,20 @@ const c = t(lang);
       </div>
     </div>
   </section>
-  <section class="band-navy">
+  <section class="pack-band">
     <div class="wrap">
       <h2>{c.manufacturing.packTitle}</h2>
-      <div class="grid-4">
+      <figure class="pack-hero">
+        <img
+          src={asset('/media/packaging-tubes.jpg')}
+          alt={c.manufacturing.packImageAlt}
+          width="1072"
+          height="615"
+          loading="lazy"
+          decoding="async"
+        />
+      </figure>
+      <div class="pack-grid">
         {
           productData.packaging.map((p) => (
             <article class="card card-hover pack-card">

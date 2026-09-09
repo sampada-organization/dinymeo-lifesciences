@@ -56,4 +56,19 @@ test.describe('Dinymeo MVP', () => {
     await expect(page.locator('svg.logo').first()).toBeVisible();
     await expect(page.locator('svg.ratio')).toBeVisible();
   });
+
+  test('header and footer share the full-colour mark', async ({ page }) => {
+    await page.goto('/');
+    await expect(page.locator('.site-header svg.logo.mark')).toBeVisible();
+    await expect(page.locator('.site-footer svg.logo.mark')).toBeVisible();
+    await expect(page.locator('.site-footer svg.logo.invert')).toHaveCount(0);
+    await expect(page.locator('.site-footer .logo-plate')).toBeVisible();
+  });
+
+  test('manufacturing lists tubes as a packing standard', async ({ page }) => {
+    await page.goto('/manufacturing');
+    await expect(page.getByRole('heading', { name: 'Tubes', exact: true })).toBeVisible();
+    await expect(page.locator('.pack-hero img')).toBeVisible();
+    await expect(page.locator('body')).not.toContainText(/recipe/i);
+  });
 });
