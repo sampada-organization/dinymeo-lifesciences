@@ -29,5 +29,5 @@ The Pages workflow builds with `ASTRO_BASE=/dinymeo-lifesciences/`. If you attac
 
 - Canonical URLs and `og:*` tags aimed at `https://dinymeo.com`
 - `robots.txt` sitemap pointer
-- `hreflang` for `en-IN`, `hi-IN`, `mr-IN`
+- Canonical English URLs at `https://dinymeo.com`
 - HTTPS security headers in `staticwebapp.config.json` and `public/_headers`

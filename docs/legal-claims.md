@@ -35,7 +35,7 @@ The packaged **Mont Heavy DEMO** font file is still **not** loaded on the websit
 
 ## Font leftover
 
-UI text (headings, body, Hindi/Marathi) uses Montserrat and Noto Sans Devanagari, not the demo font.
+UI text (headings, body) uses Montserrat and Noto Sans Devanagari, not the demo font.
 
 ## Still needed from the client before stronger claims
 

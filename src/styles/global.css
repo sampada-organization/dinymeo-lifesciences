@@ -33,8 +33,7 @@ html {
   scroll-behavior: smooth;
 }
 
-html[lang^='hi'] body,
-html[lang^='mr'] body {
+html[lang^='hi'] body {
   font-size: 1.16rem;
   line-height: 1.72;
 }

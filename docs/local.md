@@ -15,7 +15,7 @@ npm run dev:full
 
 Open http://127.0.0.1:4321
 
-- EN `/`  HI `/hi/`  MR `/mr/`
+- English at `/`
 - Admin `/admin` password `dinymeo-dev`
 - Click-to-call / WhatsApp / email dock on every page
 
@@ -43,7 +43,7 @@ Editable JSON (also the CMS target):
 - `src/content/site.json` — phone, email, address, quality footnote
 - `src/content/products.json` — therapy areas and packs
 - `src/content/slides.json` — hero slideshow
-- `src/lib/i18n.ts` — UI strings in English, Hindi, Marathi
+- `src/lib/i18n.ts` — UI strings (English on the public site)
 - `src/lib/legal.ts` — disclaimer, privacy, terms
 
 ## Brand assets

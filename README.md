@@ -1,6 +1,6 @@
 # Dinymeo Lifesciences
 
-First-version JAMstack website for **Dinymeo Lifesciences Pvt. Ltd.** (Pune) — English, हिन्दी, मराठी.
+First-version JAMstack website for **Dinymeo Lifesciences Pvt. Ltd.** (Pune) — English.
 
 Live shape: static Astro site + Azure Static Web Apps (free) + GitHub Actions. Forms and a small CMS sit on `/api`. Click-to-call, WhatsApp, and email are first-class.
 

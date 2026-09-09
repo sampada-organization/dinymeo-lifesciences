@@ -34,14 +34,12 @@ describe('paths', () => {
     expect(localePath('en', '/about')).toBe('/about');
     expect(localePath('en', '/')).toBe('/');
   });
-  it('hindi and marathi are prefixed', () => {
+  it('hindi is prefixed', () => {
     expect(localePath('hi', '/about')).toBe('/hi/about');
-    expect(localePath('mr', '/')).toBe('/mr/');
   });
   it('switchLocale strips and reapplies prefix', () => {
     expect(switchLocale('en', 'hi', '/about')).toBe('/hi/about');
-    expect(switchLocale('hi', 'mr', '/hi/contact')).toBe('/mr/contact');
-    expect(switchLocale('mr', 'en', '/mr/')).toBe('/');
+    expect(switchLocale('hi', 'en', '/hi/contact')).toBe('/contact');
   });
   it('withBase joins a non-root base', () => {
     expect(withBase('/media/x.jpg')).toMatch(/media\/x\.jpg$/);
