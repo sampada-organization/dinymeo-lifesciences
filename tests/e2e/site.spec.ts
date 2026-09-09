@@ -8,6 +8,10 @@ test.describe('Dinymeo MVP', () => {
     const menu = page.getByRole('button', { name: 'Menu' });
     if (await menu.isVisible()) await menu.click();
     await expect(page.getByRole('navigation', { name: 'Primary' })).toContainText('About');
+    await expect(
+      page.getByRole('navigation', { name: 'Primary' }).getByRole('link', { name: 'Contact' }),
+    ).toHaveCount(0);
+    await expect(page.locator('.site-header a.btn.quote').locator('visible=true')).toHaveCount(1);
     await expect(page.locator('.site-footer')).toContainText(/WHO-GMP/);
     await expect(page.locator('.hero')).not.toContainText(/WHO-GMP/);
     await expect(page.locator('body')).not.toContainText(/self-medication/i);
