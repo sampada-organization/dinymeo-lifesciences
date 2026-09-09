@@ -2,7 +2,7 @@
 
 The site stays on **GitHub Pages**. Wix cannot host this Astro build. Domain **dinymeo.com** was bought at Wix: keep Wix as the registrar and point DNS at Pages. Wix does **not** let you change nameservers on a Wix-purchased domain — only the records.
 
-`www.dinymeo.com` already points at GitHub Pages. The **apex** `dinymeo.com` still has Wix A records (`185.230.63.*`) until you delete them. Until those change, GitHub Pages is attached to **www.dinymeo.com** so the site is reachable. After the apex A records are GitHub’s, we switch the primary URL to `https://dinymeo.com`.
+Primary URL is **https://dinymeo.com** (HTTPS enforced). `www.dinymeo.com` redirects there. GitHub Pages certificate covers both names.
 
 Fallback until DNS is updated: https://sampada-organization.github.io/dinymeo-lifesciences/
 
