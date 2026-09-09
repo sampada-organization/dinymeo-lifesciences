@@ -9,7 +9,8 @@ fi
 REPO="${GITHUB_REPO:-sampada-organization/dinymeo-lifesciences}"
 
 gh variable set PRODUCTION_DOMAIN --repo "$REPO" --body "$DOMAIN"
-gh api -X PUT "repos/${REPO}/pages" -f cname="$DOMAIN" -F https_enforced=true >/dev/null
+# HTTPS enforce needs a certificate; that is issued after DNS answers. Attach the name first.
+gh api -X PUT "repos/${REPO}/pages" -f cname="$DOMAIN" >/dev/null
 
 mkdir -p public
 printf '%s\n' "$DOMAIN" > public/CNAME

@@ -1,8 +1,10 @@
 # Park the live site on a Wix domain
 
-The site stays on **GitHub Pages**. Wix cannot host this Astro build. If the domain was bought at Wix, keep Wix as the registrar and point DNS at Pages. Wix does **not** let you change nameservers on a Wix-purchased domain — only the records.
+The site stays on **GitHub Pages**. Wix cannot host this Astro build. Domain **dinymeo.com** was bought at Wix: keep Wix as the registrar and point DNS at Pages. Wix does **not** let you change nameservers on a Wix-purchased domain — only the records.
 
-Live fallback while DNS is pending: https://sampada-organization.github.io/dinymeo-lifesciences/
+GitHub Pages is already attached to `dinymeo.com`. After the Wix records below propagate, **https://dinymeo.com** is the main URL.
+
+Fallback until DNS is updated: https://sampada-organization.github.io/dinymeo-lifesciences/
 
 ## What you do in Wix (5 minutes)
 
