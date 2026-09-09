@@ -14,8 +14,9 @@ const c = t(lang);
 
 <Base lang={lang} title={c.contact.title} description={c.contact.description} current="contact">
   <section>
-    <div class="wrap grid-2">
-      <div>
+    <div class="wrap split-about">
+      <div class="about-panel">
+        <div>
         <p class="kicker">{c.contact.kicker}</p>
         <h1>{c.contact.headline}</h1>
         <p class="lede">{c.contact.lead}</p>
@@ -57,10 +58,13 @@ const c = t(lang);
             </p>
           </li>
         </ul>
+        </div>
       </div>
-      <div>
-        <EnquiryForm lang={lang} />
-      </div>
+      <aside class="form-panel">
+        <h2>{c.home.contactTitle}</h2>
+        <p class="form-lead">{c.home.formLead}</p>
+        <EnquiryForm lang={lang} compact />
+      </aside>
     </div>
   </section>
 </Base>
