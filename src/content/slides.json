@@ -5,19 +5,19 @@
       "visual": "overview",
       "image": "/media/flyer-overview.jpg",
       "en": {
-        "kicker": "Overview",
-        "title": "You market. We make.",
-        "text": "One partner for formulation, quality, packing and supply — a short path from brief to batch."
+        "kicker": "Partner",
+        "title": "Brief in. Batch out.",
+        "text": "You sell. We formulate, test, pack, ship."
       },
       "hi": {
-        "kicker": "परिचय",
-        "title": "आप बेचें। हम बनाएँ।",
-        "text": "फॉर्मूलेशन, गुणवत्ता, पैकिंग और सप्लाई — एक साथी, संक्षेप से बैच तक।"
+        "kicker": "पार्टनर",
+        "title": "संक्षेप अंदर। बैच बाहर।",
+        "text": "आप बेचें। हम फॉर्मूलेट, टेस्ट, पैक, शिप।"
       },
       "mr": {
-        "kicker": "ओव्हरव्ह्यू",
-        "title": "तुम्ही विका. आम्ही बनवतो.",
-        "text": "फॉर्म्युलेशन, गुणवत्ता, पॅकिंग आणि पुरवठा — एक भागीदार, संक्षेप ते बॅच."
+        "kicker": "भागीदार",
+        "title": "संक्षेप आत. बॅच बाहेर.",
+        "text": "तुम्ही विका. आम्ही फॉर्म्युलेट, टेस्ट, पॅक, शिप."
       }
     },
     {
@@ -25,19 +25,19 @@
       "visual": "photo",
       "image": "/media/flyer-manufacturing.jpg",
       "en": {
-        "kicker": "Manufacturing",
-        "title": "The science of healing.",
-        "text": "Allopathic medicines made with documented quality at every step — from brief to batch."
+        "kicker": "Science",
+        "title": "Stability first.",
+        "text": "Assay. Specs. Records. Then the batch."
       },
       "hi": {
-        "kicker": "निर्माण",
-        "title": "उपचार का विज्ञान।",
-        "text": "हर कदम पर दर्ज गुणवत्ता के साथ बनी एलोपैथिक दवाइयाँ — संक्षेप से बैच तक।"
+        "kicker": "विज्ञान",
+        "title": "पहले स्थिरता।",
+        "text": "असे, स्पेक, रिकॉर्ड। फिर बैच।"
       },
       "mr": {
-        "kicker": "उत्पादन",
-        "title": "उपचाराचे शास्त्र.",
-        "text": "प्रत्येक टप्प्यावर नोंदवलेली गुणवत्ता — संक्षेप ते बॅच."
+        "kicker": "शास्त्र",
+        "title": "आधी स्थिरता.",
+        "text": "असे, स्पेक, नोंद. मग बॅच."
       }
     },
     {
@@ -45,19 +45,19 @@
       "visual": "mindmap",
       "image": "/media/flyer-packaging.jpg",
       "en": {
-        "kicker": "Pack science",
-        "title": "Packs that protect the dose.",
-        "text": "Barrier first: ICH Q1A/Q1B, WVTR and OTR decide Alu-Alu, blister, strip, bottle or tube."
+        "kicker": "Pack",
+        "title": "Barrier is the product.",
+        "text": "Alu-Alu. Blister. Strip. Bottle. Tube."
       },
       "hi": {
-        "kicker": "पैक विज्ञान",
-        "title": "पैक जो दवा की रक्षा करें।",
-        "text": "पहले बैरियर: ICH Q1A/Q1B, WVTR और OTR से अलु-अलु, ब्लिस्टर, स्ट्रिप, बोतल या ट्यूब।"
+        "kicker": "पैक",
+        "title": "बैरियर ही उत्पाद है।",
+        "text": "अलु-अलु. ब्लिस्टर. स्ट्रिप. बोतल. ट्यूब."
       },
       "mr": {
-        "kicker": "पॅक शास्त्र",
-        "title": "डोस सुरक्षित ठेवणारे पॅक.",
-        "text": "आधी बॅरियर: ICH Q1A/Q1B, WVTR आणि OTR नुसार अलु-अलु, ब्लिस्टर, स्ट्रिप, बाटली किंवा ट्यूब."
+        "kicker": "पॅक",
+        "title": "बॅरियर हेच उत्पादन.",
+        "text": "अलु-अलु. ब्लिस्टर. स्ट्रिप. बाटली. ट्यूब."
       }
     },
     {
@@ -65,19 +65,19 @@
       "visual": "photo",
       "image": "/media/flyer-supply.jpg",
       "en": {
-        "kicker": "Supply",
-        "title": "Partners worldwide.",
-        "text": "A supply chain built to reach your market on the date we promise."
+        "kicker": "Ship",
+        "title": "On the date.",
+        "text": "Your market. Our clock."
       },
       "hi": {
-        "kicker": "सप्लाई",
-        "title": "दुनिया भर के पार्टनर।",
-        "text": "आपके बाजार तक, जिस तारीख का वादा हो।"
+        "kicker": "शिप",
+        "title": "तय तारीख पर।",
+        "text": "आपका बाजार। हमारी घड़ी।"
       },
       "mr": {
-        "kicker": "पुरवठा",
-        "title": "जगभरातील भागीदार.",
-        "text": "तुमच्या बाजारात, ठरलेल्या तारखेला."
+        "kicker": "शिप",
+        "title": "ठरलेल्या तारखेला.",
+        "text": "तुमचा बाजार. आमचे घड्याळ."
       }
     }
   ]

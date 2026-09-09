@@ -2,9 +2,6 @@
 import { t, type Locale } from '../lib/i18n';
 import { localePath, asset } from '../lib/paths';
 import { slideData } from '../lib/site';
-import GoldenRatio from './GoldenRatio.astro';
-import PackMindmap from './PackMindmap.astro';
-import OverviewMap from './OverviewMap.astro';
 
 interface Props {
   lang: Locale;
@@ -27,23 +24,20 @@ const slides = slideData.items;
           {'image' in slide && slide.image ? (
             <img
               src={asset(slide.image)}
-              srcset={`${asset(slide.image.replace(/(\.[a-z]+)$/i, '-sm$1'))} 640w, ${asset(slide.image)} 1156w`}
+              srcset={`${asset(slide.image.replace(/(\.[a-z]+)$/i, '-sm$1'))} 640w, ${asset(slide.image)} 1162w`}
               sizes="100vw"
               alt=""
-              width="1156"
-              height="658"
+              width="1162"
+              height="660"
               loading={i === 0 ? 'eager' : 'lazy'}
               decoding={i === 0 ? 'sync' : 'async'}
               fetchpriority={i === 0 ? 'high' : 'low'}
             />
           ) : null}
-          {visual === 'overview' ? <OverviewMap /> : null}
-          {visual === 'mindmap' ? <PackMindmap /> : null}
         </div>
       );
     })
   }
-  <GoldenRatio />
   <div class="hero-copy">
     <p class="kicker" data-kicker>{slides[0][lang].kicker}</p>
     <h1 data-title>{slides[0][lang].title}</h1>

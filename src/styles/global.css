@@ -744,13 +744,15 @@ form.enquiry label {
 form.enquiry input,
 form.enquiry textarea {
   font: inherit;
-  font-size: 1.05rem;
-  padding: 0.55rem 0.7rem;
+  font-size: 1rem;
+  padding: 0.65rem 0.75rem;
   border: 1.5px solid #8e96b0;
   border-radius: var(--radius);
   background: #ffffff;
   color: var(--ink);
-  min-height: 2.55rem;
+  min-height: 2.85rem;
+  width: 100%;
+  max-width: 100%;
 }
 
 form.enquiry input:hover,
@@ -776,6 +778,10 @@ form.enquiry.compact {
 
 form.enquiry.compact textarea {
   min-height: 4.1rem;
+}
+
+form.enquiry .btn {
+  width: 100%;
 }
 
 form.enquiry.compact .consent {
@@ -975,8 +981,23 @@ form.enquiry.compact .consent {
 @media (max-width: 980px) {
   .grid-4,
   .grid-3,
-  .foot-grid {
+  .foot-grid,
+  .cases-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .split-about {
+    grid-template-columns: 1fr;
+  }
+
+  .about-panel,
+  .form-panel {
+    min-height: 0;
+  }
+
+  form.enquiry input,
+  form.enquiry textarea {
+    font-size: 16px;
   }
 }
 

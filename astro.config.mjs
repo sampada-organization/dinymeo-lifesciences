@@ -10,20 +10,11 @@ export default defineConfig({
   base,
   trailingSlash: 'ignore',
   integrations: [
-    sitemap({
-      i18n: {
-        defaultLocale: 'en',
-        locales: {
-          en: 'en-IN',
-          hi: 'hi-IN',
-          mr: 'mr-IN',
-        },
-      },
-    }),
+    sitemap(),
   ],
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'hi', 'mr'],
+    locales: ['en'],
     routing: {
       prefixDefaultLocale: false,
     },

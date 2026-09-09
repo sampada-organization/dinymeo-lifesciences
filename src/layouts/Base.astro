@@ -38,7 +38,7 @@ const jsonLd = {
     addressCountry: 'IN',
   },
   areaServed: 'Global',
-  knowsLanguage: ['en', 'hi', 'mr'],
+  knowsLanguage: ['en'],
 };
 ---
 
@@ -54,10 +54,6 @@ const jsonLd = {
       content="pharma third party manufacturing, allopathic medicine contract manufacturing, Dinymeo Lifesciences Pvt Ltd"
     />
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" hreflang="en-IN" href={new URL(localePath('en', page), origin).href} />
-    <link rel="alternate" hreflang="hi-IN" href={new URL(localePath('hi', page), origin).href} />
-    <link rel="alternate" hreflang="mr-IN" href={new URL(localePath('mr', page), origin).href} />
-    <link rel="alternate" hreflang="x-default" href={new URL(localePath('en', '/'), origin).href} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
