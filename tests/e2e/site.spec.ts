@@ -85,24 +85,15 @@ test.describe('Dinymeo MVP', () => {
 
   test('wheel on the flyer advances one page view', async ({ page }) => {
     await page.goto('/');
-    await expect(page.locator('.roller-item.is-current')).toHaveText('Overview');
+    const flow = page.locator('.page-flow');
+    const start = await flow.evaluate((el) => el.scrollTop);
     const hero = page.locator('.hero');
     const box = await hero.boundingBox();
     expect(box).toBeTruthy();
     await page.mouse.move(box!.x + Math.min(220, box!.width * 0.28), box!.y + box!.height * 0.45);
     await page.mouse.wheel(0, 160);
-    await expect(page.locator('.roller-item.is-current')).toHaveText('Welcome');
-  });
-
-  test('section roller names the current view', async ({ page }) => {
-    await page.goto('/');
-    const roller = page.locator('.section-roller');
-    await expect(roller).toBeVisible();
-    await expect(roller.getByRole('button', { name: 'Overview' })).toHaveCount(1);
-    await roller.getByRole('button', { name: 'Who we work with' }).click({ force: true });
-    await expect(roller.locator('.roller-item.is-current')).toHaveText('Who we work with');
-    await page.goto('/legal/disclaimer');
-    await expect(page.locator('.section-roller')).toHaveCount(0);
+    await expect.poll(async () => flow.evaluate((el) => el.scrollTop)).toBeGreaterThan(start + 80);
+    await expect(page.locator('body')).not.toContainText('On this page');
   });
 
   test('hero has hold-to-pause controls and a pack-science mindmap', async ({ page }) => {

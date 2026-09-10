@@ -1,38 +1,16 @@
 ---
-import { t, type Locale } from '../lib/i18n';
-
-interface Props {
-  lang: Locale;
-}
-const { lang } = Astro.props;
-const c = t(lang);
 ---
-
-<aside class="section-roller" aria-label={c.sectionNav} hidden>
-  <p class="view-mark" data-mark aria-hidden="true"></p>
-  <nav class="view-box">
-    <p class="view-kicker">{c.sectionNav}</p>
-    <div class="view-list" data-track></div>
-  </nav>
-</aside>
 
 <script>
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const flow = document.querySelector('.page-flow');
-  const roller = document.querySelector('.section-roller');
-  const track = roller?.querySelector('[data-track]');
-  const mark = roller?.querySelector('[data-mark]');
 
-  if (flow instanceof HTMLElement && roller instanceof HTMLElement && track instanceof HTMLElement) {
+  if (flow instanceof HTMLElement) {
     const panes = () =>
       [...flow.querySelectorAll('[data-section]')].filter(
-        (node): node is HTMLElement => node instanceof HTMLElement,
+        (node): node is HTMLElement =>
+          node instanceof HTMLElement && !node.classList.contains('site-footer'),
       );
-
-    const darkPane = (el: HTMLElement) =>
-      el.classList.contains('hero') ||
-      el.classList.contains('band-navy') ||
-      el.classList.contains('site-footer');
 
     let index = 0;
     let locked = false;
@@ -40,22 +18,14 @@ const c = t(lang);
     let touchY = 0;
     let touchX = 0;
 
-    const paint = () => {
-      const list = panes();
-      const pane = list[index];
-      track.querySelectorAll('.roller-item').forEach((btn, i) => {
-        btn.classList.toggle('is-current', i === index);
-        btn.setAttribute('aria-current', i === index ? 'true' : 'false');
-      });
-      roller.classList.toggle('is-on-dark', darkPane(pane ?? list[0]));
-      if (mark instanceof HTMLElement) {
-        mark.textContent = pane?.dataset.section ?? '';
-      }
-    };
+    const maxScroll = () => Math.max(0, flow.scrollHeight - flow.clientHeight);
 
     const currentIndex = () => {
       const list = panes();
+      if (!list.length) return 0;
+      const last = list[list.length - 1];
       const mid = flow.scrollTop + flow.clientHeight * 0.45;
+      if (mid > last.offsetTop + last.offsetHeight) return list.length;
       let best = 0;
       let dist = Infinity;
       list.forEach((el, i) => {
@@ -71,13 +41,19 @@ const c = t(lang);
     const go = (next: number) => {
       const list = panes();
       if (!list.length) return;
-      const clamped = Math.max(0, Math.min(list.length - 1, next));
-      if (clamped === index && Math.abs(list[clamped].offsetTop - flow.scrollTop) < 4) return;
-      index = clamped;
-      const el = list[index];
+      if (next < 0) return;
+      if (next >= list.length) {
+        const end = maxScroll();
+        if (flow.scrollTop >= end - 4) return;
+        index = list.length;
+        flow.scrollTo({ top: end, behavior: reduced ? 'auto' : 'smooth' });
+        return;
+      }
+      const el = list[next];
+      if (next === index && Math.abs(el.offsetTop - flow.scrollTop) < 4) return;
+      index = next;
       el.scrollTop = 0;
       flow.scrollTo({ top: el.offsetTop, behavior: reduced ? 'auto' : 'smooth' });
-      paint();
     };
 
     const overflowing = (el: HTMLElement, dir: number) => {
@@ -89,33 +65,12 @@ const c = t(lang);
       return el.scrollTop > 8;
     };
 
-    const build = () => {
-      const list = panes();
-      if (!list.length) return;
-      track.replaceChildren();
-      list.forEach((el, i) => {
-        const btn = document.createElement('button');
-        btn.type = 'button';
-        btn.className = 'roller-item';
-        btn.textContent = el.dataset.section || `Section ${i + 1}`;
-        btn.addEventListener('click', () => go(i));
-        track.append(btn);
-      });
-      roller.hidden = false;
-      index = currentIndex();
-      paint();
-    };
-
-    build();
+    index = currentIndex();
 
     flow.addEventListener(
       'scroll',
       () => {
-        const next = currentIndex();
-        if (next !== index) {
-          index = next;
-          paint();
-        }
+        index = currentIndex();
       },
       { passive: true },
     );
@@ -136,9 +91,9 @@ const c = t(lang);
             return;
           }
           const i = currentIndex();
-          const pane = panes()[i];
-          if (!pane) return;
-          if (overflowing(pane, event.deltaY)) {
+          const list = panes();
+          const pane = i < list.length ? list[i] : null;
+          if (pane && overflowing(pane, event.deltaY)) {
             event.preventDefault();
             pane.scrollTop += event.deltaY;
             return;
@@ -167,11 +122,12 @@ const c = t(lang);
         const dy = touchY - y;
         const dx = touchX - x;
         if (Math.abs(dy) < 36 || Math.abs(dy) <= Math.abs(dx)) return;
-        if (target instanceof Element && target.closest('a, button, input, textarea, select, .view-box')) {
+        if (target instanceof Element && target.closest('a, button, input, textarea, select')) {
           return;
         }
         const i = currentIndex();
-        const pane = panes()[i];
+        const list = panes();
+        const pane = i < list.length ? list[i] : null;
         if (pane && overflowing(pane, dy)) return;
         if (locked) return;
         locked = true;
@@ -226,7 +182,8 @@ const c = t(lang);
         }
       }
       const i = currentIndex();
-      const pane = panes()[i];
+      const list = panes();
+      const pane = i < list.length ? list[i] : null;
       if (event.key === 'PageDown' || event.key === 'ArrowDown' || event.key === ' ') {
         if (pane && overflowing(pane, 1) && event.key !== 'PageDown') return;
         event.preventDefault();
@@ -240,7 +197,7 @@ const c = t(lang);
         go(0);
       } else if (event.key === 'End') {
         event.preventDefault();
-        go(panes().length - 1);
+        go(list.length);
       }
     });
   }

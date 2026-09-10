@@ -201,7 +201,6 @@ export const copy = {
       wa: 'WhatsApp Dinymeo',
       mail: 'Email Dinymeo',
     },
-    sectionNav: 'On this page',
   },
   hi: {
     brand: 'डिनिमियो लाइफसाइंसेस',
@@ -387,7 +386,6 @@ export const copy = {
       wa: 'डिनिमियो को व्हाट्सऐप करें',
       mail: 'डिनिमियो को ईमेल करें',
     },
-    sectionNav: 'इस पेज पर',
   },
 } as const;
 

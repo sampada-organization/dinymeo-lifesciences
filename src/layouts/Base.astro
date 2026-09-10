@@ -7,7 +7,7 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ContactDock from '../components/ContactDock.astro';
-import SectionRoller from '../components/SectionRoller.astro';
+import PageSnap from '../components/PageSnap.astro';
 import { localeMeta, type Locale, t } from '../lib/i18n';
 import { localePath, withBase, unprefixedPath } from '../lib/paths';
 import { siteData } from '../lib/site';
@@ -89,7 +89,7 @@ const jsonLd = {
       )
     }
     <ContactDock lang={lang} />
-    {paged ? <SectionRoller lang={lang} /> : null}
+    {paged ? <PageSnap /> : null}
     <noscript>
       <p class="wrap">{t(lang).footer.b2b}</p>
     </noscript>
