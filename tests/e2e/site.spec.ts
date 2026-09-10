@@ -83,6 +83,17 @@ test.describe('Dinymeo MVP', () => {
     await expect(page.locator('body')).not.toContainText(/no consumer doses/i);
   });
 
+  test('wheel on the flyer advances one page view', async ({ page }) => {
+    await page.goto('/');
+    await expect(page.locator('.roller-item.is-current')).toHaveText('Overview');
+    const hero = page.locator('.hero');
+    const box = await hero.boundingBox();
+    expect(box).toBeTruthy();
+    await page.mouse.move(box!.x + Math.min(220, box!.width * 0.28), box!.y + box!.height * 0.45);
+    await page.mouse.wheel(0, 160);
+    await expect(page.locator('.roller-item.is-current')).toHaveText('Welcome');
+  });
+
   test('section roller names the current view', async ({ page }) => {
     await page.goto('/');
     const roller = page.locator('.section-roller');

@@ -1161,6 +1161,8 @@ body.is-paged .site-footer {
 
 body.is-paged .hero {
   overflow: hidden;
+  overscroll-behavior: auto;
+  touch-action: pan-y;
 }
 
 body.is-paged .hero-nav {
