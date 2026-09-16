@@ -5,14 +5,14 @@
       "visual": "overview",
       "image": "/media/flyer-overview.jpg",
       "en": {
-        "kicker": "Partner",
-        "title": "From brief to batch.",
-        "text": "We formulate, test, pack and ship for licensed partners."
+        "kicker": "Overview",
+        "title": "You market. We make.",
+        "text": "One partner for formulation, quality, packing and supply — a short path from brief to batch."
       },
       "hi": {
-        "kicker": "पार्टनर",
-        "title": "संक्षेप से बैच तक।",
-        "text": "लाइसेंसधारी पार्टनर के लिए फॉर्मूलेशन, जाँच, पैक और शिप।"
+        "kicker": "परिचय",
+        "title": "आप बेचें। हम बनाएँ।",
+        "text": "फॉर्मूलेशन, गुणवत्ता, पैकिंग और सप्लाई — एक साथी, संक्षेप से बैच तक।"
       }
     },
     {
@@ -20,14 +20,14 @@
       "visual": "photo",
       "image": "/media/flyer-manufacturing.jpg",
       "en": {
-        "kicker": "Science",
-        "title": "Stability, then manufacture.",
-        "text": "Assay, specifications and records before the batch."
+        "kicker": "Manufacturing",
+        "title": "The science of healing.",
+        "text": "Allopathic medicines made with documented quality at every step — from brief to batch."
       },
       "hi": {
-        "kicker": "विज्ञान",
-        "title": "स्थिरता, फिर निर्माण।",
-        "text": "असे, स्पेक और रिकॉर्ड — बैच से पहले।"
+        "kicker": "निर्माण",
+        "title": "उपचार का विज्ञान।",
+        "text": "हर कदम पर दर्ज गुणवत्ता के साथ बनी एलोपैथिक दवाइयाँ — संक्षेप से बैच तक।"
       }
     },
     {
@@ -35,14 +35,14 @@
       "visual": "mindmap",
       "image": "/media/flyer-packaging.jpg",
       "en": {
-        "kicker": "Pack",
-        "title": "Packaging for the formulation.",
-        "text": "Alu-Alu, blister, strip, bottle and tube."
+        "kicker": "Pack science",
+        "title": "Packs that protect the dose.",
+        "text": "Alu-Alu, blister, strip, bottle or tube — chosen for the formulation so the dose stays stable on the shelf."
       },
       "hi": {
-        "kicker": "पैक",
-        "title": "फॉर्मूलेशन के अनुसार पैक।",
-        "text": "अलु-अलु, ब्लिस्टर, स्ट्रिप, बोतल और ट्यूब।"
+        "kicker": "पैक विज्ञान",
+        "title": "पैक जो दवा की रक्षा करें।",
+        "text": "अलु-अलु, ब्लिस्टर, स्ट्रिप, बोतल या ट्यूब — फॉर्मूलेशन के अनुसार, ताकि दवा शेल्फ पर स्थिर रहे।"
       }
     },
     {
@@ -51,13 +51,13 @@
       "image": "/media/flyer-supply.jpg",
       "en": {
         "kicker": "Supply",
-        "title": "Dispatch as agreed.",
-        "text": "Checked and released for your market."
+        "title": "Partners worldwide.",
+        "text": "A supply chain built to reach your market on the date we promise."
       },
       "hi": {
         "kicker": "सप्लाई",
-        "title": "तय समय पर डिस्पैच।",
-        "text": "जाँच के बाद आपके बाजार के लिए रिलीज़।"
+        "title": "दुनिया भर के पार्टनर।",
+        "text": "आपके बाजार तक, जिस तारीख का वादा हो।"
       }
     }
   ]

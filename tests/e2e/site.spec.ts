@@ -4,8 +4,8 @@ test.describe('Dinymeo MVP', () => {
   test('home renders headline, nav, and legal claim', async ({ page }) => {
     await page.goto('/');
     await expect(page).toHaveTitle(/Dinymeo/i);
-    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
-    const menu = page.getByRole('button', { name: 'Menu' });
+    await expect(page.locator('main').getByRole('heading', { level: 1 })).toBeVisible();
+    const menu = page.getByRole('banner').getByRole('button', { name: 'Menu' });
     if (await menu.isVisible()) await menu.click();
     await expect(page.getByRole('navigation', { name: 'Primary' })).toContainText('About');
     await expect(
@@ -35,10 +35,10 @@ test.describe('Dinymeo MVP', () => {
     for (const path of ['/about', '/manufacturing', '/contact', '/legal/disclaimer', '/legal/privacy', '/legal/terms']) {
       const res = await page.goto(path);
       expect(res?.ok()).toBeTruthy();
-      await expect(page.locator('h1')).toBeVisible();
+      await expect(page.locator('main h1')).toBeVisible();
     }
     await page.goto('/about');
-    await expect(page.locator('h1')).not.toContainText(/Made in India/i);
+    await expect(page.locator('main h1')).not.toContainText(/Made in India/i);
     await expect(page.locator('main')).not.toContainText(/small or large/i);
   });
 
@@ -83,16 +83,12 @@ test.describe('Dinymeo MVP', () => {
     await expect(page.locator('body')).not.toContainText(/no consumer doses/i);
   });
 
-  test('wheel on the flyer advances one page view', async ({ page }) => {
+  test('the page scrolls normally and has no section map', async ({ page }) => {
     await page.goto('/');
-    const flow = page.locator('.page-flow');
-    const start = await flow.evaluate((el) => el.scrollTop);
-    const hero = page.locator('.hero');
-    const box = await hero.boundingBox();
-    expect(box).toBeTruthy();
-    await page.mouse.move(box!.x + Math.min(220, box!.width * 0.28), box!.y + box!.height * 0.45);
-    await page.mouse.wheel(0, 160);
-    await expect.poll(async () => flow.evaluate((el) => el.scrollTop)).toBeGreaterThan(start + 80);
+    await expect(page.locator('.page-flow')).toHaveCount(0);
+    const start = await page.evaluate(() => window.scrollY);
+    await page.mouse.wheel(0, 900);
+    await expect.poll(async () => page.evaluate(() => window.scrollY)).toBeGreaterThan(start + 80);
     await expect(page.locator('body')).not.toContainText('On this page');
   });
 
@@ -105,15 +101,16 @@ test.describe('Dinymeo MVP', () => {
     await expect(page.locator('svg.flow-scene')).toBeVisible();
     await expect(page.locator('.flow-scene')).toContainText('Formulation');
     await expect(page.locator('body')).not.toContainText(/research-led/i);
-    await expect(page.getByRole('heading', { name: 'Who we work with' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'If this is you' })).toBeVisible();
     await page.locator('.hero-nav.next').click({ force: true });
-    await expect(page.locator('[data-title]')).toContainText(/Stability, then manufacture/i);
+    await expect(page.locator('[data-title]')).toContainText(/The science of healing/i);
     await expect(page.locator('.hero-slide.is-active img')).toHaveAttribute('src', /flyer-manufacturing/);
     await page.locator('.hero-nav.next').click({ force: true });
-    await expect(page.locator('[data-title]')).toContainText(/Packaging for the formulation/i);
+    await expect(page.locator('[data-title]')).toContainText(/Packs that protect the dose/i);
+    await expect(page.locator('.hero-slide.is-active')).not.toContainText(/Barrier first/i);
     await expect(page.locator('.hero-slide.is-active img')).toHaveAttribute('src', /flyer-packaging/);
     await page.locator('.hero-nav.next').click({ force: true });
-    await expect(page.locator('[data-title]')).toContainText(/Dispatch as agreed/i);
+    await expect(page.locator('[data-title]')).toContainText(/Partners worldwide/i);
     await expect(page.locator('.hero-slide.is-active img')).toHaveAttribute('src', /flyer-supply/);
   });
 });

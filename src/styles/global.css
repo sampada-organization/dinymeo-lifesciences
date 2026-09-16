@@ -1123,67 +1123,9 @@ form.enquiry.compact .consent {
   }
 }
 
-body.is-paged {
-  height: 100dvh;
-  overflow: hidden;
-  display: grid;
-  grid-template-rows: var(--header) minmax(0, 1fr);
-}
-
-body.is-paged .site-header {
-  position: relative;
-}
-
-.page-flow {
-  min-height: 0;
-  overflow: auto;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  overscroll-behavior-y: contain;
-  -webkit-overflow-scrolling: touch;
-}
-
-body.is-paged main {
-  display: contents;
-}
-
-body.is-paged .hero,
-body.is-paged main > section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  height: 100%;
-  min-height: 100%;
-  max-height: 100%;
-  overflow: auto;
-  overscroll-behavior: contain;
-}
-
-body.is-paged .hero {
-  overflow: hidden;
-  overscroll-behavior: auto;
-  touch-action: pan-y;
-}
-
-body.is-paged .hero-nav {
-  width: 2.9rem;
-}
-
-body.is-paged .site-footer {
-  height: auto;
-  min-height: 0;
-  max-height: none;
-  overflow: visible;
-  scroll-snap-align: end;
-  scroll-snap-stop: normal;
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-  }
-
-  .page-flow {
-    scroll-snap-type: none;
   }
 
   *,

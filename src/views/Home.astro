@@ -36,6 +36,7 @@ const links = [
     <div class="wrap">
       <p class="kicker">Process</p>
       <h2>{c.home.flowTitle}</h2>
+      {c.home.flowLead ? <p class="lede">{c.home.flowLead}</p> : null}
       <ProcessScene lang={lang} />
     </div>
   </section>

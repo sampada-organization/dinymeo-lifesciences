@@ -6,7 +6,7 @@
       "image": "/media/pack-alu-alu.jpg",
       "en": {
         "name": "Alu-Alu",
-        "blurb": "Cold-form foil. Light and moisture out."
+        "blurb": "Cold-form foil. Strong against light and moisture."
       },
       "hi": {
         "name": "अलु-अलु",
@@ -19,7 +19,7 @@
       "image": "/media/pack-blister.jpg",
       "en": {
         "name": "Blister",
-        "blurb": "One dose. See it. Count it."
+        "blurb": "Clear pockets, one dose at a time, easy to count."
       },
       "hi": {
         "name": "ब्लिस्टर",
@@ -32,7 +32,7 @@
       "image": "/media/pack-strip.jpg",
       "en": {
         "name": "Strip",
-        "blurb": "Everyday tablets. Long shelf."
+        "blurb": "Foil strips for everyday tablets and a long shelf life."
       },
       "hi": {
         "name": "स्ट्रिप",
@@ -44,8 +44,8 @@
       "icon": "bottle",
       "image": "/media/pack-bottle.jpg",
       "en": {
-        "name": "Bottles",
-        "blurb": "Glass or PET. Your label. Sealed."
+        "name": "Custom bottles",
+        "blurb": "Glass or PET, labelled to your brand, sealed for the road."
       },
       "hi": {
         "name": "कस्टम बोतल",
@@ -58,7 +58,7 @@
       "image": "/media/pack-tube.jpg",
       "en": {
         "name": "Tubes",
-        "blurb": "Cream. Gel. Ointment."
+        "blurb": "Aluminium or laminate tubes for creams, gels and ointments."
       },
       "hi": {
         "name": "ट्यूब",
@@ -72,7 +72,7 @@
       "icon": "heart",
       "en": {
         "name": "Cardiology",
-        "blurb": "Heart and BP. Your brand."
+        "blurb": "Heart and blood-pressure formulations for licensed marketing partners."
       },
       "hi": {
         "name": "हृदय रोग",
@@ -84,7 +84,7 @@
       "icon": "shield",
       "en": {
         "name": "Antibiotics",
-        "blurb": "Anti-infective. Controlled batches."
+        "blurb": "Anti-infective range made in controlled, documented batches."
       },
       "hi": {
         "name": "एंटीबायोटिक",
@@ -96,7 +96,7 @@
       "icon": "care",
       "en": {
         "name": "Gynaecology",
-        "blurb": "Women’s health. Partner brands."
+        "blurb": "Women’s health formulations for partner brands."
       },
       "hi": {
         "name": "स्त्री रोग",
@@ -108,7 +108,7 @@
       "icon": "leaf",
       "en": {
         "name": "Dermatology",
-        "blurb": "Skin. Stable formulations."
+        "blurb": "Skin-care allopathic products with stable, tested formulations."
       },
       "hi": {
         "name": "त्वचा रोग",
@@ -120,7 +120,7 @@
       "icon": "drop",
       "en": {
         "name": "Paediatrics",
-        "blurb": "Child strengths. Made to spec."
+        "blurb": "Child-appropriate strengths and packs, made to spec."
       },
       "hi": {
         "name": "बाल रोग",
@@ -132,7 +132,7 @@
       "icon": "hex",
       "en": {
         "name": "Gastroenterology",
-        "blurb": "Gut care. Everyday and surgical."
+        "blurb": "Stomach and digestive-care range for everyday and surgical use."
       },
       "hi": {
         "name": "पेट और पाचन",
@@ -143,8 +143,8 @@
       "id": "critical",
       "icon": "pulse",
       "en": {
-        "name": "Critical care",
-        "blurb": "Procedure and hospital packs."
+        "name": "Critical care & surgery",
+        "blurb": "Formulations used around procedures and hospital care."
       },
       "hi": {
         "name": "गंभीर देखभाल और सर्जरी",
@@ -156,7 +156,7 @@
       "icon": "plus",
       "en": {
         "name": "General medicine",
-        "blurb": "Everyday range. Wide catalogue."
+        "blurb": "Everyday allopathic medicines for a wide partner catalogue."
       },
       "hi": {
         "name": "सामान्य दवाइयाँ",

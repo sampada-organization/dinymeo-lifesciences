@@ -52,7 +52,7 @@ const en: Record<'disclaimer' | 'privacy' | 'terms', LegalDoc> = {
         heading: 'What we collect',
         body: [
           'If you send the enquiry form we receive: name, email, phone, company name, message, language, and the time of sending. If you call, WhatsApp, or email us, that channel’s own records also exist.',
-          'The website itself does not use advertising cookies or third-party analytics in this version. We may store a language preference in your browser (local storage). That is optional and can be cleared.',
+          'The website itself does not use advertising cookies or third-party analytics in this version.',
         ],
       },
       {
@@ -161,7 +161,7 @@ const hi: Record<'disclaimer' | 'privacy' | 'terms', LegalDoc> = {
         heading: 'हम क्या इकट्ठा करते हैं',
         body: [
           'फॉर्म भेजने पर: नाम, ईमेल, फोन, कंपनी, संदेश, भाषा, और समय। कॉल, व्हाट्सऐप या ईमेल पर उस माध्यम के अपने रिकॉर्ड भी रहते हैं।',
-          'इस संस्करण में विज्ञापन कुकीज़ या तीसरे पक्ष का एनालिटिक्स नहीं है। भाषा पसंद ब्राउज़र में रखी जा सकती है। इसे साफ किया जा सकता है।',
+          'इस संस्करण में विज्ञापन कुकीज़ या तीसरे पक्ष का एनालिटिक्स नहीं है।',
         ],
       },
       {
