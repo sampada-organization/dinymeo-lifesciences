@@ -1,0 +1,28 @@
+---
+import { t, type Locale } from '../lib/i18n';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const c = t(lang);
+---
+
+<section class="stats-band" data-section={c.statsTitle} aria-label={c.statsTitle}>
+  <div class="wrap">
+    <h2>{c.statsTitle}</h2>
+    <dl class="stats">
+      {
+        c.stats.map((item) => (
+          <div class="stat">
+            <dt>{item.label}</dt>
+            <dd class="stat-value">{item.value}</dd>
+            <dd class="stat-note">{item.note}</dd>
+          </div>
+        ))
+      }
+    </dl>
+    <p class="stats-foot">{c.statsNote}</p>
+  </div>
+</section>

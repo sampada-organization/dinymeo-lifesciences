@@ -1,63 +1,63 @@
 {
   "items": [
     {
-      "id": "overview",
-      "visual": "overview",
-      "image": "/media/flyer-overview.jpg",
-      "en": {
-        "kicker": "Overview",
-        "title": "You market. We make.",
-        "text": "One partner for formulation, quality, packing and supply — a short path from brief to batch."
-      },
-      "hi": {
-        "kicker": "परिचय",
-        "title": "आप बेचें। हम बनाएँ।",
-        "text": "फॉर्मूलेशन, गुणवत्ता, पैकिंग और सप्लाई — एक साथी, संक्षेप से बैच तक।"
-      }
-    },
-    {
-      "id": "precision",
+      "id": "identity",
       "visual": "photo",
-      "image": "/media/flyer-manufacturing.jpg",
+      "image": "/media/line-hall.jpg",
       "en": {
-        "kicker": "Manufacturing",
-        "title": "The science of healing.",
-        "text": "Allopathic medicines made with documented quality at every step — from brief to batch."
+        "kicker": "Dinymeo Lifesciences",
+        "title": "Innovating healthcare. Empowering lives.",
+        "text": "Generic and proprietary formulations for partners in India and in export markets."
       },
       "hi": {
-        "kicker": "निर्माण",
-        "title": "उपचार का विज्ञान।",
-        "text": "हर कदम पर दर्ज गुणवत्ता के साथ बनी एलोपैथिक दवाइयाँ — संक्षेप से बैच तक।"
+        "kicker": "डिनिमियो लाइफसाइंसेस",
+        "title": "स्वास्थ्य में नवाचार। जीवन को बल।",
+        "text": "भारत और निर्यात बाज़ार के पार्टनर के लिए जेनेरिक और प्रोप्राइटरी फॉर्मूलेशन।"
       }
     },
     {
-      "id": "packaging",
-      "visual": "mindmap",
-      "image": "/media/flyer-packaging.jpg",
-      "en": {
-        "kicker": "Pack science",
-        "title": "Packs that protect the dose.",
-        "text": "Alu-Alu, blister, strip, bottle or tube — chosen for the formulation so the dose stays stable on the shelf."
-      },
-      "hi": {
-        "kicker": "पैक विज्ञान",
-        "title": "पैक जो दवा की रक्षा करें।",
-        "text": "अलु-अलु, ब्लिस्टर, स्ट्रिप, बोतल या ट्यूब — फॉर्मूलेशन के अनुसार, ताकि दवा शेल्फ पर स्थिर रहे।"
-      }
-    },
-    {
-      "id": "global",
+      "id": "tablet",
       "visual": "photo",
-      "image": "/media/flyer-supply.jpg",
+      "image": "/media/line-tablet.jpg",
       "en": {
-        "kicker": "Supply",
-        "title": "Partners worldwide.",
-        "text": "A supply chain built to reach your market on the date we promise."
+        "kicker": "Processing",
+        "title": "Lines built for the dose.",
+        "text": "High-speed tablet compression, run as a documented batch from brief to release."
       },
       "hi": {
-        "kicker": "सप्लाई",
-        "title": "दुनिया भर के पार्टनर।",
-        "text": "आपके बाजार तक, जिस तारीख का वादा हो।"
+        "kicker": "प्रोसेसिंग",
+        "title": "डोज़ के लिए बनी लाइनें।",
+        "text": "तेज़ टैबलेट कम्प्रेशन — संक्षेप से रिलीज़ तक दर्ज बैच।"
+      }
+    },
+    {
+      "id": "analytical",
+      "visual": "photo",
+      "image": "/media/line-hplc.jpg",
+      "en": {
+        "kicker": "Analytical",
+        "title": "Purity, checked in the lab.",
+        "text": "HPLC and spectral testing on the batch before it moves to your market."
+      },
+      "hi": {
+        "kicker": "विश्लेषण",
+        "title": "शुद्धता, लैब में जाँची हुई।",
+        "text": "बैच आपके बाज़ार जाए, उससे पहले HPLC और स्पेक्ट्रल जाँच।"
+      }
+    },
+    {
+      "id": "packing",
+      "visual": "photo",
+      "image": "/media/line-blister.jpg",
+      "en": {
+        "kicker": "Packing",
+        "title": "Sealed for the journey.",
+        "text": "Blister and strip lines with a moisture seal, so the dose stays stable on the shelf."
+      },
+      "hi": {
+        "kicker": "पैकिंग",
+        "title": "रास्ते के लिए सील।",
+        "text": "ब्लिस्टर और स्ट्रिप लाइन, नमी से सील — ताकि दवा शेल्फ पर स्थिर रहे।"
       }
     }
   ]

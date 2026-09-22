@@ -72,59 +72,23 @@
       "icon": "heart",
       "en": {
         "name": "Cardiology",
-        "blurb": "Heart and blood-pressure formulations for licensed marketing partners."
+        "blurb": "Tablets and sustained-release capsules for licensed partners."
       },
       "hi": {
-        "name": "हृदय रोग",
-        "blurb": "हृदय और ब्लड प्रेशर की दवाइयाँ, लाइसेंसधारी मार्केटिंग पार्टनर के लिए।"
+        "name": "हृदय",
+        "blurb": "लाइसेंसधारी पार्टनर के लिए टैबलेट और सस्टेन्ड-रिलीज़ कैप्सूल।"
       }
     },
     {
-      "id": "antibiotics",
-      "icon": "shield",
-      "en": {
-        "name": "Antibiotics",
-        "blurb": "Anti-infective range made in controlled, documented batches."
-      },
-      "hi": {
-        "name": "एंटीबायोटिक",
-        "blurb": "संक्रमण रोधी दवाइयाँ, नियंत्रित और दर्ज बैच में।"
-      }
-    },
-    {
-      "id": "gynaecology",
-      "icon": "care",
-      "en": {
-        "name": "Gynaecology",
-        "blurb": "Women’s health formulations for partner brands."
-      },
-      "hi": {
-        "name": "स्त्री रोग",
-        "blurb": "महिला स्वास्थ्य की दवाइयाँ, पार्टनर ब्रांड के लिए।"
-      }
-    },
-    {
-      "id": "dermatology",
-      "icon": "leaf",
-      "en": {
-        "name": "Dermatology",
-        "blurb": "Skin-care allopathic products with stable, tested formulations."
-      },
-      "hi": {
-        "name": "त्वचा रोग",
-        "blurb": "त्वचा की एलोपैथिक दवाइयाँ, स्थिर और जाँचे हुए फॉर्मूलेशन के साथ।"
-      }
-    },
-    {
-      "id": "paediatrics",
+      "id": "diabetology",
       "icon": "drop",
       "en": {
-        "name": "Paediatrics",
-        "blurb": "Child-appropriate strengths and packs, made to spec."
+        "name": "Diabetology",
+        "blurb": "Oral antidiabetics and syrups, made to the brief you send."
       },
       "hi": {
-        "name": "बाल रोग",
-        "blurb": "बच्चों के अनुकूल ताकत और पैक, आपकी जरूरत के अनुसार।"
+        "name": "मधुमेह",
+        "blurb": "ओरल एंटीडायबिटिक और सिरप, आपकी संक्षेप के अनुसार।"
       }
     },
     {
@@ -132,35 +96,47 @@
       "icon": "hex",
       "en": {
         "name": "Gastroenterology",
-        "blurb": "Stomach and digestive-care range for everyday and surgical use."
+        "blurb": "Capsules and oral suspensions for partner catalogues."
       },
       "hi": {
         "name": "पेट और पाचन",
-        "blurb": "पेट और पाचन की दवाइयाँ, रोजमर्रा और सर्जरी दोनों के लिए।"
+        "blurb": "पार्टनर कैटलॉग के लिए कैप्सूल और ओरल सस्पेंशन।"
       }
     },
     {
-      "id": "critical",
-      "icon": "pulse",
+      "id": "oncology",
+      "icon": "cross",
       "en": {
-        "name": "Critical care & surgery",
-        "blurb": "Formulations used around procedures and hospital care."
+        "name": "Oncology",
+        "blurb": "Formulations in this segment for licensed partners only."
       },
       "hi": {
-        "name": "गंभीर देखभाल और सर्जरी",
-        "blurb": "अस्पताल और प्रक्रिया के आसपास इस्तेमाल होने वाली दवाइयाँ।"
+        "name": "ऑन्कोलॉजी",
+        "blurb": "इस खंड की फॉर्मूलेशन, केवल लाइसेंसधारी पार्टनर के लिए।"
       }
     },
     {
-      "id": "general",
-      "icon": "plus",
+      "id": "antibiotics",
+      "icon": "shield",
       "en": {
-        "name": "General medicine",
-        "blurb": "Everyday allopathic medicines for a wide partner catalogue."
+        "name": "Antibiotics",
+        "blurb": "Anti-infective range in controlled, documented batches."
       },
       "hi": {
-        "name": "सामान्य दवाइयाँ",
-        "blurb": "रोजमर्रा की एलोपैथिक दवाइयाँ, बड़े कैटलॉग के लिए।"
+        "name": "एंटीबायोटिक",
+        "blurb": "संक्रमण-रोधी रेंज, नियंत्रित और दर्ज बैच में।"
+      }
+    },
+    {
+      "id": "nutraceuticals",
+      "icon": "leaf",
+      "en": {
+        "name": "Nutraceuticals",
+        "blurb": "Softgels and tablets for nutritional ranges."
+      },
+      "hi": {
+        "name": "न्यूट्रास्यूटिकल",
+        "blurb": "पोषण रेंज के लिए सॉफ्टजेल और टैबलेट।"
       }
     }
   ]

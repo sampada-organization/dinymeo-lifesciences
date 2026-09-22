@@ -344,6 +344,15 @@ h3 {
   pointer-events: none;
 }
 
+.hero-count {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  font-size: 0.82rem;
+  color: var(--gold-bright);
+}
+
 .hero-copy h1 {
   color: var(--white);
   max-width: 14ch;
@@ -433,7 +442,7 @@ h3 {
 .hero-hold {
   position: absolute;
   z-index: 4;
-  right: var(--space);
+  right: 5.4rem;
   bottom: 1.35rem;
   margin: 0;
   font-size: 0.72rem;
@@ -982,6 +991,174 @@ form.enquiry.compact .consent {
   margin: 0 0 1.2rem;
 }
 
+.stats-band {
+  background: var(--navy-ink);
+  color: var(--white);
+}
+
+.stats-band h2 {
+  color: var(--white);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.15rem 1.25rem;
+  margin: 0.4rem 0 0;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding-top: 0.8rem;
+  border-top: 2px solid var(--gold);
+}
+
+.stat dt {
+  order: 2;
+  margin-top: 0.45rem;
+  font-weight: 700;
+}
+
+.stat-value {
+  order: 1;
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.1rem, 4vw, 3.1rem);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--gold-bright);
+}
+
+.stat-note {
+  order: 3;
+  margin: 0.3rem 0 0;
+  color: color-mix(in srgb, var(--white) 72%, transparent);
+  font-size: 0.98rem;
+}
+
+.stats-foot {
+  margin: 1.35rem 0 0;
+  max-width: 46rem;
+  font-size: 0.95rem;
+  color: color-mix(in srgb, var(--white) 68%, transparent);
+}
+
+.still {
+  margin: 1.6rem 0 0;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.still img {
+  width: 100%;
+  height: min(28rem, 56vw);
+  object-fit: cover;
+  object-position: 50% 42%;
+}
+
+.plant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.1rem;
+  margin-top: 1.4rem;
+}
+
+.plant-card {
+  margin: 0;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.plant-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+}
+
+.plant-card figcaption {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.95rem 1rem 1.1rem;
+}
+
+.plant-card strong {
+  font-family: var(--font-display);
+  color: var(--navy-ink);
+}
+
+.plant-note {
+  margin: 1rem 0 0;
+  max-width: 48rem;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.roadmap {
+  list-style: none;
+  margin: 0.6rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.15rem;
+}
+
+.roadmap li {
+  margin: 0;
+  padding-top: 0.85rem;
+  border-top: 3px solid var(--gold);
+}
+
+.roadmap .year {
+  margin: 0 0 0.3rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.55rem;
+  letter-spacing: -0.04em;
+  color: var(--navy);
+}
+
+.dose-wrap {
+  overflow-x: auto;
+  margin-top: 0.5rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.dose-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 36rem;
+}
+
+.dose-table th,
+.dose-table td {
+  text-align: left;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.dose-table thead th {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+  background: color-mix(in srgb, var(--navy) 5%, white);
+}
+
+.dose-table tbody th {
+  font-family: var(--font-display);
+  color: var(--navy-ink);
+}
+
 .process li::before {
   counter-increment: step;
   content: counter(step);
@@ -1009,7 +1186,13 @@ form.enquiry.compact .consent {
   .grid-4,
   .grid-3,
   .foot-grid,
-  .cases-grid {
+  .cases-grid,
+  .stats,
+  .roadmap {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .plant-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -1074,7 +1257,13 @@ form.enquiry.compact .consent {
   .grid-2,
   .foot-grid,
   .split-about,
-  .pack-grid {
+  .pack-grid,
+  .roadmap,
+  .plant-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
     grid-template-columns: 1fr;
   }
 

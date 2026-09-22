@@ -27,8 +27,8 @@ const slides = slideData.items;
               srcset={`${asset(slide.image.replace(/(\.[a-z]+)$/i, '-sm$1'))} 640w, ${asset(slide.image)} 1162w`}
               sizes="100vw"
               alt=""
-              width="1162"
-              height="660"
+              width="1280"
+              height="720"
               loading={i === 0 ? 'eager' : 'lazy'}
               decoding={i === 0 ? 'sync' : 'async'}
               fetchpriority={i === 0 ? 'high' : 'low'}
@@ -39,6 +39,10 @@ const slides = slideData.items;
     })
   }
   <div class="hero-copy">
+    <p class="hero-count" aria-hidden="true">
+      <span data-index>01</span>
+      <span> / {String(slides.length).padStart(2, '0')}</span>
+    </p>
     <p class="kicker" data-kicker>{slides[0][lang].kicker}</p>
     <h1 data-title>{slides[0][lang].title}</h1>
     <p data-text>{slides[0][lang].text}</p>
@@ -96,6 +100,8 @@ const slides = slideData.items;
     if (kicker) kicker.textContent = s.kicker;
     if (title) title.textContent = s.title;
     if (text) text.textContent = s.text;
+    const indexEl = document.querySelector('[data-index]');
+    if (indexEl) indexEl.textContent = String(i + 1).padStart(2, '0');
   }
 
   function stop() {

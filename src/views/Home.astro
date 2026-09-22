@@ -4,6 +4,8 @@ import Slideshow from '../components/Slideshow.astro';
 import EnquiryForm from '../components/EnquiryForm.astro';
 import Icon from '../components/Icon.astro';
 import ProcessScene from '../components/ProcessScene.astro';
+import Stats from '../components/Stats.astro';
+import LineGrid from '../components/LineGrid.astro';
 import { t, type Locale } from '../lib/i18n';
 import { localePath } from '../lib/paths';
 
@@ -20,15 +22,26 @@ const links = [
 ];
 ---
 
-<Base lang={lang} title={c.home.title} description={c.home.description} current="home">
+<Base lang={lang} title={c.home.title} description={c.home.description} keywords={c.home.keywords} current="home">
   <Slideshow lang={lang} />
 
   <section data-section="Welcome">
     <div class="wrap">
-      <p class="kicker">Dinymeo</p>
+      <p class="kicker">Dinymeo Lifesciences</p>
       <h2>{c.home.welcome}</h2>
       <p class="lede">{c.home.intro}</p>
       <p>{c.home.body}</p>
+    </div>
+  </section>
+
+  <Stats lang={lang} />
+
+  <section data-section={c.home.linesTitle}>
+    <div class="wrap">
+      <p class="kicker">Processing</p>
+      <h2>{c.home.linesTitle}</h2>
+      <p class="lede">{c.home.linesLead}</p>
+      <LineGrid items={c.manufacturing.plant.slice(0, 3)} />
     </div>
   </section>
 

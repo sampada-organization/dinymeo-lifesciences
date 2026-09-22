@@ -34,12 +34,9 @@ describe('paths', () => {
     expect(localePath('en', '/about')).toBe('/about');
     expect(localePath('en', '/')).toBe('/');
   });
-  it('hindi is prefixed', () => {
-    expect(localePath('hi', '/about')).toBe('/hi/about');
-  });
-  it('switchLocale strips and reapplies prefix', () => {
-    expect(switchLocale('en', 'hi', '/about')).toBe('/hi/about');
-    expect(switchLocale('hi', 'en', '/hi/contact')).toBe('/contact');
+  it('legacy locale prefixes collapse to the English path', () => {
+    expect(switchLocale('en', 'en', '/hi/contact')).toBe('/contact');
+    expect(unprefixedPath('/hi/about')).toBe('/about');
   });
   it('withBase joins a non-root base', () => {
     expect(withBase('/media/x.jpg')).toMatch(/media\/x\.jpg$/);
@@ -70,10 +67,22 @@ describe('packaging catalogue', () => {
 });
 
 describe('flyer images', () => {
-  it('gives every slide its own background file', () => {
+  it('gives every slide its own processing photograph', () => {
     const imgs = slides.items.map((s) => s.image);
     expect(imgs).toHaveLength(4);
     expect(new Set(imgs).size).toBe(4);
-    expect(imgs.every((src) => src.startsWith('/media/flyer-'))).toBe(true);
+    expect(imgs.every((src) => src.startsWith('/media/line-'))).toBe(true);
+  });
+});
+
+describe('company voice', () => {
+  it('names Dinymeo Lifesciences and does not lead with contract manufacturing', () => {
+    const blob = JSON.stringify(copy.en);
+    expect(blob).toContain('Dinymeo Lifesciences');
+    expect(blob.toLowerCase()).not.toMatch(/contract manufacturing/);
+    expect(blob.toLowerCase()).not.toMatch(/third-party manufacturing/);
+    expect(blob.toLowerCase()).not.toMatch(/premier/);
+    expect(blob.toLowerCase()).not.toMatch(/million units/);
+    expect(blob).toContain('500+');
   });
 });

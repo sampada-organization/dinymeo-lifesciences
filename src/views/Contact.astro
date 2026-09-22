@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import EnquiryForm from '../components/EnquiryForm.astro';
 import Icon from '../components/Icon.astro';
+import Stats from '../components/Stats.astro';
 import { t, type Locale } from '../lib/i18n';
 import { siteData, hours, mapsUrl, telUrl, mailUrl, whatsappUrl } from '../lib/site';
 
@@ -12,7 +13,7 @@ const { lang } = Astro.props;
 const c = t(lang);
 ---
 
-<Base lang={lang} title={c.contact.title} description={c.contact.description} current="contact">
+<Base lang={lang} title={c.contact.title} description={c.contact.description} keywords={c.contact.keywords} current="contact">
   <section data-section={c.contact.kicker}>
     <div class="wrap split-about">
       <div class="about-panel">
@@ -67,4 +68,20 @@ const c = t(lang);
       </aside>
     </div>
   </section>
+  <section data-section={c.contact.pathsTitle}>
+    <div class="wrap">
+      <h2>{c.contact.pathsTitle}</h2>
+      <div class="grid-3">
+        {
+          c.contact.paths.map((item) => (
+            <article class="card">
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+  <Stats lang={lang} />
 </Base>

@@ -1,6 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 import Icon from '../components/Icon.astro';
+import LineGrid from '../components/LineGrid.astro';
+import Stats from '../components/Stats.astro';
 import { t, type Locale } from '../lib/i18n';
 import { productData } from '../lib/site';
 import { localePath, asset } from '../lib/paths';
@@ -16,6 +18,7 @@ const c = t(lang);
   lang={lang}
   title={c.manufacturing.title}
   description={c.manufacturing.description}
+  keywords={c.manufacturing.keywords}
   current="manufacturing"
 >
   <section data-section={c.manufacturing.kicker}>
@@ -23,6 +26,26 @@ const c = t(lang);
       <p class="kicker">{c.manufacturing.kicker}</p>
       <h1>{c.manufacturing.headline}</h1>
       <p class="lede">{c.manufacturing.lead}</p>
+      <figure class="still">
+        <img
+          src={asset('/media/line-hall.jpg')}
+          srcset={`${asset('/media/line-hall-sm.jpg')} 640w, ${asset('/media/line-hall.jpg')} 1280w`}
+          sizes="(max-width: 760px) 100vw, 72rem"
+          alt={c.manufacturing.stillAlt}
+          width="1280"
+          height="720"
+          loading="eager"
+          decoding="async"
+        />
+      </figure>
+    </div>
+  </section>
+  <section data-section={c.manufacturing.plantTitle}>
+    <div class="wrap">
+      <h2>{c.manufacturing.plantTitle}</h2>
+      <p class="lede">{c.manufacturing.plantLead}</p>
+      <LineGrid items={c.manufacturing.plant} />
+      <p class="plant-note">{c.manufacturing.plantNote}</p>
     </div>
   </section>
   <section data-section={c.manufacturing.productsTitle}>
@@ -80,6 +103,32 @@ const c = t(lang);
       </div>
     </div>
   </section>
+  <section data-section={c.manufacturing.formsTitle}>
+    <div class="wrap">
+      <h2>{c.manufacturing.formsTitle}</h2>
+      <div class="dose-wrap">
+        <table class="dose-table">
+          <thead>
+            <tr>
+              {c.manufacturing.formsHead.map((head) => <th scope="col">{head}</th>)}
+            </tr>
+          </thead>
+          <tbody>
+            {
+              c.manufacturing.forms.map((row) => (
+                <tr>
+                  <th scope="row">{row.area}</th>
+                  <td>{row.forms}</td>
+                  <td>{row.standard}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="plant-note">{c.manufacturing.formsNote}</p>
+    </div>
+  </section>
   <section data-section={c.manufacturing.processTitle}>
     <div class="wrap">
       <h2>{c.manufacturing.processTitle}</h2>
@@ -98,4 +147,5 @@ const c = t(lang);
       </p>
     </div>
   </section>
+  <Stats lang={lang} />
 </Base>

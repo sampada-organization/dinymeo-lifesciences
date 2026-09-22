@@ -1,0 +1,39 @@
+---
+import { asset } from '../lib/paths';
+
+interface Item {
+  image: string;
+  title: string;
+  text: string;
+  alt: string;
+}
+
+interface Props {
+  items: readonly Item[];
+}
+
+const { items } = Astro.props;
+---
+
+<div class="plant-grid">
+  {
+    items.map((item) => (
+      <figure class="plant-card">
+        <img
+          src={asset(item.image)}
+          srcset={`${asset(item.image.replace(/(\.[a-z]+)$/i, '-sm$1'))} 640w, ${asset(item.image)} 1280w`}
+          sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 33vw"
+          alt={item.alt}
+          width="1280"
+          height="720"
+          loading="lazy"
+          decoding="async"
+        />
+        <figcaption>
+          <strong>{item.title}</strong>
+          <span>{item.text}</span>
+        </figcaption>
+      </figure>
+    ))
+  }
+</div>

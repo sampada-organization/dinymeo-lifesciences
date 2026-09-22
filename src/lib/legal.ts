@@ -9,7 +9,7 @@ const en: Record<'disclaimer' | 'privacy' | 'terms', LegalDoc> = {
       {
         heading: 'Who this website is for',
         body: [
-          'This website is published by Dinymeo Lifesciences Pvt. Ltd., Pune, for pharmaceutical marketing companies, licensed traders, and other business partners. It is not an online pharmacy and it does not offer medicines, prescriptions, or treatment to the public.',
+          'This website is published by Dinymeo Lifesciences Pvt. Ltd., Pune, for PCD franchise partners, export desks, licensed traders, and other business partners. It is not an online pharmacy and it does not offer medicines, prescriptions, or treatment to the public.',
           'Nothing here is medical advice. Patients should speak to a registered medical practitioner. Do not start, stop, or change any medicine based on this website.',
         ],
       },
@@ -18,7 +18,7 @@ const en: Record<'disclaimer' | 'privacy' | 'terms', LegalDoc> = {
         body: [
           'References to WHO-GMP, GLP and ISO describe the manufacturing sites we work with. Those certificates are held by the respective facilities. Dinymeo will share copies with qualified partners on request, after confirming the current status with the site.',
           'Until a named certificate is on file for a specific product and site, treat the wording as a description of our intended supply standard — not as a personal licence number displayed on this page.',
-          'We do not claim to be a “premier” or exclusive manufacturer. We do not publish invented statistics (employee counts, turnover, or product counts) on this site.',
+          'We do not claim to be a “premier” or exclusive manufacturer. We do not publish employee counts or turnover. The formulation count on this site is the company’s own portfolio statement from its corporate materials. It is not a regulator’s licence tally.',
         ],
       },
       {

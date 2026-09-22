@@ -1,8 +1,6 @@
 ---
 import '@fontsource-variable/montserrat/wght.css';
 import '@fontsource-variable/source-sans-3/wght.css';
-import '@fontsource/noto-sans-devanagari/400.css';
-import '@fontsource/noto-sans-devanagari/700.css';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -15,10 +13,15 @@ interface Props {
   lang: Locale;
   title: string;
   description: string;
+  keywords?: string;
   current: 'home' | 'about' | 'manufacturing' | 'contact' | 'legal' | 'admin';
 }
 const { lang, title, description, current } = Astro.props;
 const meta = localeMeta[lang];
+const copy = t(lang);
+const keywords =
+  Astro.props.keywords ??
+  'Dinymeo Lifesciences, Dinymeo Lifesciences Pvt Ltd, pharmaceutical formulations, PCD pharma, pharmaceutical export India';
 const origin = Astro.site ?? new URL('https://dinymeo.com');
 const page = unprefixedPath(Astro.url.pathname);
 const canonical = new URL(localePath(lang, page), origin).href;
@@ -26,19 +29,32 @@ const ogImage = new URL(withBase('/brand/og.jpg'), origin).href;
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: siteData.legalName,
+  name: 'Dinymeo Lifesciences',
+  legalName: siteData.legalName,
+  alternateName: ['Dinymeo Lifesciences Pvt. Ltd.', 'Dinymeo'],
   url: Astro.site?.href ?? 'https://dinymeo.com/',
   email: siteData.email,
   telephone: siteData.phoneTel,
+  description: copy.home.description,
+  slogan: copy.home.slogan,
   address: {
     '@type': 'PostalAddress',
     streetAddress: siteData.address.lines[0],
     addressLocality: 'Pune',
+    addressRegion: 'Maharashtra',
     postalCode: '411033',
     addressCountry: 'IN',
   },
-  areaServed: 'Global',
-  knowsLanguage: ['en'],
+  areaServed: ['India', 'South Asia', 'Africa', 'CIS'],
+  knowsAbout: [
+    'Pharmaceutical formulations',
+    'Cardiology',
+    'Diabetology',
+    'Gastroenterology',
+    'Oncology',
+    'Antibiotics',
+    'Nutraceuticals',
+  ],
 };
 ---
 
@@ -49,10 +65,8 @@ const jsonLd = {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta
-      name="keywords"
-      content="pharma third party manufacturing, allopathic medicine contract manufacturing, Dinymeo Lifesciences Pvt Ltd"
-    />
+    <meta name="keywords" content={keywords} />
+    <meta property="og:site_name" content="Dinymeo Lifesciences" />
     <link rel="canonical" href={canonical} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
