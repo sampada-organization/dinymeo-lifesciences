@@ -18,7 +18,7 @@ const en: Record<'disclaimer' | 'privacy' | 'terms', LegalDoc> = {
         body: [
           'References to WHO-GMP, GLP and ISO describe the manufacturing sites we work with. Those certificates are held by the respective facilities. Dinymeo will share copies with qualified partners on request, after confirming the current status with the site.',
           'Until a named certificate is on file for a specific product and site, treat the wording as a description of our intended supply standard — not as a personal licence number displayed on this page.',
-          'We do not claim to be a “premier” or exclusive manufacturer. We do not publish invented statistics (employee counts, turnover, or product counts) on this site.',
+          'We do not claim to be a “premier” or exclusive manufacturer. We do not publish employee counts or turnover. The formulation figure on the home page is the company’s own statement of its portfolio, not a regulator’s count.',
         ],
       },
       {

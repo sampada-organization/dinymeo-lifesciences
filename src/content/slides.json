@@ -29,6 +29,46 @@
         "title": "From India to partners worldwide.",
         "text": "A supply chain built to reach your market — in India and overseas — on the date we promise."
       }
+    },
+    {
+      "id": "analytical",
+      "visual": "photo",
+      "image": "/media/line-hplc.jpg",
+      "en": {
+        "kicker": "Analytical",
+        "title": "Checked before the batch moves.",
+        "text": "HPLC and spectral testing on the formulation, so the record matches the batch that ships."
+      }
+    },
+    {
+      "id": "capsules",
+      "visual": "photo",
+      "image": "/media/line-capsule.jpg",
+      "en": {
+        "kicker": "Capsules",
+        "title": "Capsules filled to the brief.",
+        "text": "Capsule lines for the formulation you send, documented from fill to release."
+      }
+    },
+    {
+      "id": "liquids",
+      "visual": "photo",
+      "image": "/media/line-liquid.jpg",
+      "en": {
+        "kicker": "Liquids",
+        "title": "Liquids on the same path.",
+        "text": "Oral liquids made with the same documented steps — brief, tests, then batch."
+      }
+    },
+    {
+      "id": "stability",
+      "visual": "photo",
+      "image": "/media/line-stability.jpg",
+      "en": {
+        "kicker": "Stability",
+        "title": "Shelf life, kept on file.",
+        "text": "Stability work so the pack you chose still protects the dose."
+      }
     }
   ]
 }

@@ -14,6 +14,10 @@ test.describe('Dinymeo MVP', () => {
     await expect(page.locator('.site-header a.btn.quote').locator('visible=true')).toHaveCount(1);
     await expect(page.locator('.site-footer')).toContainText(/WHO-GMP/);
     await expect(page.locator('.hero')).not.toContainText(/WHO-GMP/);
+    await expect(page.locator('.hero')).not.toContainText(/Pune/);
+    await expect(page.getByRole('heading', { name: 'By the numbers' })).toBeVisible();
+    await expect(page.locator('.stat-value').first()).toHaveText('500+');
+    await expect(page.locator('.stats')).not.toContainText(/Pune/);
     await expect(page.locator('body')).not.toContainText(/self-medication/i);
     await expect(page.getByRole('link', { name: /Call Dinymeo/i })).toHaveAttribute(
       'href',
@@ -75,6 +79,9 @@ test.describe('Dinymeo MVP', () => {
 
   test('manufacturing lists tubes as a packing standard', async ({ page }) => {
     await page.goto('/manufacturing');
+    await expect(page.getByRole('heading', { name: 'The lines' })).toBeVisible();
+    await expect(page.locator('.plant-card').first()).toContainText('Tablet compression');
+    await expect(page.locator('.plant-card')).toHaveCount(6);
     await expect(page.getByRole('heading', { name: 'Tubes', exact: true })).toBeVisible();
     await expect(page.locator('.pack-hero img')).toBeVisible();
     await expect(page.locator('.pack-hero img')).toHaveAttribute('src', /pack-hero/);
@@ -113,5 +120,9 @@ test.describe('Dinymeo MVP', () => {
     await page.locator('.hero-nav.next').click({ force: true });
     await expect(page.locator('[data-title]')).toContainText(/From India to partners worldwide/i);
     await expect(page.locator('.hero-slide.is-active img')).toHaveAttribute('src', /line-tablet/);
+    await page.locator('.hero-nav.next').click({ force: true });
+    await expect(page.locator('[data-title]')).toContainText(/Checked before the batch moves/i);
+    await expect(page.locator('.hero-slide.is-active img')).toHaveAttribute('src', /line-hplc/);
+    await expect(page.locator('.hero')).not.toContainText(/Pune/);
   });
 });

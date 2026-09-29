@@ -69,13 +69,15 @@ describe('packaging catalogue', () => {
 describe('flyer images', () => {
   it('gives every slide its own processing photograph', () => {
     const imgs = slides.items.map((s) => s.image);
-    expect(imgs).toHaveLength(3);
-    expect(new Set(imgs).size).toBe(3);
+    expect(imgs).toHaveLength(7);
+    expect(new Set(imgs).size).toBe(7);
     expect(imgs.every((src) => src.startsWith('/media/line-'))).toBe(true);
-    expect(slides.items.map((s) => s.en.title)).toEqual([
+    expect(slides.items.map((s) => s.en.title).slice(0, 3)).toEqual([
       'The science of healing.',
       'Packs that protect the dose.',
       'From India to partners worldwide.',
     ]);
+    expect(slides.items.map((s) => s.en.title)).not.toContain('From Pune to partners worldwide.');
+    expect(JSON.stringify(copy.en.stats)).not.toMatch(/Pune/);
   });
 });

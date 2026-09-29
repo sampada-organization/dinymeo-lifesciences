@@ -101,6 +101,14 @@ export const copy = {
       contactTitle: 'Talk to us',
       formLead: 'Tell us what you need. A person will read this. No spam list.',
     },
+    statsTitle: 'By the numbers',
+    statsNote:
+      'These figures are Dinymeo Lifesciences’ own statement, taken from the company’s corporate materials. They are not a regulator’s count, and they are not turnover.',
+    stats: [
+      { value: '500+', label: 'Approved formulations', note: 'Portfolio the company states' },
+      { value: '2018', label: 'Founded', note: 'India' },
+      { value: '3', label: 'Export markets', note: 'South Asia, Africa, CIS' },
+    ],
     promises: [
       {
         icon: 'shield',
@@ -170,6 +178,47 @@ export const copy = {
       kicker: 'Capabilities',
       headline: 'A catalogue you can brand.',
       lead: 'We offer a wide allopathic range across many therapy areas for licensed marketing partners.',
+      linesTitle: 'The lines',
+      linesLead:
+        'Tablet compression, capsule filling and liquid lines. The pictures show the class of equipment, not one named site.',
+      plant: [
+        {
+          image: '/media/line-tablet.jpg',
+          title: 'Tablet compression',
+          text: 'Rotary presses for plain and sustained-release tablets.',
+          alt: 'Rotary tablet press compressing white tablets in a cleanroom.',
+        },
+        {
+          image: '/media/line-capsule.jpg',
+          title: 'Capsule filling',
+          text: 'Automatic fillers for two-piece capsules.',
+          alt: 'Automatic capsule filling machine with ivory capsules in stainless hoppers.',
+        },
+        {
+          image: '/media/line-liquid.jpg',
+          title: 'Liquid filling',
+          text: 'Syrups and oral liquids under laminar flow.',
+          alt: 'Pharmaceutical liquid filling line with unlabelled glass bottles.',
+        },
+        {
+          image: '/media/line-blister.jpg',
+          title: 'Blister packing',
+          text: 'Foil forming and a moisture seal on the pack.',
+          alt: 'High-speed blister packaging line sealing tablets in foil.',
+        },
+        {
+          image: '/media/line-hplc.jpg',
+          title: 'Analytical release',
+          text: 'HPLC and spectral checks before a batch moves.',
+          alt: 'Row of HPLC instruments on a stainless laboratory bench.',
+        },
+        {
+          image: '/media/line-stability.jpg',
+          title: 'Stability',
+          text: 'Chambers that hold samples for the shelf-life file.',
+          alt: 'Walk-in stability chamber with sample racks of bottles and blisters.',
+        },
+      ],
       productsTitle: 'Therapy areas',
       packTitle: 'Packaging',
       packImageAlt: 'Premium pharmaceutical packs: Alu-Alu, blister, strip, bottle and tube.',
