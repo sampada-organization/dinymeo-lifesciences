@@ -40,23 +40,17 @@ export const copy = {
       hold: 'Hold to pause',
     },
     home: {
-      title: 'Dinymeo Lifesciences | Pharmaceutical formulations',
+      title: 'Dinymeo Lifesciences | Pharma contract manufacturing',
       description:
-        'Dinymeo Lifesciences Pvt. Ltd. develops and manufactures generic and proprietary formulations for partners in India and in export markets.',
-      keywords:
-        'Dinymeo Lifesciences, Dinymeo Lifesciences Pvt Ltd, pharmaceutical formulations, PCD pharma, pharmaceutical export, cardiology, diabetology, gastroenterology',
-      slogan: 'Innovating healthcare. Empowering lives.',
-      welcome: 'Dinymeo Lifesciences',
+        'Dinymeo Lifesciences Pvt Ltd — allopathic medicine contract manufacturing for marketing partners worldwide.',
+      welcome: 'Welcome to Dinymeo Lifesciences Pvt. Ltd.',
       intro:
-        'A formulation house for partners who take medicines to market. Development, a documented batch, and a path into India and export markets sit in one place.',
+        'We connect healthcare innovation with the market. Dinymeo makes a full range of allopathic medicines for marketing partners.',
       body:
-        'The range is generic and proprietary. PCD franchises, export desks, and companies that sell under their own name share the same process.',
-      linesTitle: 'Processing, at the standard we work to',
-      linesLead:
-        'Tablet compression, capsule filling and liquid lines. The pictures show the class of equipment, not one named site.',
-      flowTitle: 'How a batch stays in sync',
+        'As a premium pharmaceutical company in India, we specialise in a comprehensive range of essential medicines.',
+      flowTitle: 'How we stay in sync',
       flowLead:
-        'You bring the market. Dinymeo Lifesciences runs development through dispatch. Each step talks to the next, so the batch matches the brief.',
+        'You bring the market. We run the back end. Each step talks to the next, so the batch you sell is the brief you sent.',
       flowPartner: 'You',
       flowOps: 'Dinymeo',
       flowSync: 'In sync',
@@ -71,115 +65,74 @@ export const copy = {
         { title: 'Dispatch', text: 'On the promised date.' },
         { title: 'Your brand', text: 'You take it to market.' },
       ],
-      casesTitle: 'Who we work with',
+      casesTitle: 'If this is you',
       cases: [
         {
-          icon: 'user',
-          title: 'PCD partners',
-          text: 'Franchise and territory partners who need a formulation list ready for their market.',
-        },
-        {
-          icon: 'globe',
-          title: 'Export desks',
-          text: 'Trade partners supplying South Asia, Africa and CIS markets.',
+          icon: 'spark',
+          title: 'New brand',
+          text: 'First SKU — we formulate and pack so you can launch.',
         },
         {
           icon: 'pack',
-          title: 'Your brand',
-          text: 'Your name on the pack. A documented batch behind it.',
+          title: 'Grow the list',
+          text: 'Add a line without building a new plant.',
+        },
+        {
+          icon: 'lock',
+          title: 'Private label',
+          text: 'Your name on the pack, our documented batch.',
         },
         {
           icon: 'pulse',
-          title: 'Institutions',
-          text: 'Hospital and clinical supply, with records kept on file.',
+          title: 'Hospital line',
+          text: 'Critical-care packs with records on file.',
         },
       ],
-      promisesTitle: 'Pillars of the work',
+      promisesTitle: 'What you can count on',
       aboutTitle: 'A short word about us',
       aboutTeaser:
-        'Dinymeo Lifesciences was founded in 2018. We develop, manufacture and move high-grade formulations — materials, formulation work, testing and packing — so partners can sell with a batch they can explain.',
+        'We handle the back end — materials, formulation, testing and packing — so marketing companies can sell with confidence. We work only in allopathic medicines, with a named person on your account and batches that match the brief you send.',
       aboutPoints: [
-        'Analytical checks, including HPLC and spectral testing, before a batch is released.',
-        'Tablet, capsule and liquid lines, then a pack chosen for the formulation.',
-        'Domestic partners, and export across South Asia, Africa and CIS.',
+        'Sourcing, formulation work and quality tests under one roof of process.',
+        'Flexible batch sizes for new brands and growing catalogues.',
+        'Packs chosen for shelf life: Alu-Alu, blister, strip, bottle or tube.',
       ],
       linksTitle: 'Find your way',
       contactTitle: 'Talk to us',
-      formLead: 'PCD, export, or a formulation brief. A person will read this.',
+      formLead: 'Tell us what you need. A person will read this. No spam list.',
     },
-    statsTitle: 'By the numbers',
-    statsNote:
-      'These figures are Dinymeo Lifesciences’ own statement, taken from the company’s corporate materials. They are not a regulator’s count, and they are not turnover.',
-    stats: [
-      { value: '500+', label: 'Approved formulations', note: 'Portfolio the company states' },
-      { value: '2018', label: 'Founded', note: 'Pune, India' },
-      { value: '3', label: 'Export regions', note: 'South Asia, Africa, CIS' },
-      { value: '6', label: 'Therapy areas', note: 'The focus list we publish' },
-    ],
     promises: [
       {
-        icon: 'spark',
-        title: 'Formulation science',
-        text: 'Delivery systems and stability work, shaped around the brief rather than a fixed catalogue only.',
+        icon: 'shield',
+        title: 'Documented quality',
+        text: 'Batches made with clean-room discipline and full test records.',
       },
       {
-        icon: 'shield',
-        title: 'Quality first',
-        text: 'Multi-stage batch testing for purity and stability, with HPLC and spectral checks in the chain.',
+        icon: 'pack',
+        title: 'Packs that last',
+        text: 'Alu-Alu, blister, strip, custom bottles and tubes — chosen for shelf life and a clean look.',
       },
       {
         icon: 'globe',
         title: 'Global supply',
-        text: 'A path for partners in India and for export across South Asia, Africa and CIS.',
+        text: 'A working supply chain so consignments reach your market on a promised date.',
       },
       {
-        icon: 'pack',
-        title: 'Precision packing',
-        text: 'Blister and strip with a moisture seal, plus Alu-Alu, bottles and tubes when the formulation asks.',
+        icon: 'clock',
+        title: 'On-time work',
+        text: 'From formulation to dispatch, we keep turnaround short and visible to you.',
       },
     ],
     about: {
-      title: 'About Dinymeo Lifesciences',
+      title: 'About Dinymeo Lifesciences Pvt. Ltd.',
       description:
-        'Vision, mission and growth of Dinymeo Lifesciences Pvt. Ltd. — pharmaceutical formulations from Pune for India and export markets.',
-      keywords:
-        'Dinymeo Lifesciences, about Dinymeo Lifesciences, pharmaceutical company Pune, PCD pharma franchise, pharmaceutical export South Asia Africa CIS',
+        'Dinymeo is a pharmaceutical company making allopathic medicines for marketing partners, with a focus on compliance, confidentiality and practical supply.',
       kicker: 'Company',
-      headline: 'Formulations, with a path to market.',
+      headline: 'Built for partners worldwide.',
       overview:
-        'Dinymeo Lifesciences Pvt. Ltd. develops, manufactures and distributes high-grade generic and proprietary formulations. The company was founded in 2018 and works with PCD partners, export desks and brands that sell under their own name.',
+        'Dinymeo Lifesciences Pvt. Ltd. is a growing, lawfully set-up pharmaceutical company. We work only in the allopathic segment and give end-to-end manufacturing to pharmaceutical marketing companies worldwide.',
       operations:
-        'The back end is one process: sourcing, formulation, analytical testing and packing. Custom work and business data stay confidential. A named person sits on the account.',
-      stillAlt: 'Cleanroom line of the standard used for Dinymeo Lifesciences formulations.',
-      visionTitle: 'Vision',
-      vision:
-        'To be known for careful pharmaceutical innovation, uncompromised purity, and formulations partners can take to their own markets.',
-      missionTitle: 'Mission',
-      mission:
-        'To improve quality of life by developing, manufacturing and distributing formulations that are safe, effective and able to travel.',
-      roadmapTitle: 'How the company has grown',
-      roadmap: [
-        {
-          year: '2018',
-          title: 'Inception',
-          text: 'Dinymeo Lifesciences is founded, with accessible formulations as the aim.',
-        },
-        {
-          year: '2020',
-          title: 'Accreditation',
-          text: 'The manufacturing network is aligned to WHO-GMP practice at the sites we work with.',
-        },
-        {
-          year: '2022',
-          title: 'Global reach',
-          text: 'Export channels open across South Asia, Africa and CIS markets.',
-        },
-        {
-          year: '2025',
-          title: 'Next horizon',
-          text: 'The direction from here is specialty biologics and newer delivery systems.',
-        },
-      ],
+        'Our work rests on clear dealing, regulatory care, and science. We take care of the whole back end — sourcing, formulation, strict quality testing, and modern packing.',
       valuesTitle: 'How we work',
       values: [
         {
@@ -208,97 +161,33 @@ export const copy = {
       ],
       specialtiesTitle: 'Therapeutic focus',
       specialties:
-        'Cardiology, diabetology, gastroenterology, oncology, antibiotics and nutraceuticals. Categories only — we do not publish a public list of brands, strengths or indications.',
+        'Gastrointestinal care, general surgery, critical care, and everyday health needs — plus cardiology, anti-infectives, gynaecology, dermatology and paediatrics.',
     },
     manufacturing: {
-      title: 'Formulations and facilities | Dinymeo Lifesciences',
+      title: 'Manufacturing & products | Dinymeo Lifesciences',
       description:
-        'Dinymeo Lifesciences formulations across cardiology, diabetology, gastroenterology, oncology, antibiotics and nutraceuticals, with tablet, capsule, liquid and blister lines.',
-      keywords:
-        'Dinymeo Lifesciences formulations, tablet compression, capsule filling, blister packaging, HPLC pharmaceutical testing, cardiology, diabetology, nutraceuticals',
+        'Allopathic contract manufacturing across cardiology, antibiotics, gynaecology, dermatology, paediatrics and general medicine. Alu-Alu, blister, strip, bottle and tube packing.',
       kicker: 'Capabilities',
       headline: 'A catalogue you can brand.',
-      lead: 'Six therapy areas. Tablet, capsule, liquid and softgel forms. Packing chosen for the formulation.',
-      stillAlt: 'Automated cleanroom line used to illustrate Dinymeo Lifesciences processing.',
+      lead: 'We offer a wide allopathic range across many therapy areas for licensed marketing partners.',
       productsTitle: 'Therapy areas',
       packTitle: 'Packaging',
       packImageAlt: 'Premium pharmaceutical packs: Alu-Alu, blister, strip, bottle and tube.',
       processTitle: 'From brief to batch',
-      plantTitle: 'The lines',
-      plantLead:
-        'Automated tablet, capsule and liquid processing, then blister or strip packing, with analytical release and stability work beside the line.',
-      plantNote:
-        'Photographs illustrate this class of equipment. They are not a picture of one named Dinymeo site. WHO-GMP, GLP and ISO refer to the manufacturing sites we work with.',
-      plant: [
-        {
-          image: '/media/line-tablet.jpg',
-          title: 'Tablet compression',
-          text: 'Rotary presses for plain and sustained-release tablets.',
-          alt: 'Rotary tablet press compressing white tablets in a cleanroom.',
-        },
-        {
-          image: '/media/line-capsule.jpg',
-          title: 'Capsule filling',
-          text: 'Automatic fillers for two-piece capsules.',
-          alt: 'Automatic capsule filling machine with ivory capsules in stainless hoppers.',
-        },
-        {
-          image: '/media/line-liquid.jpg',
-          title: 'Liquid filling',
-          text: 'Syrups and oral liquids under laminar flow.',
-          alt: 'Pharmaceutical liquid filling line with unlabelled glass bottles.',
-        },
-        {
-          image: '/media/line-blister.jpg',
-          title: 'Blister packing',
-          text: 'Foil forming and a moisture seal on the pack.',
-          alt: 'High-speed blister packaging line sealing tablets in foil.',
-        },
-        {
-          image: '/media/line-hplc.jpg',
-          title: 'Analytical release',
-          text: 'HPLC and spectral checks before a batch moves.',
-          alt: 'Row of HPLC instruments on a stainless laboratory bench.',
-        },
-        {
-          image: '/media/line-stability.jpg',
-          title: 'Stability',
-          text: 'Chambers that hold samples for the shelf-life file.',
-          alt: 'Walk-in stability chamber with sample racks of bottles and blisters.',
-        },
-      ],
-      formsTitle: 'Dosage forms',
-      formsNote:
-        'The standard column describes practice at partner sites. Certificates stay with those sites and can be shared with qualified partners on request.',
-      formsHead: ['Therapy', 'Dosage forms', 'Standard'],
-      forms: [
-        { area: 'Cardiovascular', forms: 'Tablets, sustained-release capsules', standard: 'WHO-GMP practice' },
-        { area: 'Diabetology', forms: 'Oral tablets, syrups', standard: 'WHO-GMP practice' },
-        { area: 'Gastroenterology', forms: 'Capsules, oral suspensions', standard: 'WHO-GMP practice' },
-        { area: 'Nutraceuticals', forms: 'Softgels, tablets', standard: 'ISO and GMP practice' },
-      ],
       steps: [
-        { title: 'Share the brief', text: 'Molecule, strength, pack and market — or ask for a range from the focus list.' },
-        { title: 'Formulation and tests', text: 'Formulation work, stability thinking, and HPLC-level specs before a batch is locked.' },
-        { title: 'Make and pack', text: 'Tablet, capsule or liquid, then Alu-Alu, blister, strip, bottle or tube.' },
+        { title: 'Share the brief', text: 'Molecule, strength, pack and market — or ask us to suggest a range.' },
+        { title: 'Formulation & tests', text: 'Formulation work, stability thinking, and quality specs before a batch is locked.' },
+        { title: 'Make & pack', text: 'Documented manufacturing in certified facilities, then Alu-Alu, blister, strip, bottle or tube.' },
         { title: 'Dispatch', text: 'Checked, packed, and sent on the agreed date.' },
       ],
     },
     contact: {
-      title: 'Contact Dinymeo Lifesciences | PCD and export',
+      title: 'Contact Dinymeo Lifesciences',
       description:
-        'Talk to Dinymeo Lifesciences Pvt. Ltd. in Pune about PCD franchise, export and formulation partnerships.',
-      keywords:
-        'Dinymeo Lifesciences contact, PCD pharma enquiry, pharmaceutical export enquiry, Dinymeo Lifesciences Pune',
+        'Partner with Dinymeo Lifesciences Pvt Ltd. Call, WhatsApp or email for third-party manufacturing.',
       kicker: 'Enquiry',
-      headline: 'PCD and export enquiries.',
-      lead: 'Franchise, export and formulation partners. This form is for companies and licensed traders.',
-      pathsTitle: 'What to write about',
-      paths: [
-        { title: 'PCD franchise', text: 'Territory, the therapy list, and the pack you want on the shelf.' },
-        { title: 'Export', text: 'Destination market, the documents you need, and the dosage forms.' },
-        { title: 'Your brand', text: 'Molecule, strength, pack, and the name that goes on it.' },
-      ],
+      headline: 'Partner with us today.',
+      lead: 'This form is for companies and licensed traders.',
       office: 'Registered office',
       hours: 'Business hours',
       phone: 'Phone / WhatsApp',
@@ -319,13 +208,13 @@ export const copy = {
     },
     footer: {
       blurb:
-        'Dinymeo Lifesciences. Pharmaceutical formulations, documented quality, and supply for partners in India and abroad.',
+        'Allopathic contract manufacturing. Quality, packing and global supply for marketing partners.',
       legal: 'Legal',
       disclaimer: 'Disclaimer',
       privacy: 'Privacy',
       terms: 'Terms',
       rights: 'All rights reserved.',
-      b2b: 'For licensed partners.',
+      b2b: 'B2B manufacturing only.',
     },
     legal: {
       disclaimerTitle: 'Disclaimer',

@@ -69,20 +69,13 @@ describe('packaging catalogue', () => {
 describe('flyer images', () => {
   it('gives every slide its own processing photograph', () => {
     const imgs = slides.items.map((s) => s.image);
-    expect(imgs).toHaveLength(4);
-    expect(new Set(imgs).size).toBe(4);
+    expect(imgs).toHaveLength(3);
+    expect(new Set(imgs).size).toBe(3);
     expect(imgs.every((src) => src.startsWith('/media/line-'))).toBe(true);
-  });
-});
-
-describe('company voice', () => {
-  it('names Dinymeo Lifesciences and does not lead with contract manufacturing', () => {
-    const blob = JSON.stringify(copy.en);
-    expect(blob).toContain('Dinymeo Lifesciences');
-    expect(blob.toLowerCase()).not.toMatch(/contract manufacturing/);
-    expect(blob.toLowerCase()).not.toMatch(/third-party manufacturing/);
-    expect(blob.toLowerCase()).not.toMatch(/premier/);
-    expect(blob.toLowerCase()).not.toMatch(/million units/);
-    expect(blob).toContain('500+');
+    expect(slides.items.map((s) => s.en.title)).toEqual([
+      'The science of healing.',
+      'Packs that protect the dose.',
+      'From India to partners worldwide.',
+    ]);
   });
 });

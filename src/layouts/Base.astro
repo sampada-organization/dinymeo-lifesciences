@@ -18,10 +18,9 @@ interface Props {
 }
 const { lang, title, description, current } = Astro.props;
 const meta = localeMeta[lang];
-const copy = t(lang);
 const keywords =
   Astro.props.keywords ??
-  'Dinymeo Lifesciences, Dinymeo Lifesciences Pvt Ltd, pharmaceutical formulations, PCD pharma, pharmaceutical export India';
+  'pharma third party manufacturing, allopathic medicine contract manufacturing, Dinymeo Lifesciences Pvt Ltd';
 const origin = Astro.site ?? new URL('https://dinymeo.com');
 const page = unprefixedPath(Astro.url.pathname);
 const canonical = new URL(localePath(lang, page), origin).href;
@@ -29,32 +28,19 @@ const ogImage = new URL(withBase('/brand/og.jpg'), origin).href;
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Dinymeo Lifesciences',
-  legalName: siteData.legalName,
-  alternateName: ['Dinymeo Lifesciences Pvt. Ltd.', 'Dinymeo'],
+  name: siteData.legalName,
   url: Astro.site?.href ?? 'https://dinymeo.com/',
   email: siteData.email,
   telephone: siteData.phoneTel,
-  description: copy.home.description,
-  slogan: copy.home.slogan,
   address: {
     '@type': 'PostalAddress',
     streetAddress: siteData.address.lines[0],
     addressLocality: 'Pune',
-    addressRegion: 'Maharashtra',
     postalCode: '411033',
     addressCountry: 'IN',
   },
-  areaServed: ['India', 'South Asia', 'Africa', 'CIS'],
-  knowsAbout: [
-    'Pharmaceutical formulations',
-    'Cardiology',
-    'Diabetology',
-    'Gastroenterology',
-    'Oncology',
-    'Antibiotics',
-    'Nutraceuticals',
-  ],
+  areaServed: 'Global',
+  knowsLanguage: ['en'],
 };
 ---
 

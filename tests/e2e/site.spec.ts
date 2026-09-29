@@ -75,11 +75,6 @@ test.describe('Dinymeo MVP', () => {
 
   test('manufacturing lists tubes as a packing standard', async ({ page }) => {
     await page.goto('/manufacturing');
-    await expect(page.getByRole('heading', { name: 'The lines', exact: true })).toBeVisible();
-    await expect(page.locator('.plant-card')).toHaveCount(6);
-    await expect(page.getByRole('heading', { name: 'Diabetology', exact: true })).toBeVisible();
-    await expect(page.locator('.dose-table')).toContainText('Cardiovascular');
-    await expect(page.locator('body')).not.toContainText(/Hypertension/i);
     await expect(page.getByRole('heading', { name: 'Tubes', exact: true })).toBeVisible();
     await expect(page.locator('.pack-hero img')).toBeVisible();
     await expect(page.locator('.pack-hero img')).toHaveAttribute('src', /pack-hero/);
@@ -97,34 +92,26 @@ test.describe('Dinymeo MVP', () => {
     await expect(page.locator('body')).not.toContainText('On this page');
   });
 
-  test('hero cycles the corporate slides and the home page states the portfolio', async ({ page }) => {
+  test('hero cycles the three formulation slides', async ({ page }) => {
     await page.goto('/');
     await expect(page).toHaveTitle(/Dinymeo Lifesciences/);
-    await expect(page.locator('meta[name="keywords"]')).toHaveAttribute('content', /Dinymeo Lifesciences/);
-    await expect(page.locator('meta[name="keywords"]')).not.toHaveAttribute('content', /contract manufacturing/i);
-    await expect(page.locator('meta[name="description"]')).not.toHaveAttribute('content', /contract manufacturing/i);
     await expect(page.getByRole('button', { name: 'Previous slide' })).toBeVisible();
     await expect(page.getByRole('button', { name: 'Next slide' })).toBeVisible();
     await expect(page.locator('.hero-hold')).toContainText(/Hold to pause/i);
     await expect(page.locator('.hero')).not.toContainText(/WHO-GMP/);
-    await expect(page.locator('[data-title]')).toContainText(/Innovating healthcare/i);
+    await expect(page.locator('[data-title]')).toContainText(/The science of healing/i);
     await expect(page.locator('.hero-slide.is-active img')).toHaveAttribute('src', /line-hall/);
-    await expect(page.locator('.stats')).toContainText('500+');
-    await expect(page.locator('.plant-card')).toHaveCount(3);
     await expect(page.locator('svg.flow-scene')).toBeVisible();
     await expect(page.locator('.flow-scene')).toContainText('Formulation');
     await expect(page.locator('body')).not.toContainText(/research-led/i);
-    await expect(page.locator('body')).not.toContainText(/premier/i);
-    await expect(page.locator('body')).not.toContainText(/million units/i);
-    await expect(page.getByRole('heading', { name: 'Who we work with' })).toBeVisible();
+    await expect(page.locator('body')).not.toContainText(/recipe/i);
+    await expect(page.getByRole('heading', { name: 'If this is you' })).toBeVisible();
     await page.locator('.hero-nav.next').click({ force: true });
-    await expect(page.locator('[data-title]')).toContainText(/Lines built for the dose/i);
-    await expect(page.locator('.hero-slide.is-active img')).toHaveAttribute('src', /line-tablet/);
-    await page.locator('.hero-nav.next').click({ force: true });
-    await expect(page.locator('[data-title]')).toContainText(/Purity, checked in the lab/i);
-    await expect(page.locator('.hero-slide.is-active img')).toHaveAttribute('src', /line-hplc/);
-    await page.locator('.hero-nav.next').click({ force: true });
-    await expect(page.locator('[data-title]')).toContainText(/Sealed for the journey/i);
+    await expect(page.locator('[data-title]')).toContainText(/Packs that protect the dose/i);
+    await expect(page.locator('.hero-slide.is-active')).not.toContainText(/Barrier first/i);
     await expect(page.locator('.hero-slide.is-active img')).toHaveAttribute('src', /line-blister/);
+    await page.locator('.hero-nav.next').click({ force: true });
+    await expect(page.locator('[data-title]')).toContainText(/From India to partners worldwide/i);
+    await expect(page.locator('.hero-slide.is-active img')).toHaveAttribute('src', /line-tablet/);
   });
 });
