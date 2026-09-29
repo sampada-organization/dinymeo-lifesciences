@@ -120,9 +120,7 @@ test.describe('Dinymeo MVP', () => {
     await page.locator('.hero-nav.next').click({ force: true });
     await expect(page.locator('[data-title]')).toContainText(/From India to partners worldwide/i);
     await expect(page.locator('.hero-slide.is-active img')).toHaveAttribute('src', /line-tablet/);
-    await page.locator('.hero-nav.next').click({ force: true });
-    await expect(page.locator('[data-title]')).toContainText(/Checked before the batch moves/i);
-    await expect(page.locator('.hero-slide.is-active img')).toHaveAttribute('src', /line-hplc/);
+    await expect(page.locator('.hero-dots button')).toHaveCount(3);
     await expect(page.locator('.hero')).not.toContainText(/Pune/);
   });
 });

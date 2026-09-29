@@ -69,10 +69,10 @@ describe('packaging catalogue', () => {
 describe('flyer images', () => {
   it('gives every slide its own processing photograph', () => {
     const imgs = slides.items.map((s) => s.image);
-    expect(imgs).toHaveLength(7);
-    expect(new Set(imgs).size).toBe(7);
+    expect(imgs).toHaveLength(3);
+    expect(new Set(imgs).size).toBe(3);
     expect(imgs.every((src) => src.startsWith('/media/line-'))).toBe(true);
-    expect(slides.items.map((s) => s.en.title).slice(0, 3)).toEqual([
+    expect(slides.items.map((s) => s.en.title)).toEqual([
       'The science of healing.',
       'Packs that protect the dose.',
       'From India to partners worldwide.',
