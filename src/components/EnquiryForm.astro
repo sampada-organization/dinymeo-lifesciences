@@ -44,7 +44,7 @@ const c = t(lang);
   <p class="alt">
     <a href={`tel:${siteData.phoneTel}`}>{siteData.phone}</a>
     <span aria-hidden="true"> · </span>
-    <a href={whatsappUrl()}>{c.cta.whatsapp}</a>
+    <a href={whatsappUrl(c.cta.whatsappText)} target="_blank" rel="noopener noreferrer">{c.cta.whatsapp}</a>
     <span aria-hidden="true"> · </span>
     <a href={mailUrl()}>{c.cta.email}</a>
   </p>

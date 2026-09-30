@@ -15,18 +15,22 @@ test.describe('Dinymeo MVP', () => {
     await expect(page.locator('.site-footer')).toContainText(/WHO-GMP/);
     await expect(page.locator('.hero')).not.toContainText(/WHO-GMP/);
     await expect(page.locator('.hero')).not.toContainText(/Pune/);
-    await expect(page.getByRole('heading', { name: 'By the numbers' })).toBeVisible();
-    await expect(page.locator('.stat-value').first()).toHaveText('500+');
-    await expect(page.locator('.stats')).not.toContainText(/Pune/);
+    await expect(page.getByRole('heading', { name: 'By the numbers' })).toHaveCount(0);
+    await expect(page.locator('.stats')).toHaveCount(0);
+    await expect(page.locator('body')).not.toContainText(/500\+/);
     await expect(page.locator('body')).not.toContainText(/self-medication/i);
     await expect(page.getByRole('link', { name: /Call Dinymeo/i })).toHaveAttribute(
       'href',
       'tel:+917775000425',
     );
-    await expect(page.getByRole('link', { name: /WhatsApp Dinymeo/i })).toHaveAttribute(
-      'href',
-      /wa\.me\/917775000425/,
-    );
+    const whatsapp = page.getByRole('link', { name: /WhatsApp Dinymeo/i });
+    await expect(whatsapp).toHaveAttribute('href', /wa\.me\/917775000425\?text=/);
+    await expect(whatsapp).toHaveAttribute('target', '_blank');
+    const popup = page.waitForEvent('popup');
+    await whatsapp.click();
+    const chat = await popup;
+    await expect(chat).toHaveURL(/917775000425/);
+    await chat.close();
   });
 
   test('language switcher is not shown', async ({ page }) => {
@@ -41,6 +45,15 @@ test.describe('Dinymeo MVP', () => {
       expect(res?.ok()).toBeTruthy();
       await expect(page.locator('main h1')).toBeVisible();
     }
+    await page.goto('/contact');
+    const contactWhatsapp = page.locator('main').getByRole('link', { name: '+91 7775000425' }).nth(1);
+    await expect(contactWhatsapp).toHaveAttribute('href', /wa\.me\/917775000425\?text=/);
+    await expect(contactWhatsapp).toHaveAttribute('target', '_blank');
+    await expect(page.getByRole('link', { name: 'Google Business profile' }).first()).toHaveAttribute(
+      'href',
+      /google\.com\/maps\/search/,
+    );
+    await expect(page.locator('iframe[title="Google Business profile"]')).toBeVisible();
     await page.goto('/about');
     await expect(page.locator('main h1')).not.toContainText(/Made in India/i);
     await expect(page.locator('main')).not.toContainText(/small or large/i);

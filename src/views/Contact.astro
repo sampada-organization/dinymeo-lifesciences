@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import EnquiryForm from '../components/EnquiryForm.astro';
 import Icon from '../components/Icon.astro';
 import { t, type Locale } from '../lib/i18n';
-import { siteData, hours, mapsUrl, telUrl, mailUrl, whatsappUrl } from '../lib/site';
+import { siteData, hours, mapsUrl, googleBusinessUrl, googleMapEmbedUrl, telUrl, mailUrl, whatsappUrl } from '../lib/site';
 
 interface Props {
   lang: Locale;
@@ -26,7 +26,7 @@ const c = t(lang);
             <p>
               <strong>{c.contact.office}</strong><br />
               {siteData.address.lines.map((line) => <span>{line}<br /></span>)}
-              <a href={mapsUrl()}>{c.contact.map}</a>
+              <a href={mapsUrl()} target="_blank" rel="noopener noreferrer">{c.contact.map}</a>
             </p>
           </li>
           <li>
@@ -40,7 +40,7 @@ const c = t(lang);
             <span class="icon-tile"><Icon name="wa" /></span>
             <p>
               <strong>{c.cta.whatsapp}</strong><br />
-              <a href={whatsappUrl()}>{siteData.phone}</a>
+              <a href={whatsappUrl(c.cta.whatsappText)} target="_blank" rel="noopener noreferrer">{siteData.phone}</a>
             </p>
           </li>
           <li>
@@ -57,7 +57,22 @@ const c = t(lang);
               {hours(lang)}
             </p>
           </li>
+          <li>
+            <span class="icon-tile"><Icon name="globe" /></span>
+            <p>
+              <strong>{c.contact.google}</strong><br />
+              <a href={googleBusinessUrl()} target="_blank" rel="noopener noreferrer">{c.contact.google}</a>
+            </p>
+          </li>
         </ul>
+        <div class="map-frame">
+          <iframe
+            title={c.contact.google}
+            src={googleMapEmbedUrl()}
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
         </div>
       </div>
       <aside class="form-panel">

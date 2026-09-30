@@ -16,7 +16,7 @@ This is not legal advice. It records how v1 treats statements from the client br
 | Brief wording | v1 treatment |
 |---|---|
 | “Premier pharmaceutical company” | Not used. Puffery that is hard to prove. |
-| Invented statistics (employee counts, revenue) | Employee counts and turnover stay off. Home states 500+ approved formulations, founded 2018, and three export markets (South Asia, Africa, CIS) as the company’s own deck figures — not a regulator’s count. The million-unit chart and disease indications stay off. |
+| Invented statistics (employee counts, revenue) | Employee counts, turnover, formulation counts, and the million-unit chart stay off the site. Disease indications stay off. |
 | Doctor testimonials (Lloyd-style) | Not used. Restricted under UCPMP. |
 | Consumer CTA to buy medicines | Not used. Site is B2B only. Click-to-call / WhatsApp / email for partners. |
 

@@ -7,7 +7,7 @@ import Footer from '../components/Footer.astro';
 import ContactDock from '../components/ContactDock.astro';
 import { localeMeta, type Locale, t } from '../lib/i18n';
 import { localePath, withBase, unprefixedPath } from '../lib/paths';
-import { siteData } from '../lib/site';
+import { googleBusinessUrl, siteData } from '../lib/site';
 
 interface Props {
   lang: Locale;
@@ -27,18 +27,34 @@ const canonical = new URL(localePath(lang, page), origin).href;
 const ogImage = new URL(withBase('/brand/og.jpg'), origin).href;
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Organization',
+  '@type': 'LocalBusiness',
   name: siteData.legalName,
   url: Astro.site?.href ?? 'https://dinymeo.com/',
+  image: ogImage,
   email: siteData.email,
   telephone: siteData.phoneTel,
   address: {
     '@type': 'PostalAddress',
-    streetAddress: siteData.address.lines[0],
+    streetAddress: siteData.address.lines.slice(0, 2).join(', '),
     addressLocality: 'Pune',
+    addressRegion: 'Maharashtra',
     postalCode: '411033',
     addressCountry: 'IN',
   },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: siteData.geo.lat,
+    longitude: siteData.geo.lng,
+  },
+  hasMap: googleBusinessUrl(),
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      opens: '09:30',
+      closes: '17:00',
+    },
+  ],
   areaServed: 'Global',
   knowsLanguage: ['en'],
 };

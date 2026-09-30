@@ -1,7 +1,7 @@
 ---
 import { t, type Locale } from '../lib/i18n';
 import { localePath } from '../lib/paths';
-import { siteData, hours, qualityNote } from '../lib/site';
+import { siteData, hours, qualityNote, whatsappUrl, googleBusinessUrl } from '../lib/site';
 import Logo from './Logo.astro';
 
 interface Props {
@@ -37,6 +37,8 @@ const year = new Date().getFullYear();
       <p>
         {siteData.address.lines.map((line) => <span>{line}<br /></span>)}
         <a href={`tel:${siteData.phoneTel}`}>{siteData.phone}</a><br />
+        <a href={whatsappUrl(c.cta.whatsappText)} target="_blank" rel="noopener noreferrer">{c.cta.whatsapp}</a><br />
+        <a href={googleBusinessUrl()} target="_blank" rel="noopener noreferrer">{c.contact.google}</a><br />
         <a href={`mailto:${siteData.email}`}>{siteData.email}</a><br />
         {hours(lang)}
       </p>

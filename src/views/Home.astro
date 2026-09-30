@@ -4,7 +4,6 @@ import Slideshow from '../components/Slideshow.astro';
 import EnquiryForm from '../components/EnquiryForm.astro';
 import Icon from '../components/Icon.astro';
 import ProcessScene from '../components/ProcessScene.astro';
-import Stats from '../components/Stats.astro';
 import { t, type Locale } from '../lib/i18n';
 import { localePath } from '../lib/paths';
 
@@ -32,8 +31,6 @@ const links = [
       <p>{c.home.body}</p>
     </div>
   </section>
-
-  <Stats lang={lang} />
 
   <section data-section={c.home.flowTitle}>
     <div class="wrap">

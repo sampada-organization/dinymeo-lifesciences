@@ -14,7 +14,14 @@ const c = t(lang);
   <a href={telUrl()} aria-label={c.dock.call} title={c.dock.call}>
     <Icon name="phone" size={22} />
   </a>
-  <a class="wa" href={whatsappUrl(c.home.welcome)} aria-label={c.dock.wa} title={c.dock.wa}>
+  <a
+    class="wa"
+    href={whatsappUrl(c.cta.whatsappText)}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={c.dock.wa}
+    title={c.dock.wa}
+  >
     <Icon name="wa" size={22} />
   </a>
   <a class="mail" href={mailUrl(c.cta.quote)} aria-label={c.dock.mail} title={c.dock.mail}>

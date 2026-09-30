@@ -28,6 +28,7 @@ export const copy = {
       range: 'See our range',
       call: 'Call',
       whatsapp: 'WhatsApp',
+      whatsappText: 'Hello, I would like to enquire about manufacturing with Dinymeo Lifesciences.',
       email: 'Email',
       send: 'Send enquiry',
       sending: 'Sending…',
@@ -101,14 +102,6 @@ export const copy = {
       contactTitle: 'Talk to us',
       formLead: 'Tell us what you need. A person will read this. No spam list.',
     },
-    statsTitle: 'By the numbers',
-    statsNote:
-      'These figures are Dinymeo Lifesciences’ own statement, taken from the company’s corporate materials. They are not a regulator’s count, and they are not turnover.',
-    stats: [
-      { value: '500+', label: 'Approved formulations', note: 'Portfolio the company states' },
-      { value: '2018', label: 'Founded', note: 'India' },
-      { value: '3', label: 'Export markets', note: 'South Asia, Africa, CIS' },
-    ],
     promises: [
       {
         icon: 'shield',
@@ -242,6 +235,7 @@ export const copy = {
       phone: 'Phone / WhatsApp',
       email: 'Email',
       map: 'Open in maps',
+      google: 'Google Business profile',
     },
     form: {
       name: 'Name',

@@ -12,9 +12,9 @@ export const productData: Products = products;
 export const slideData: Slides = slides;
 
 export function whatsappUrl(text?: string): string {
-  const base = `https://wa.me/${siteData.whatsapp}`;
-  if (!text) return base;
-  return `${base}?text=${encodeURIComponent(text)}`;
+  const message =
+    text ?? 'Hello, I would like to enquire about manufacturing with Dinymeo Lifesciences.';
+  return `https://wa.me/${siteData.whatsapp}?text=${encodeURIComponent(message)}`;
 }
 
 export function telUrl(): string {
@@ -29,9 +29,20 @@ export function mailUrl(subject?: string, body?: string): string {
   return `mailto:${siteData.email}${s ? `?${s}` : ''}`;
 }
 
+function placeQuery(): string {
+  return `${siteData.legalName}, ${siteData.address.lines.join(', ')}`;
+}
+
 export function mapsUrl(): string {
-  const q = encodeURIComponent(siteData.address.lines.join(', '));
-  return `https://www.google.com/maps/search/?api=1&query=${q}`;
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(placeQuery())}`;
+}
+
+export function googleBusinessUrl(): string {
+  return mapsUrl();
+}
+
+export function googleMapEmbedUrl(): string {
+  return `https://maps.google.com/maps?q=${encodeURIComponent(placeQuery())}&z=16&hl=en&output=embed`;
 }
 
 export function hours(lang: Locale): string {

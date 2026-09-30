@@ -78,6 +78,7 @@ describe('flyer images', () => {
       'From India to partners worldwide.',
     ]);
     expect(slides.items.map((s) => s.en.title)).not.toContain('From Pune to partners worldwide.');
-    expect(JSON.stringify(copy.en.stats)).not.toMatch(/Pune/);
+    expect(JSON.stringify(copy.en)).not.toMatch(/By the numbers/);
+    expect(JSON.stringify(copy.en)).not.toMatch(/500\+/);
   });
 });
