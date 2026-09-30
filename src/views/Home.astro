@@ -3,7 +3,6 @@ import Base from '../layouts/Base.astro';
 import Slideshow from '../components/Slideshow.astro';
 import EnquiryForm from '../components/EnquiryForm.astro';
 import Icon from '../components/Icon.astro';
-import ProcessScene from '../components/ProcessScene.astro';
 import { t, type Locale } from '../lib/i18n';
 import { localePath } from '../lib/paths';
 
@@ -29,15 +28,6 @@ const links = [
       <h2>{c.home.welcome}</h2>
       <p class="lede">{c.home.intro}</p>
       <p>{c.home.body}</p>
-    </div>
-  </section>
-
-  <section data-section={c.home.flowTitle}>
-    <div class="wrap">
-      <p class="kicker">Process</p>
-      <h2>{c.home.flowTitle}</h2>
-      {c.home.flowLead ? <p class="lede">{c.home.flowLead}</p> : null}
-      <ProcessScene lang={lang} />
     </div>
   </section>
 

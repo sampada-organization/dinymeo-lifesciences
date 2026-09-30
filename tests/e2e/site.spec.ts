@@ -121,8 +121,8 @@ test.describe('Dinymeo MVP', () => {
     await expect(page.locator('.hero')).not.toContainText(/WHO-GMP/);
     await expect(page.locator('[data-title]')).toContainText(/The science of healing/i);
     await expect(page.locator('.hero-slide.is-active img')).toHaveAttribute('src', /line-hall/);
-    await expect(page.locator('svg.flow-scene')).toBeVisible();
-    await expect(page.locator('.flow-scene')).toContainText('Formulation');
+    await expect(page.locator('svg.flow-scene')).toHaveCount(0);
+    await expect(page.getByRole('heading', { name: 'How we stay in sync' })).toHaveCount(0);
     await expect(page.locator('body')).not.toContainText(/research-led/i);
     await expect(page.locator('body')).not.toContainText(/recipe/i);
     await expect(page.getByRole('heading', { name: 'If this is you' })).toBeVisible();

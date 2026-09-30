@@ -49,23 +49,6 @@ export const copy = {
         'We connect healthcare innovation with the market. Dinymeo makes a full range of allopathic medicines for marketing partners.',
       body:
         'As a premium pharmaceutical company in India, we specialise in a comprehensive range of essential medicines.',
-      flowTitle: 'How we stay in sync',
-      flowLead:
-        'You bring the market. We run the back end. Each step talks to the next, so the batch you sell is the brief you sent.',
-      flowPartner: 'You',
-      flowOps: 'Dinymeo',
-      flowSync: 'In sync',
-      flow: [
-        { title: 'Brief', text: 'Molecule, pack, market.' },
-        { title: 'Source', text: 'API and materials to spec.' },
-        { title: 'Formulation', text: 'Stable product work.' },
-        { title: 'Stability', text: 'ICH data on file.' },
-        { title: 'QA', text: 'Specs you can see.' },
-        { title: 'Make', text: 'Documented batch.' },
-        { title: 'Pack', text: 'Pack chosen for the formulation.' },
-        { title: 'Dispatch', text: 'On the promised date.' },
-        { title: 'Your brand', text: 'You take it to market.' },
-      ],
       casesTitle: 'If this is you',
       cases: [
         {
